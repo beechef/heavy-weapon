@@ -1,34 +1,33 @@
 using System;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.Events;
+using UnityEngine.PlayerLoop;
 using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Vector2 _moveDir;
-    private CharacterController _playerController;
     public float speed=10f;
     public bool isMoveRight;
     private float constantMoveSpeed = 0.5f;
     [SerializeField] private Animator animator;
+    private float moveDirXValue;
+    
     private void Start()
     {
         isMoveRight = true;
-        _playerController = GetComponent<CharacterController>();
         animator.SetBool("isMoveRight",true);
         animator.SetFloat("MoveDir",1);
     }
-
-    // Update is called once per frame
     void Update()
     {
-      Move();
+        Move();
     }
 
     private void Move()
     {
+        Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
         float MoveRightVal=1;
-        
         if (!isMoveRight)
         {
             constantMoveSpeed = 0;
@@ -37,13 +36,21 @@ public class PlayerMovement : MonoBehaviour
         {
             constantMoveSpeed = 0.5f;
         }
-        float moveDirXValue = Input.GetAxis("Horizontal");
+        moveDirXValue = Input.GetAxis("Horizontal");
+        
+        Vector3 force = new Vector3(moveDirXValue*speed*Time.deltaTime, 0,0);
         if (moveDirXValue < 0)
         {
             MoveRightVal = moveDirXValue;
         }
-        _moveDir = new Vector2(moveDirXValue,0);
+        
+        if (pos.x < 0.1f &&moveDirXValue<0|| pos.x > 0.9f&&moveDirXValue>0)
+        {
+            force = Vector3.zero;
+        }
+        transform.localPosition =transform.localPosition + force;
+
         animator.SetFloat("MoveDir",moveDirXValue+(constantMoveSpeed*MoveRightVal));
-        _playerController.Move(_moveDir * (Time.deltaTime * speed));
+        
     }
 }
