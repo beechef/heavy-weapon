@@ -12,11 +12,11 @@ public class PlayerMovement : MonoBehaviour
     private float constantMoveSpeed = 0.5f;
     [SerializeField] private Animator animator;
     private float moveDirXValue;
-    
+
     private void Start()
     {
+     
         isMoveRight = true;
-        animator.SetBool("isMoveRight",true);
         animator.SetFloat("MoveDir",1);
     }
     void Update()
@@ -48,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         {
             force = Vector3.zero;
         }
+        
         transform.localPosition =transform.localPosition + force;
 
         animator.SetFloat("MoveDir",moveDirXValue+(constantMoveSpeed*MoveRightVal));
