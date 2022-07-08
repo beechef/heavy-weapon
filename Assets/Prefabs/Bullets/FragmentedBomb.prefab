@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7695798403426201407}
   - component: {fileID: 3597526804564548858}
   - component: {fileID: 2784012109209078708}
-  - component: {fileID: 1825493787422108233}
+  - component: {fileID: 8203248502027043913}
   m_Layer: 7
   m_Name: FragmentedBomb
   m_TagString: Untagged
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4251967252394265974}
-  statsSystem: {fileID: 1825493787422108233}
+  statsSystem: {fileID: 8203248502027043913}
 --- !u!114 &7695798403426201407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,13 +215,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 7695798403426201407}
-  statsSystem: {fileID: 1825493787422108233}
+  statsSystem: {fileID: 8203248502027043913}
   audioSource: {fileID: 3597526804564548858}
   startClip: {fileID: 8300000, guid: dae9de61f2369bb47858ac7aec73b54e, type: 3}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
-  fragmentPrefab: {fileID: 1908248281161119097, guid: 0c134a59b3ba96f439c4c0b756432369, type: 3}
-  fragmentedStatsSystem: {fileID: 1825493787422108233}
---- !u!114 &1825493787422108233
+  coll: {fileID: 1651649918080226006}
+  fragmentPrefab: {fileID: 79585730597040073, guid: 0c134a59b3ba96f439c4c0b756432369, type: 3}
+  shape:
+  - {x: 0, y: 1}
+  - {x: -1, y: 0}
+  - {x: 1, y: 0}
+  - {x: -1, y: -1}
+  - {x: 1, y: -1}
+--- !u!114 &8203248502027043913
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,10 +236,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 893112604172622695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 338cd9d011384cda87d8d7808faae139, type: 3}
+  m_Script: {fileID: 11500000, guid: b9e7fe964bd74f9a9dd0672699df78fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 7a6104895f0ad5c4cb5fe0cc65c64103, type: 2}
+  stats: {fileID: 11400000, guid: b95c4e6eddd0b2b468e9d690ae573ceb, type: 2}
 --- !u!1 &8181318475132781495
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +251,7 @@ GameObject:
   - component: {fileID: 3565597716779954064}
   - component: {fileID: 2323125782823538755}
   - component: {fileID: 7984843148579306215}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}

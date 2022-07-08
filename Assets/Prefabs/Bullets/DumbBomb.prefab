@@ -107,6 +107,7 @@ MonoBehaviour:
   audioSource: {fileID: -6703177278094199269}
   startClip: {fileID: 8300000, guid: dae9de61f2369bb47858ac7aec73b54e, type: 3}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
+  coll: {fileID: 431970146182248503}
 --- !u!114 &8780202369523713502
 MonoBehaviour:
   m_ObjectHideFlags: 0

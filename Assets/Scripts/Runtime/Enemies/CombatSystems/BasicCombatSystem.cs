@@ -9,17 +9,19 @@ namespace Runtime.Enemies.CombatSystems
     public class BasicCombatSystem : MonoBehaviour, IVulnerable
     {
         [SerializeField] protected BasicAnimation anim;
-        [SerializeField] protected Enemies.StatsSystems.BasicStatsSystem statsSystem;
+        [SerializeField] protected StatsSystems.BasicStatsSystem statsSystem;
         [SerializeField] protected Transform attackPoint;
         [SerializeField] protected GameObject bulletPrefab;
         [SerializeField] protected AudioSource audioSource;
         [SerializeField] protected AudioClip deathClip;
+        [SerializeField] protected Collider2D coll;
 
-        private Enemies.Stats.BasicStats _stats;
+        private Stats.BasicStats _stats;
         private float _lastAttack = 0f;
 
         protected virtual void OnEnable()
         {
+            coll.enabled = true;
             _stats = statsSystem.Stats;
             audioSource.loop = false;
             audioSource.playOnAwake = false;
@@ -60,13 +62,25 @@ namespace Runtime.Enemies.CombatSystems
             audioSource.clip = clip;
             audioSource.Play();
         }
+
+        protected virtual void Death()
+        {
+            coll.enabled = false;
+            PlaySound(deathClip);
+            anim.Death();
+            Destroy(gameObject, .2f);
+        }
+
         public virtual void TakeDamage(float damage)
         {
             anim.Hit();
             if (!statsSystem.TakeDamage(damage)) return;
-            PlaySound(deathClip);
-            anim.Death();
-            Destroy(this, .2f);
+            Death();
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            Destroy(gameObject, .2f);
         }
     }
 }

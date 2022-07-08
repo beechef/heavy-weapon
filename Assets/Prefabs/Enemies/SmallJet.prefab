@@ -176,7 +176,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000035762787, y: -0.00000023841858}
@@ -257,6 +257,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2265738841553875334, guid: aad5e981bec80d94d9bf78614320b8d8, type: 3}
   audioSource: {fileID: 7982261943743185848}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
+  coll: {fileID: 5592890185998193510}
 --- !u!82 &7982261943743185848
 AudioSource:
   m_ObjectHideFlags: 0

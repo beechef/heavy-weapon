@@ -1,32 +1,21 @@
 ﻿using System.Collections.Generic;
-using Runtime.Bullets.Stats;
-using Runtime.Bullets.StatsSystems;
 using UnityEngine;
 
 namespace Runtime.Bullets
 {
-    [RequireComponent(typeof(FragmentedStatsSystem))]
     public class FragmentedBullet : BasicBullet
     {
         [SerializeField] private GameObject fragmentPrefab;
-        [SerializeField] private FragmentedStatsSystem fragmentedStatsSystem;
 
-        [SerializeField] private List<Vector3> shape = new List<Vector3>()
+        [SerializeField] private List<Vector2> shape = new List<Vector2>()
         {
-            Vector3.up,
-            Vector3.left,
-            Vector3.right,
-            Vector3.down + Vector3.left,
-            Vector3.down + Vector3.right,
+            Vector2.up,
+            Vector2.left,
+            Vector2.right,
+            Vector2.down + Vector2.left,
+            Vector2.down + Vector2.right,
         };
 
-        private FragmentedStats _stats;
-
-        protected override void OnEnable()
-        {
-            base.OnEnable();
-            _stats = fragmentedStatsSystem.Stats;
-        }
 
         protected override void Death()
         {
@@ -36,16 +25,18 @@ namespace Runtime.Bullets
 
         private void CreateShape()
         {
-            Vector3 pos = transform.position;
+            Vector2 pos = transform.position;
             foreach (var piece in shape)
             {
-                SpawnFragment(pos + piece * _stats.fragmentDistance);
+                SpawnFragment(piece);
             }
         }
 
-        private void SpawnFragment(Vector3 pos)
+        private void SpawnFragment(Vector2 dir)
         {
-            Instantiate(fragmentPrefab, pos, Quaternion.identity);
+            GameObject go = Instantiate(fragmentPrefab, transform.position, Quaternion.identity);
+            float rotationZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            go.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ - 90f);
         }
     }
 }
