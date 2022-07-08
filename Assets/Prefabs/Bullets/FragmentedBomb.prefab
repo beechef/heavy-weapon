@@ -233,8 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338cd9d011384cda87d8d7808faae139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 2ebe6ac7a26ece540a9469d4ad7cf29b, type: 2}
-  fragmentedStats: {fileID: 11400000, guid: 7a6104895f0ad5c4cb5fe0cc65c64103, type: 2}
+  stats: {fileID: 11400000, guid: 7a6104895f0ad5c4cb5fe0cc65c64103, type: 2}
 --- !u!1 &8181318475132781495
 GameObject:
   m_ObjectHideFlags: 0

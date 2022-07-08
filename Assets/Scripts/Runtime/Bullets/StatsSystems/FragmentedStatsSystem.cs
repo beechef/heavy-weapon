@@ -5,8 +5,6 @@ namespace Runtime.Bullets.StatsSystems
 {
     public class FragmentedStatsSystem : BasicStatsSystem
     {
-        [SerializeField] protected FragmentedStats fragmentedStats;
-        public FragmentedStats FragmentedStatsStats => fragmentedStats;
-
+        public new FragmentedStats Stats => stats as FragmentedStats;
     }
 }
