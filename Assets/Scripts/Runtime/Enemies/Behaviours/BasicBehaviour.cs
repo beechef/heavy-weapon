@@ -3,6 +3,7 @@ using Runtime.Enemies.CombatSystems;
 using Runtime.Enemies.Controllers;
 using Runtime.Enemies.Stats;
 using Runtime.Enemies.StatsSystems;
+using Runtime.Interfaces;
 using UnityEngine;
 
 namespace Runtime.Enemies.Behaviours
@@ -11,7 +12,7 @@ namespace Runtime.Enemies.Behaviours
     {
         [SerializeField] private Rigidbody2D rb;
         [SerializeField] private BasicAnimation anim;
-        [SerializeField] private BasicCombatSystem combatSystem;
+        [SerializeField] private CombatSystem combatSystem;
         [SerializeField] private BasicStatsSystem statsSystem;
         
         private BasicStats _stats;

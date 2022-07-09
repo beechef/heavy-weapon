@@ -7,7 +7,6 @@ namespace Runtime.Enemies.Stats
     {
         public float health;
         public float maxHealth;
-        public float attack;
         public float attackTimes;
         public float attackDelay;
         public float attackSpeed;

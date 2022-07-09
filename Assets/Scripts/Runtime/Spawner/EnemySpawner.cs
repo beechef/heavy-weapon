@@ -8,40 +8,24 @@ namespace Runtime.Spawner
     public class EnemySpawner : MonoBehaviour
     {
         [SerializeField] private List<EnemyWave> enemyWaves;
-        private EnemyWave _currentWave;
-        private float _currentDelay;
-        private float _lastSpawn;
 
-        private void OnEnable()
-        {
-            _lastSpawn = Time.time;
-            _currentWave = GetNextWave();
-        }
 
         private void Update()
         {
-            if (_currentWave == null) return;
-            if (Time.time - _lastSpawn >= _currentDelay)
+            for (int i = 0; i < enemyWaves.Count; i++)
             {
-                SpawnWave().Forget();
-                _currentDelay = _currentWave.delayTime;
-                _currentWave = GetNextWave();
-                _lastSpawn = Time.time;
+                EnemyWave enemyWave = enemyWaves[i];
+                if (Time.time >= enemyWave.delayTime)
+                {
+                    SpawnWave(enemyWave).Forget();
+                    enemyWaves.RemoveAt(i);
+                    i--;
+                }
             }
         }
 
-        private EnemyWave GetNextWave()
+        public async UniTask SpawnWave(EnemyWave enemyWave)
         {
-            if (enemyWaves.Count == 0) return null;
-            EnemyWave enemyWave = enemyWaves[0];
-            enemyWaves.RemoveAt(0);
-            return enemyWave;
-        }
-
-        public async UniTask SpawnWave()
-        {
-            if (_currentWave == null) return;
-            var enemyWave = _currentWave;
             foreach (var enemyPack in enemyWave.enemyPacks)
             {
                 for (int i = 0; i < enemyPack.quantity; i++)

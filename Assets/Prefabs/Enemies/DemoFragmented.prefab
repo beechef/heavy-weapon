@@ -180,7 +180,8 @@ MonoBehaviour:
   anim: {fileID: 3434047223295302503}
   statsSystem: {fileID: 9091995370324343341}
   attackPoint: {fileID: 7201887586847008486}
-  bulletPrefab: {fileID: 893112604172622695, guid: 20d23881a8b1d6141be84e3cbfd2ded8, type: 3}
+  bulletPrefabs:
+  - {fileID: 893112604172622695, guid: 20d23881a8b1d6141be84e3cbfd2ded8, type: 3}
   audioSource: {fileID: 173797643120135830}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 2392021660416319048}

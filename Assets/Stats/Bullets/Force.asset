@@ -16,4 +16,4 @@ MonoBehaviour:
   health: 0
   maxHealth: 10
   moveSpeed: 1.5
-  force: 7
+  force: 1.5

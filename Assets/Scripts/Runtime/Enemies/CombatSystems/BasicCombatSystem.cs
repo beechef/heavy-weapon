@@ -1,17 +1,19 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using Runtime.Enemies.Animations;
-using Runtime.Interfaces;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Runtime.Enemies.CombatSystems
 {
     [RequireComponent(typeof(Collider2D))]
-    public class BasicCombatSystem : MonoBehaviour, IVulnerable
+    public class BasicCombatSystem : CombatSystem
     {
         [SerializeField] protected BasicAnimation anim;
         [SerializeField] protected StatsSystems.BasicStatsSystem statsSystem;
         [SerializeField] protected Transform attackPoint;
-        [SerializeField] protected GameObject bulletPrefab;
+        [SerializeField] protected List<GameObject> bulletPrefabs;
         [SerializeField] protected AudioSource audioSource;
         [SerializeField] protected AudioClip deathClip;
         [SerializeField] protected Collider2D coll;
@@ -32,27 +34,30 @@ namespace Runtime.Enemies.CombatSystems
             GODictionary.AddVulnerableGO(gameObject, this);
         }
 
-        public bool IsCanAttack()
+        public override bool IsCanAttack()
         {
             return Time.time - _lastAttack >= _stats.attackSpeed;
         }
 
-        public virtual void Attack()
+        public override void Attack()
         {
             if (!IsCanAttack()) return;
             _lastAttack = Time.time;
 
-            StartCoroutine(SpawnBullet());
+            SpawnBullet().Forget();
 
             anim.Attack();
         }
 
-        protected virtual IEnumerator SpawnBullet()
+        protected virtual async UniTask SpawnBullet()
         {
             for (int i = 0; i < _stats.attackTimes; i++)
             {
-                Instantiate(bulletPrefab, attackPoint.position, Quaternion.identity);
-                yield return new WaitForSeconds(_stats.attackDelay);
+                if (bulletPrefabs.Count == 0) return;
+                var randomNumber = Random.Range(0, bulletPrefabs.Count);
+                GameObject go = bulletPrefabs[randomNumber];
+                Instantiate(go, attackPoint.position, Quaternion.identity);
+                await UniTask.Delay(TimeSpan.FromSeconds(_stats.attackDelay));
             }
         }
 
@@ -71,7 +76,7 @@ namespace Runtime.Enemies.CombatSystems
             Destroy(gameObject, .2f);
         }
 
-        public virtual void TakeDamage(float damage)
+        public override void TakeDamage(float damage)
         {
             anim.Hit();
             if (!statsSystem.TakeDamage(damage)) return;

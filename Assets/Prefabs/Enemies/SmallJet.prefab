@@ -254,7 +254,8 @@ MonoBehaviour:
   anim: {fileID: 4830087761438021193}
   statsSystem: {fileID: 1333775108958516995}
   attackPoint: {fileID: 1107316379773103048}
-  bulletPrefab: {fileID: 2265738841553875334, guid: aad5e981bec80d94d9bf78614320b8d8, type: 3}
+  bulletPrefabs:
+  - {fileID: 2265738841553875334, guid: 6aab2dfdb8cf70a43ac9daeeb77ffb8f, type: 3}
   audioSource: {fileID: 7982261943743185848}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 5592890185998193510}

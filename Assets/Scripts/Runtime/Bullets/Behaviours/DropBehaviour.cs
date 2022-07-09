@@ -8,7 +8,6 @@ namespace Runtime.Bullets.Behaviours
     {
         [SerializeField] protected Rigidbody2D rb;
         [SerializeField] private BasicStatsSystem statsSystem;
-
         private BasicStats _stats;
 
         protected virtual void OnEnable()

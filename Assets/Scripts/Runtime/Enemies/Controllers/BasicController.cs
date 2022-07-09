@@ -1,6 +1,7 @@
 ﻿using Runtime.Enemies.Animations;
 using Runtime.Enemies.CombatSystems;
 using Runtime.Enemies.Stats;
+using Runtime.Interfaces;
 using UnityEngine;
 
 namespace Runtime.Enemies.Controllers
@@ -13,7 +14,7 @@ namespace Runtime.Enemies.Controllers
             anim.MoveForward();
         }
 
-        public static void Attack(BasicCombatSystem combatSystem)
+        public static void Attack(CombatSystem combatSystem)
         {
             combatSystem.Attack();
         }

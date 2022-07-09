@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 8743948735849565589}
   - component: {fileID: 1651649918080226006}
   - component: {fileID: 4251967252394265974}
-  - component: {fileID: 6953403870867304087}
   - component: {fileID: 7695798403426201407}
   - component: {fileID: 3597526804564548858}
   - component: {fileID: 2784012109209078708}
   - component: {fileID: 8203248502027043913}
+  - component: {fileID: 1022326090937054350}
   m_Layer: 7
-  m_Name: FragmentedBomb
+  m_Name: FragmentedBomb 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,20 +76,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6953403870867304087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 893112604172622695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cdc80d140ed4272aa18fa9ab3f9b764, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 4251967252394265974}
-  statsSystem: {fileID: 8203248502027043913}
 --- !u!114 &7695798403426201407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +226,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: b95c4e6eddd0b2b468e9d690ae573ceb, type: 2}
+--- !u!114 &1022326090937054350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893112604172622695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b2ea792aab4df4baf3209ebb8b3082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 4251967252394265974}
+  statsSystem: {fileID: 8203248502027043913}
 --- !u!1 &8181318475132781495
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,18 +7,18 @@ namespace Runtime.Bullets.Behaviours
     public class ForceBehaviour : MonoBehaviour
     {
         [SerializeField] protected Rigidbody2D rb;
-        [SerializeField] private ForceStatsSystem statsSystem;
+        [SerializeField] private BasicStatsSystem statsSystem;
 
-        private ForceStats _stats;
+        private BasicStats _stats;
 
         protected virtual void OnEnable()
         {
-            _stats = statsSystem.ForceStats;
+            _stats = statsSystem.Stats;
         }
 
-        protected virtual void Start()
+        private void FixedUpdate()
         {
-            rb.velocity = transform.up * _stats.force;
+            rb.velocity = transform.up * _stats.moveSpeed;
         }
     }
 }
