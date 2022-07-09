@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 128172438}
   - component: {fileID: 128172437}
   - component: {fileID: 128172436}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128172435}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 23.58, z: 0}
+  m_LocalPosition: {x: 3.59, y: 23.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 456731672}
   - component: {fileID: 456731671}
   - component: {fileID: 456731670}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &556365742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -673,7 +673,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190795008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.71, z: 0}
+  m_LocalPosition: {x: 1.2, y: 2.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -691,7 +691,7 @@ GameObject:
   - component: {fileID: 1570098535}
   - component: {fileID: 1570098534}
   - component: {fileID: 1570098536}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -732,7 +732,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570098533}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.59, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -771,7 +771,7 @@ GameObject:
   - component: {fileID: 1748607493}
   - component: {fileID: 1748607492}
   - component: {fileID: 1748607491}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -884,7 +884,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4417445563579876803, guid: c1964e6d5e1c2484396049e9688f2c81, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4417445563579876806, guid: c1964e6d5e1c2484396049e9688f2c81, type: 3}
       propertyPath: m_RootOrder
@@ -892,7 +892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4417445563579876806, guid: c1964e6d5e1c2484396049e9688f2c81, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.98
+      value: -13.7
       objectReference: {fileID: 0}
     - target: {fileID: 4417445563579876806, guid: c1964e6d5e1c2484396049e9688f2c81, type: 3}
       propertyPath: m_LocalPosition.y

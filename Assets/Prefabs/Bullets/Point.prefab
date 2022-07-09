@@ -233,6 +233,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2888911716931889047}
   statsSystem: {fileID: 8905441896143470167}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!1 &7105727588917373270
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ namespace Runtime.Bullets.Behaviours
     {
         [SerializeField] private Rigidbody2D rb;
         [SerializeField] private BasicStatsSystem statsSystem;
+        [SerializeField] private LayerMask groundLayer;
 
         private BasicStats _stats;
         private Vector2 _startPoint;
@@ -39,25 +40,49 @@ namespace Runtime.Bullets.Behaviours
             _time = 0f;
             Vector2 dir = (_endPoint - _startPoint).normalized;
             RotateToDir(dir);
+            _heightPoint = GetHeightPoint(dir);
+            if (IsImpactGround()) _heightPoint = GetHeightPoint(-dir);
+        }
+
+        private Vector2 GetHeightPoint(Vector2 dir)
+        {
             Vector2 normalVector = Vector2.zero;
             normalVector.x = -dir.y;
             normalVector.y = dir.x;
-            _heightPoint = Vector2.Lerp(_endPoint, _startPoint, .5f);
-            _heightPoint += normalVector * _curveHeight;
+            Vector2 heightPoint = Vector2.Lerp(_endPoint, _startPoint, .5f);
+            heightPoint += normalVector * _curveHeight;
+            return heightPoint;
         }
 
-        private Vector2 GetNextPosition()
+        private bool IsImpactGround()
+        {
+            float time = 0f;
+            while (time < 1f)
+            {
+                Vector2 movePoint = GetNextPosition(time);
+                time += _stats.moveSpeed * Time.fixedDeltaTime / 5f;
+                Collider2D col = Physics2D.OverlapPoint(movePoint, groundLayer);
+                if (col != null)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private Vector2 GetNextPosition(float time)
         {
             Vector2 nextPosition;
             if (_hasCurve)
             {
-                Vector2 pointA = Vector2.Lerp(_startPoint, _heightPoint, _time);
-                Vector2 pointB = Vector2.Lerp(_heightPoint, _endPoint, _time);
-                nextPosition = Vector2.Lerp(pointA, pointB, _time);
+                Vector2 pointA = Vector2.Lerp(_startPoint, _heightPoint, time);
+                Vector2 pointB = Vector2.Lerp(_heightPoint, _endPoint, time);
+                nextPosition = Vector2.Lerp(pointA, pointB, time);
             }
             else
             {
-                nextPosition = Vector2.Lerp(_startPoint, _endPoint, _time);
+                nextPosition = Vector2.Lerp(_startPoint, _endPoint, time);
             }
 
             return nextPosition;
@@ -66,7 +91,7 @@ namespace Runtime.Bullets.Behaviours
         private void FixedUpdate()
         {
             if (_time >= 1f) return;
-            Vector2 nextPosition = GetNextPosition();
+            Vector2 nextPosition = GetNextPosition(_time);
             Vector2 currentPosition = transform.position;
             Vector2 dir = nextPosition - currentPosition;
             RotateToDir(dir);
