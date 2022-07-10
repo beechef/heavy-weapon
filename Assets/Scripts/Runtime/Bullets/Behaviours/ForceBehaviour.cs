@@ -13,6 +13,11 @@ namespace Runtime.Bullets.Behaviours
 
         protected virtual void OnEnable()
         {
+            OnInit();
+        }
+
+        private void OnInit()
+        {
             _stats = statsSystem.Stats;
         }
 

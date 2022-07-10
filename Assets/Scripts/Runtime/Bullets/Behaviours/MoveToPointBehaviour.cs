@@ -1,7 +1,9 @@
-﻿using Runtime.Bullets.Stats;
+﻿using System;
+using Runtime.Bullets.Stats;
 using Runtime.Bullets.StatsSystems;
 using Runtime.Enemy;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Runtime.Bullets.Behaviours
 {
@@ -10,19 +12,24 @@ namespace Runtime.Bullets.Behaviours
         [SerializeField] private Rigidbody2D rb;
         [SerializeField] private BasicStatsSystem statsSystem;
         [SerializeField] private LayerMask groundLayer;
+        [SerializeField] private Vector2 size;
 
         private BasicStats _stats;
         private Vector2 _startPoint;
         private Vector2 _endPoint;
         private Vector2 _heightPoint;
-        private bool _hasCurve;
         private float _curveHeight;
         private float _time = 1f;
 
         private void OnEnable()
         {
+            OnInit();
+        }
+
+        private void OnInit()
+        {
             _stats = statsSystem.Stats;
-            SetPoint(PlayerPosition.GetNearestPlayerPosition(transform.position), Random.Range(0, 1) == 0, 5f);
+            SetPoint(PlayerPosition.GetNearestPlayerPosition(transform.position), 5f);
         }
 
         private void RotateToDir(Vector2 dir)
@@ -31,17 +38,17 @@ namespace Runtime.Bullets.Behaviours
             transform.rotation = Quaternion.Euler(0f, 0f, rotationZ + 90f);
         }
 
-        public void SetPoint(Vector2 point, bool hasCurve, float curveHeight)
+        public void SetPoint(Vector2 point, float curveHeight)
         {
             _startPoint = transform.position;
             _endPoint = point;
-            _hasCurve = hasCurve;
             _curveHeight = curveHeight;
             _time = 0f;
             Vector2 dir = (_endPoint - _startPoint).normalized;
             RotateToDir(dir);
             _heightPoint = GetHeightPoint(dir);
             if (IsImpactGround()) _heightPoint = GetHeightPoint(-dir);
+            if (IsImpactGround()) _heightPoint = point;
         }
 
         private Vector2 GetHeightPoint(Vector2 dir)
@@ -60,8 +67,8 @@ namespace Runtime.Bullets.Behaviours
             while (time < 1f)
             {
                 Vector2 movePoint = GetNextPosition(time);
-                time += _stats.moveSpeed * Time.fixedDeltaTime / 5f;
-                Collider2D col = Physics2D.OverlapPoint(movePoint, groundLayer);
+                time += Time.fixedDeltaTime / 5f;
+                Collider2D col = Physics2D.OverlapBox(movePoint, size, 0f, groundLayer);
                 if (col != null)
                 {
                     return true;
@@ -73,17 +80,9 @@ namespace Runtime.Bullets.Behaviours
 
         private Vector2 GetNextPosition(float time)
         {
-            Vector2 nextPosition;
-            if (_hasCurve)
-            {
-                Vector2 pointA = Vector2.Lerp(_startPoint, _heightPoint, time);
-                Vector2 pointB = Vector2.Lerp(_heightPoint, _endPoint, time);
-                nextPosition = Vector2.Lerp(pointA, pointB, time);
-            }
-            else
-            {
-                nextPosition = Vector2.Lerp(_startPoint, _endPoint, time);
-            }
+            Vector2 pointA = Vector2.Lerp(_startPoint, _heightPoint, time);
+            Vector2 pointB = Vector2.Lerp(_heightPoint, _endPoint, time);
+            var nextPosition = Vector2.Lerp(pointA, pointB, time);
 
             return nextPosition;
         }

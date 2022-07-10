@@ -1,4 +1,5 @@
-﻿using Runtime.Bullets.Animations;
+﻿using System;
+using Runtime.Bullets.Animations;
 using Runtime.Bullets.StatsSystems;
 using Runtime.Interfaces;
 using UnityEngine;
@@ -19,12 +20,21 @@ namespace Runtime.Bullets
 
         protected virtual void OnEnable()
         {
+            OnInit();
+        }
+
+        protected virtual void Start()
+        {
+            GODictionary.AddVulnerableGO(gameObject, this);
+        }
+
+        protected virtual void OnInit()
+        {
             coll.enabled = true;
             Stats = statsSystem.Stats;
             audioSource.loop = false;
             audioSource.playOnAwake = false;
             PlayAudio(startClip);
-            GODictionary.AddVulnerableGO(gameObject, this);
         }
 
         protected void PlayAudio(AudioClip audioClip)
