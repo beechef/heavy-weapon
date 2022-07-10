@@ -25,7 +25,6 @@ namespace Runtime.Bullets
 
         private void CreateShape()
         {
-            Vector2 pos = transform.position;
             foreach (var piece in shape)
             {
                 SpawnFragment(piece);

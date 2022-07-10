@@ -23,6 +23,11 @@ namespace Runtime.Bullets.Behaviours
 
         private void OnEnable()
         {
+            OnInit();
+        }
+
+        private void OnInit()
+        {
             _stats = statsSystem.Stats;
             SetPoint(PlayerPosition.GetNearestPlayerPosition(transform.position), 5f);
         }

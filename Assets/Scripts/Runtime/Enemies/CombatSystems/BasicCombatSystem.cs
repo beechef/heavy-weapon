@@ -23,6 +23,11 @@ namespace Runtime.Enemies.CombatSystems
 
         protected virtual void OnEnable()
         {
+            OnInit();
+        }
+
+        protected virtual void OnInit()
+        {
             coll.enabled = true;
             _stats = statsSystem.Stats;
             audioSource.loop = false;

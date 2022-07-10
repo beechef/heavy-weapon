@@ -10,6 +10,11 @@ namespace Runtime.Bullets.StatsSystems
 
         protected virtual void OnEnable()
         {
+            OnInit();
+        }
+
+        protected virtual void OnInit()
+        {
             stats = Instantiate(stats);
             stats.health = stats.maxHealth;
         }

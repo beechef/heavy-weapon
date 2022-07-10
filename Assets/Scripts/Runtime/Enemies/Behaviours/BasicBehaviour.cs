@@ -14,10 +14,15 @@ namespace Runtime.Enemies.Behaviours
         [SerializeField] private BasicAnimation anim;
         [SerializeField] private CombatSystem combatSystem;
         [SerializeField] private BasicStatsSystem statsSystem;
-        
+
         private BasicStats _stats;
 
         protected virtual void OnEnable()
+        {
+            OnInit();
+        }
+
+        protected virtual void OnInit()
         {
             _stats = statsSystem.Stats;
         }

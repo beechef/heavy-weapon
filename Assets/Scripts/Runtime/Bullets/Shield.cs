@@ -8,9 +8,9 @@ namespace Runtime.Bullets
         [SerializeField] private float scale = 1f;
         [SerializeField] private bool isPlayOnAwake = true;
 
-        protected override void OnEnable()
+        protected override void OnInit()
         {
-            base.OnEnable();
+            base.OnInit();
             if (isPlayOnAwake)
             {
                 TurnOn();

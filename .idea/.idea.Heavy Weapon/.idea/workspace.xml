@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce7e8cd7-a3b1-48cf-9d43-c9c8823b1bf4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Heavy Weapon/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Heavy Weapon/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Shield.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Shield.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/BasicBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/BasicBullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/DropBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/DropBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/ForceBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/ForceBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/MoveToPointBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/MoveToPointBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/TraceBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/TraceBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/FragmentedBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/FragmentedBullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Shield.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Shield.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/StatsSystems/BasicStatsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/StatsSystems/BasicStatsSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/BasicBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/BasicBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BasicCombatSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BasicCombatSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/StatsSystems/BasicStatsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/StatsSystems/BasicStatsSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,20 +37,24 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/DirectMoveBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/ForwardMoveBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/DropBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Interfaces/IAttackable.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BasicCombatSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/BasicBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Controllers/BasicController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/CombatSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Stats/BasicStats.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/PlayerPosition.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/DirectionCombatSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/FragmentedBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Spawner/EnemySpawner.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/ForceBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Shield.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/FragmentedBullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/StatsSystems/BasicStatsSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/TraceBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/MoveToPointBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/ForceBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/DropBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/BasicBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/BasicBullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BasicCombatSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/CombatSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/StatsSystems/BasicStatsSystem.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2BhJJB9rgYr0IQAWNq5chfxuza7" />
