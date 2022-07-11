@@ -12,15 +12,8 @@ public class ShootByPressMouse : MonoBehaviour
     [SerializeField] private GameObject casingPrefab;
     [SerializeField] private AudioSource tankFireAudio;
 
-    private void Start()
-    {
-      
-    }
-
     void Update()
     {
-        
-       
         if (Input.GetMouseButtonDown(0))
         {
             // create bullet, config direction
@@ -32,7 +25,6 @@ public class ShootByPressMouse : MonoBehaviour
             barrelTrans.DOPunchPosition(new Vector3(0f,1f,0f) * -0.1f, 0.1f);
             podTrans.DORewind();
             podTrans.DOPunchScale(new Vector3(1f, -1f, 0f) * 0.3f, 0.2f);
-
         }
     }
 }

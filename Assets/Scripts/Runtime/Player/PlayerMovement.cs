@@ -1,57 +1,74 @@
-using System;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.Assertions.Must;
 using UnityEngine.Events;
-using UnityEngine.PlayerLoop;
-using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed=10f;
-    public bool isMoveRight;
-    private float constantMoveSpeed = 0.5f;
+    [SerializeField] private GameStateSO GameState;
+    [SerializeField] private BoolVariable isMoveRight;
+    private float _constantMoveSpeed = 0.5f;
     [SerializeField] private Animator animator;
-    private float moveDirXValue;
-
+    [SerializeField]private FloatVarible moveDirXValue;
+    [SerializeField] private BoolVariable canGetInput;
     private void Start()
     {
-     
-        isMoveRight = true;
+        isMoveRight.value = true;
         animator.SetFloat("MoveDir",1);
     }
     void Update()
     {
-        Move();
+        if (GameState.State == GameStateSO.GameState.StartGame)
+        {
+            OnGameStart();
+        }
+        if (canGetInput.value)
+        {
+            moveDirXValue.value = Input.GetAxis("Horizontal");
+        }
+        Move(moveDirXValue.value);
     }
+    private void Move(float moveSpeed)
 
-    private void Move()
     {
         Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
         float MoveRightVal=1;
-        if (!isMoveRight)
+        if (!isMoveRight.value)
         {
-            constantMoveSpeed = 0;
+            _constantMoveSpeed = 0;
         }
         else
         {
-            constantMoveSpeed = 0.5f;
+            _constantMoveSpeed = 0.5f;
         }
-        moveDirXValue = Input.GetAxis("Horizontal");
-        
-        Vector3 force = new Vector3(moveDirXValue*speed*Time.deltaTime, 0,0);
-        if (moveDirXValue < 0)
+
+        Vector3 force = new Vector3(moveSpeed*10*Time.deltaTime, 0,0);
+        if (moveSpeed < 0)
         {
-            MoveRightVal = moveDirXValue;
+            MoveRightVal = moveSpeed;
         }
         
-        if (pos.x < 0.1f &&moveDirXValue<0|| pos.x > 0.9f&&moveDirXValue>0)
+        if (pos.x < 0.1f &&moveSpeed<0|| pos.x > 0.9f&&moveSpeed>0)
         {
             force = Vector3.zero;
         }
         
-        transform.localPosition =transform.localPosition + force;
+        transform.localPosition += force;
 
-        animator.SetFloat("MoveDir",moveDirXValue+(constantMoveSpeed*MoveRightVal));
-        
+        animator.SetFloat("MoveDir",moveSpeed+(_constantMoveSpeed*MoveRightVal));
+    }
+    public void OnGameStart()
+    {
+        Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
+        if (pos.x >= 0.5f && pos.x <= 0.51f)
+        {
+            moveDirXValue.value = 0;
+            StartCoroutine(WaitToEnterPlayGameState(1.5f));
+        }
+    }
+
+    IEnumerator WaitToEnterPlayGameState(float time)
+    {
+        yield return new WaitForSeconds(time);
+        GameState.PlayGame();
     }
 }
