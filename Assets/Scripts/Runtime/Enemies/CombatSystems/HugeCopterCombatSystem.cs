@@ -1,5 +1,4 @@
-﻿using Runtime.Enemies.StatsSystems;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Runtime.Enemies.CombatSystems
 {
@@ -26,31 +25,18 @@ namespace Runtime.Enemies.CombatSystems
 
         public override void Attack()
         {
-            if (_currentLauncher.IsCanAttack())
-            {
-                _currentLauncher.Attack();
+            _currentLauncher.Attack();
 
-                anim.Attack();
-            }
-
-            if (leftTurret.IsCanAttack())
+            if (Random.Range(0, 2) == 0)
             {
                 leftTurret.Attack();
             }
-
-            if (rightTurret.IsCanAttack())
+            else
             {
                 rightTurret.Attack();
             }
-        }
 
-
-        public override void TakeDamage(float damage)
-        {
-            anim.Hit();
-            if (!statsSystem.TakeDamage(damage)) return;
-
-            Death();
+            anim.Attack();
         }
     }
 }
