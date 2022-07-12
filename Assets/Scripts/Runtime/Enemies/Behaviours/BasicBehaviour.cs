@@ -1,9 +1,7 @@
 ﻿using Runtime.Enemies.Animations;
 using Runtime.Enemies.CombatSystems;
-using Runtime.Enemies.Controllers;
 using Runtime.Enemies.Stats;
 using Runtime.Enemies.StatsSystems;
-using Runtime.Interfaces;
 using UnityEngine;
 
 namespace Runtime.Enemies.Behaviours
@@ -31,12 +29,23 @@ namespace Runtime.Enemies.Behaviours
         {
             if (combatSystem.IsCanAttack())
             {
-                BasicController.Attack(combatSystem);
+                Attack();
             }
             else
             {
-                BasicController.MoveForward(rb, _stats, anim);
+                MoveForward();
             }
+        }
+
+        private void MoveForward()
+        {
+            rb.velocity = rb.transform.right * _stats.moveSpeed;
+            anim.MoveForward();
+        }
+
+        private void Attack()
+        {
+            combatSystem.Attack();
         }
     }
 }

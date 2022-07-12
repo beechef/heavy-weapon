@@ -5,7 +5,7 @@ namespace Runtime.Bullets
 {
     public class FragmentedBullet : BasicBullet
     {
-        [SerializeField] private GameObject fragmentPrefab;
+        [SerializeField] private string fragmentPrefab;
 
         [SerializeField] private List<Vector2> shape = new List<Vector2>()
         {
@@ -31,11 +31,11 @@ namespace Runtime.Bullets
             }
         }
 
-        private void SpawnFragment(Vector2 dir)
+        private async void SpawnFragment(Vector2 dir)
         {
-            GameObject go = Instantiate(fragmentPrefab, transform.position, Quaternion.identity);
             float rotationZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            go.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ - 90f);
+            GameObject go = await pooling.GetAsync(fragmentPrefab, transform.position,
+                Quaternion.Euler(0f, 0f, rotationZ - 90f));
         }
     }
 }

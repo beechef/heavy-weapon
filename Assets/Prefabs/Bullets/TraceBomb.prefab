@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6830594586584505740}
   - component: {fileID: 169606012670436971}
   - component: {fileID: 8905441896143470167}
+  - component: {fileID: 1889939090678160614}
   m_Layer: 7
   m_Name: TraceBomb
   m_TagString: Untagged
@@ -94,6 +95,7 @@ MonoBehaviour:
   startClip: {fileID: 8300000, guid: dae9de61f2369bb47858ac7aec73b54e, type: 3}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 431970146182248503}
+  pooling: {fileID: 1889939090678160614}
 --- !u!114 &8793440657999818686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +235,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: feabaa092904c37409e2e46ad258e105, type: 2}
+--- !u!114 &1889939090678160614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2265738841553875334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1969491cda1a4180a23fe6c2760c804e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7105727588917373270
 GameObject:
   m_ObjectHideFlags: 0

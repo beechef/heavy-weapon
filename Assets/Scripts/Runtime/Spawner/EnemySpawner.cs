@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.AddressableAssets.Pooling;
 
 namespace Runtime.Spawner
 {
@@ -9,6 +10,7 @@ namespace Runtime.Spawner
     {
         [SerializeField] private List<EnemyWave> enemyWaves;
 
+        [SerializeField] private Pooling spawner;
 
         private void Update()
         {
@@ -30,9 +32,9 @@ namespace Runtime.Spawner
             {
                 for (int i = 0; i < enemyPack.quantity; i++)
                 {
-                    GameObject go = Instantiate(enemyPack.enemyPrefab);
+                    GameObject go = await spawner.GetAsync(enemyPack.enemyPrefab, enemyPack.transform.position,
+                        Quaternion.identity);
                     Transform cachedTransform = go.transform;
-                    cachedTransform.position = enemyPack.transform.position;
 
                     switch (enemyPack.direction)
                     {

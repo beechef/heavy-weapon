@@ -19,10 +19,6 @@ namespace Runtime.Bullets.Behaviours
         private void OnInit()
         {
             _stats = statsSystem.Stats;
-        }
-
-        private void FixedUpdate()
-        {
             rb.velocity = transform.up * _stats.moveSpeed;
         }
     }

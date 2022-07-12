@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Cysharp.Threading.Tasks;
 using Runtime.Bullets.Animations;
 using Runtime.Bullets.StatsSystems;
 using Runtime.Interfaces;
@@ -16,6 +16,7 @@ namespace Runtime.Bullets
         [SerializeField] protected AudioClip startClip;
         [SerializeField] protected AudioClip deathClip;
         [SerializeField] protected Collider2D coll;
+        [SerializeField] protected Pooling pooling;
         public BasicStats Stats { get; protected set; }
 
         protected virtual void OnEnable()
@@ -57,13 +58,14 @@ namespace Runtime.Bullets
             coll.enabled = false;
             anim.Death();
             PlayAudio(deathClip);
-            Destroy(gameObject, .2f);
+            pooling.Return(gameObject, .2f).Forget();
         }
 
         private void OnCollisionEnter2D(Collision2D other)
         {
             OnCollision(other.collider);
-            if (other.gameObject.CompareTag(TagName.Ground))
+            if (other.gameObject.CompareTag(TagName.Ground) || other.gameObject.CompareTag(TagName.Player) ||
+                other.gameObject.CompareTag(TagName.Enemy))
                 Death();
         }
 

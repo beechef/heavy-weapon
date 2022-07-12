@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 9091995370324343341}
   - component: {fileID: 2392021660416319047}
   - component: {fileID: 173797643120135830}
+  - component: {fileID: 2694652505396239460}
   m_Layer: 6
   m_Name: Bomber
   m_TagString: Untagged
@@ -181,10 +182,11 @@ MonoBehaviour:
   statsSystem: {fileID: 9091995370324343341}
   attackPoint: {fileID: 7201887586847008486}
   bulletPrefabs:
-  - {fileID: 2265738841553875334, guid: aad5e981bec80d94d9bf78614320b8d8, type: 3}
+  - TraceBomb
   audioSource: {fileID: 173797643120135830}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 2392021660416319048}
+  pooling: {fileID: 2694652505396239460}
 --- !u!82 &173797643120135830
 AudioSource:
   m_ObjectHideFlags: 0
@@ -281,6 +283,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2694652505396239460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7703602690142597864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1969491cda1a4180a23fe6c2760c804e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7703602690269392544
 GameObject:
   m_ObjectHideFlags: 0
