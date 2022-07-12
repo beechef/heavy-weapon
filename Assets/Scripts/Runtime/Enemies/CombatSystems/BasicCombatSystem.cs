@@ -89,9 +89,9 @@ namespace Runtime.Enemies.CombatSystems
             Death();
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
+        protected virtual void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.CompareTag(TagName.Ground))
+            if (other.gameObject.CompareTag(TagName.Ground))
                 pooling.Return(gameObject, .2f).Forget();
         }
     }

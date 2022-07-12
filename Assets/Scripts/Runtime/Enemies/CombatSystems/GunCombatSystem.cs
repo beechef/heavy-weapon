@@ -15,8 +15,6 @@ namespace Runtime.Enemies.CombatSystems
             LastAttack = Time.time;
 
             SpawnBullet().Forget();
-
-            anim.Attack();
         }
 
         protected override async UniTask SpawnBullet()
