@@ -3,16 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class GameSession : MonoBehaviour
 {
     [SerializeField] private BoolVariable isMoveRight;
-    [SerializeField] private FloatVarible moveRightSpeed;
+    [SerializeField] private FloatVarible moveLeftSpeed;
     [SerializeField] private FloatVarible tankMoveSpeed;
     [SerializeField] private GameStateSO gameStateSo;
     [SerializeField] private BoolVariable canGetInput;
-
-
+    
     private void Update()
     {
         switch (gameStateSo.State)
@@ -42,7 +42,7 @@ public class GameSession : MonoBehaviour
     {
         canGetInput.value = false;
         isMoveRight.value = false;
-        moveRightSpeed.value = 0f;
+        moveLeftSpeed.value = 0f;
         tankMoveSpeed.value = 1f;
  
     }
@@ -51,7 +51,7 @@ public class GameSession : MonoBehaviour
     {
         canGetInput.value = true;
         isMoveRight.value = true;
-        moveRightSpeed.value = 1;
+        moveLeftSpeed.value = 1;
       
     }
 
@@ -59,14 +59,14 @@ public class GameSession : MonoBehaviour
     {
         canGetInput.value = true;
         isMoveRight.value = false;
-        moveRightSpeed.value = 0;
+        moveLeftSpeed.value = 0;
     }
 
     void OnFinishGame()
     {
         canGetInput.value = false;
         isMoveRight.value = true;
-        moveRightSpeed.value = 2f;
+        moveLeftSpeed.value = 2f;
         tankMoveSpeed.value = 1.5f;
 
     }
@@ -75,7 +75,7 @@ public class GameSession : MonoBehaviour
     {
         canGetInput.value = false;
         isMoveRight.value = false;
-        moveRightSpeed.value = 0;
+        moveLeftSpeed.value = 0;
         tankMoveSpeed.value = 0;
     }
     
