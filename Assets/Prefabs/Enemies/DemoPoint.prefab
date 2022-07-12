@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 2992671773298855174}
   - component: {fileID: 6182367550383684029}
   - component: {fileID: 2992671773298855175}
+  - component: {fileID: 9221030284606933625}
   m_Layer: 6
   m_Name: DemoPoint
   m_TagString: Untagged
@@ -351,10 +352,23 @@ MonoBehaviour:
   statsSystem: {fileID: 2992671773298855174}
   attackPoint: {fileID: 3771593281368166861}
   bulletPrefabs:
-  - {fileID: 893112604172622695, guid: 6b9d8538c593ed04591069b19a495cf8, type: 3}
+  - Point
   audioSource: {fileID: 6182367550383684029}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 8545423645937969507}
+  pooling: {fileID: 9221030284606933625}
+--- !u!114 &9221030284606933625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4417445563579876803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1969491cda1a4180a23fe6c2760c804e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8291175110576147445
 GameObject:
   m_ObjectHideFlags: 0

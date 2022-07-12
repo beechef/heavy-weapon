@@ -5,7 +5,7 @@ namespace Runtime.Spawner
     [System.Serializable]
     public class EnemyPack
     {
-        public GameObject enemyPrefab;
+        public string enemyPrefab;
         public int quantity;
         public float delayTime;
         public float delayNextPack;

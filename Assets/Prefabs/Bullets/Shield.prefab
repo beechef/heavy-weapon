@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3152116375479419735}
   - component: {fileID: 3152116375479419734}
   - component: {fileID: 3152116375479419721}
+  - component: {fileID: 5352208805738215640}
   m_Layer: 7
   m_Name: Shield
   m_TagString: Untagged
@@ -71,6 +72,7 @@ MonoBehaviour:
   startClip: {fileID: 8300000, guid: 432395b2d8df70d43ae7ce438cfd480d, type: 3}
   deathClip: {fileID: 8300000, guid: fda10ba33baf73044b599f5515d59588, type: 3}
   coll: {fileID: 3152116375479419733}
+  pooling: {fileID: 5352208805738215640}
   renderer: {fileID: 3152116375943159602}
   scale: 1
   isPlayOnAwake: 1
@@ -199,6 +201,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5352208805738215640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3152116375479419723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1969491cda1a4180a23fe6c2760c804e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3152116375943159607
 GameObject:
   m_ObjectHideFlags: 0

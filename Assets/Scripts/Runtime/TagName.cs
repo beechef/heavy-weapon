@@ -2,8 +2,8 @@
 {
     public static class TagName
     {
-        public static readonly string Enemy = "Enemy";
-        public static readonly string Player = "Player";
-        public static readonly string Ground = "Ground";
+        public const string Enemy = "Enemy";
+        public const string Player = "Player";
+        public const string Ground = "Ground";
     }
 }

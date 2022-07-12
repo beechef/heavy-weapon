@@ -4,7 +4,7 @@ using BasicStats = Runtime.Bullets.Stats.BasicStats;
 
 namespace Runtime.Bullets.Behaviours
 {
-    public class DropBehaviour : MonoBehaviour
+    public class MoveDownBehaviour : MonoBehaviour
     {
         [SerializeField] protected Rigidbody2D rb;
         [SerializeField] private BasicStatsSystem statsSystem;
@@ -22,9 +22,8 @@ namespace Runtime.Bullets.Behaviours
 
         protected virtual void FixedUpdate()
         {
-            Vector2 velocity = rb.velocity;
-            velocity.y -= _stats.moveSpeed * Time.deltaTime;
-            rb.velocity = velocity;
+            Vector2 velocity = -transform.up * (_stats.moveSpeed * Time.deltaTime);
+            rb.velocity += velocity;
         }
     }
 }

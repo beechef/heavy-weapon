@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2784012109209078708}
   - component: {fileID: 8203248502027043913}
   - component: {fileID: 1022326090937054350}
+  - component: {fileID: 944054520523612560}
   m_Layer: 7
   m_Name: FragmentedBomb 1
   m_TagString: Untagged
@@ -206,7 +207,8 @@ MonoBehaviour:
   startClip: {fileID: 8300000, guid: dae9de61f2369bb47858ac7aec73b54e, type: 3}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 1651649918080226006}
-  fragmentPrefab: {fileID: 5566753665572755347, guid: 0c134a59b3ba96f439c4c0b756432369, type: 3}
+  pooling: {fileID: 944054520523612560}
+  fragmentPrefab: BombFragment
   shape:
   - {x: 0, y: 1}
   - {x: -1, y: 0}
@@ -244,6 +246,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   size: {x: 0.5, y: 0.5}
+--- !u!114 &944054520523612560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893112604172622695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1969491cda1a4180a23fe6c2760c804e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8181318475132781495
 GameObject:
   m_ObjectHideFlags: 0

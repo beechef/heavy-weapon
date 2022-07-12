@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 8780202369523713502}
   - component: {fileID: -6703177278094199269}
   - component: {fileID: 1346416372482181136}
+  - component: {fileID: -7615524969838067081}
   m_Layer: 7
   m_Name: DumbBomb
   m_TagString: Untagged
@@ -213,6 +214,7 @@ MonoBehaviour:
   startClip: {fileID: 8300000, guid: dae9de61f2369bb47858ac7aec73b54e, type: 3}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 431970146182248503}
+  pooling: {fileID: -7615524969838067081}
 --- !u!114 &8780202369523713502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,3 +340,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: e052e0503cdc53c4391bf563453524d7, type: 2}
+--- !u!114 &-7615524969838067081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2265738841553875334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1969491cda1a4180a23fe6c2760c804e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
