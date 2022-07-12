@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
+
   - BossPoint
+
+  - Ground
+
   layers:
   - Default
   - TransparentFX
@@ -12,11 +16,19 @@ TagManager:
   - 
   - Water
   - UI
+
   - Player
   - Point
   - 
   - 
   - 
+
+  - Enemy
+  - EnemyBullet
+  - Player
+  - PlayerBullet
+  - Ground
+
   - 
   - 
   - 
