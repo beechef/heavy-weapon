@@ -6,6 +6,7 @@ namespace Runtime.Bullets.Stats
     public class BasicStats : ScriptableObject
     {
         public float attack;
+        public float attackSpeed;
         public float health;
         public float maxHealth;
         public float moveSpeed;

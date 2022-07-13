@@ -1,5 +1,5 @@
-﻿using System;
-using Cysharp.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Runtime.Interfaces;
 using UnityEngine;
 
 namespace Runtime.Bullets
@@ -8,14 +8,13 @@ namespace Runtime.Bullets
     {
         [SerializeField] private LineRenderer lineRenderer;
         [SerializeField] private LayerMask groundMask;
-        Vector3 _startPoint, _endPoint;
+        private Vector3 _startPoint, _endPoint;
+        private float _lastAttack;
 
-        protected override void OnEnable()
+        private void FixedUpdate()
         {
-            base.OnEnable();
             CreateLaser();
             Attack();
-            Death();
         }
 
         private void CreateLaser()
@@ -24,20 +23,20 @@ namespace Runtime.Bullets
             _startPoint = cachedTransform.position;
             var rayCastHit = Physics2D.Raycast(_startPoint, cachedTransform.up,
                 float.MaxValue, groundMask);
-            
+
             _endPoint = rayCastHit.point;
             lineRenderer.SetPosition(0, _startPoint);
             lineRenderer.SetPosition(1, _endPoint);
         }
 
-        protected override async void Death()
+        protected override void Death()
         {
-            await UniTask.Delay(TimeSpan.FromSeconds(.01f));
-            base.Death();
         }
 
         private void Attack()
         {
+            if (Time.time - _lastAttack <= 1f / Stats.attackSpeed) return;
+            _lastAttack = Time.time;
             var rayCastHits = Physics2D.RaycastAll(_startPoint, transform.up);
             foreach (var rayCastHit in rayCastHits)
             {

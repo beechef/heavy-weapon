@@ -17,21 +17,36 @@ namespace Runtime
             EnemyPositions.Remove(transform);
         }
 
-        public static Vector3 GetNearestEnemyPosition(Transform playerTransform)
+        public static TransformData GetNearestEnemyPosition(Transform playerTransform,
+            List<Transform> ignoreTransforms)
         {
-            Vector3 minPos = playerTransform.up;
+            ignoreTransforms ??= new List<Transform>();
+            Transform minTransform = null;
             Vector3 playerPos = playerTransform.position;
+            Vector3 minPos = playerTransform.up + playerPos;
             float minDistance = float.MaxValue;
             foreach (var enemyPosition in EnemyPositions)
             {
+                if (ignoreTransforms.Contains(enemyPosition)) continue;
                 float distance = Vector3.Distance(playerPos, enemyPosition.position);
                 if (distance < minDistance)
                 {
                     minDistance = distance;
+                    minTransform = enemyPosition;
                     minPos = enemyPosition.position;
                 }
             }
-            return minPos;
+
+            TransformData transformData;
+            transformData.Position = minPos;
+            transformData.Transform = minTransform;
+            return transformData;
         }
+    }
+
+    public struct TransformData
+    {
+        public Transform Transform;
+        public Vector3 Position;
     }
 }

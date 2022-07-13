@@ -21,6 +21,7 @@ namespace Runtime.Enemies.CombatSystems
 
         protected Stats.BasicStats Stats;
         protected float LastAttack = 0f;
+        protected bool IsDeath;
 
         protected virtual void OnEnable()
         {
@@ -29,6 +30,7 @@ namespace Runtime.Enemies.CombatSystems
 
         protected virtual void OnInit()
         {
+            IsDeath = false;
             coll.enabled = true;
             Stats = statsSystem.Stats;
             audioSource.loop = false;
@@ -48,6 +50,7 @@ namespace Runtime.Enemies.CombatSystems
 
         public override void Attack()
         {
+            if (IsDeath) return;
             if (!IsCanAttack()) return;
             LastAttack = Time.time;
 
@@ -79,6 +82,7 @@ namespace Runtime.Enemies.CombatSystems
 
         public virtual void Death(float delay)
         {
+            IsDeath = true;
             coll.enabled = false;
             PlaySound(deathClip);
             anim.Death();
@@ -88,7 +92,6 @@ namespace Runtime.Enemies.CombatSystems
         public override void TakeDamage(float damage)
         {
             anim.Hit();
-
             if (!statsSystem.TakeDamage(damage)) return;
             Death(.2f);
         }
