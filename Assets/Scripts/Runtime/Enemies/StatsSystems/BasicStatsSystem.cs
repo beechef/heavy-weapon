@@ -1,4 +1,5 @@
-﻿using Runtime.Enemies.Stats;
+﻿using System;
+using Runtime.Enemies.Stats;
 using UnityEngine;
 
 namespace Runtime.Enemies.StatsSystems
@@ -7,6 +8,11 @@ namespace Runtime.Enemies.StatsSystems
     {
         [SerializeField] private BasicStats stats;
         public BasicStats Stats => stats;
+
+        protected virtual void Awake()
+        {
+            GODictionary.AddBasicEnemyStatsSystemGO(gameObject, this);
+        }
 
         protected virtual void OnEnable()
         {
@@ -25,6 +31,16 @@ namespace Runtime.Enemies.StatsSystems
         {
             stats.health = Mathf.Clamp(stats.health - damage, 0f, stats.maxHealth);
             return IsDead();
+        }
+
+        public virtual void IncreaseAttack(float attack)
+        {
+            stats.attack += attack;
+        }
+
+        public virtual void DecreaseAttack(float attack)
+        {
+            stats.attack -= attack;
         }
     }
 }

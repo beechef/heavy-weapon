@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 3466574081133924476}
   - component: {fileID: 3466574081133924478}
   - component: {fileID: 3466574081133924472}
+  - component: {fileID: 6021707402468923299}
   m_Layer: 6
   m_Name: Right Turret
   m_TagString: Untagged
@@ -331,6 +332,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 6e2562fc8782b0a49bdc0389b40628a1, type: 2}
+--- !u!50 &6021707402468923299
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466574081133924467}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 100
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &3466574081186535010
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,11 +647,11 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3466574081366582418}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -637,7 +659,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &3466574081366582426
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -922,6 +944,7 @@ GameObject:
   - component: {fileID: 3466574081695895022}
   - component: {fileID: 3466574081695895009}
   - component: {fileID: 3466574081695895018}
+  - component: {fileID: 2080661128569581832}
   m_Layer: 6
   m_Name: Left Launcher
   m_TagString: Untagged
@@ -1132,6 +1155,27 @@ MonoBehaviour:
   coll: {fileID: 3466574081695895021}
   pooling: {fileID: 3466574081695895020}
   attackPoint: {fileID: 3466574081695895008}
+--- !u!50 &2080661128569581832
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466574081695895011}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 100
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &3466574081742200139
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,6 +1191,7 @@ GameObject:
   - component: {fileID: 3466574081742200501}
   - component: {fileID: 3466574081742200498}
   - component: {fileID: 3466574081742200136}
+  - component: {fileID: 5154181523609090239}
   m_Layer: 6
   m_Name: Right Launcher
   m_TagString: Untagged
@@ -1357,6 +1402,27 @@ MonoBehaviour:
   coll: {fileID: 3466574081742200503}
   pooling: {fileID: 3466574081742200502}
   attackPoint: {fileID: 3466574081742200137}
+--- !u!50 &5154181523609090239
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466574081742200139}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 100
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &3466574081900119249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,6 +1471,7 @@ GameObject:
   - component: {fileID: 3466574081977804173}
   - component: {fileID: 3466574081977804172}
   - component: {fileID: 3466574081977804279}
+  - component: {fileID: 5000143447633712453}
   m_Layer: 6
   m_Name: Left Turret
   m_TagString: Untagged
@@ -1686,6 +1753,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 6e2562fc8782b0a49bdc0389b40628a1, type: 2}
+--- !u!50 &5000143447633712453
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466574081977804174}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 100
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &3466574082369635124
 GameObject:
   m_ObjectHideFlags: 0

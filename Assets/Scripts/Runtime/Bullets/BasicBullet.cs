@@ -24,7 +24,7 @@ namespace Runtime.Bullets
             OnInit();
         }
 
-        protected virtual void Start()
+        protected virtual void Awake()
         {
             GODictionary.AddVulnerableGO(gameObject, this);
         }
@@ -40,6 +40,8 @@ namespace Runtime.Bullets
 
         protected void PlayAudio(AudioClip audioClip)
         {
+            if (audioClip == null) return;
+
             audioSource.Stop();
             audioSource.clip = audioClip;
             audioSource.Play();
@@ -53,15 +55,15 @@ namespace Runtime.Bullets
             }
         }
 
-        protected virtual void Death()
+        protected virtual async void Death()
         {
             coll.enabled = false;
             anim.Death();
             PlayAudio(deathClip);
-            pooling.Return(gameObject, .2f).Forget();
+            await pooling.Return(gameObject, .2f);
         }
 
-        private void OnCollisionEnter2D(Collision2D other)
+        protected virtual void OnCollisionEnter2D(Collision2D other)
         {
             OnCollision(other.collider);
             if (other.gameObject.CompareTag(TagName.Ground) || other.gameObject.CompareTag(TagName.Player) ||
@@ -69,7 +71,7 @@ namespace Runtime.Bullets
                 Death();
         }
 
-        public void TakeDamage(float damage)
+        public virtual void TakeDamage(float damage)
         {
             anim.Hit();
             if (statsSystem.TakeDamage(damage))

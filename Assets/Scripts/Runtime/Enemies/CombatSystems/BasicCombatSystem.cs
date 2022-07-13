@@ -33,16 +33,17 @@ namespace Runtime.Enemies.CombatSystems
             Stats = statsSystem.Stats;
             audioSource.loop = false;
             audioSource.playOnAwake = false;
+            EnemyPosition.AddPos(transform);
         }
 
-        protected virtual void Start()
+        protected virtual void Awake()
         {
             GODictionary.AddVulnerableGO(gameObject, this);
         }
 
         public override bool IsCanAttack()
         {
-            return Time.time - LastAttack >= Stats.attackSpeed;
+            return Time.time - LastAttack >= 1f / Stats.attackSpeed;
         }
 
         public override void Attack()
@@ -63,36 +64,49 @@ namespace Runtime.Enemies.CombatSystems
                 var randomNumber = Random.Range(0, bulletPrefabs.Count);
                 GameObject go = await pooling.GetAsync(bulletPrefabs[randomNumber], attackPoint.position,
                     attackPoint.rotation);
+                GODictionary.BasicBulletStatsSystemGOs[go].IncreaseAttack(Stats.attack);
                 await UniTask.Delay(TimeSpan.FromSeconds(Stats.attackDelay));
             }
         }
 
-        protected void PlaySound(AudioClip clip)
+        protected void PlaySound(AudioClip audioClip)
         {
+            if (audioClip == null) return;
             audioSource.Stop();
-            audioSource.clip = clip;
+            audioSource.clip = audioClip;
             audioSource.Play();
         }
 
-        public virtual void Death()
+        public virtual void Death(float delay)
         {
             coll.enabled = false;
             PlaySound(deathClip);
             anim.Death();
-            pooling.Return(gameObject, .2f).Forget();
+            pooling.Return(gameObject, delay).Forget();
         }
 
         public override void TakeDamage(float damage)
         {
             anim.Hit();
+
             if (!statsSystem.TakeDamage(damage)) return;
-            Death();
+            Death(.2f);
         }
 
         protected virtual void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.gameObject.CompareTag(TagName.Ground))
+            if (GODictionary.VulnerableGOs.TryGetValue(other.gameObject, out var vulnerable))
+            {
+                vulnerable.TakeDamage(Stats.attack);
+            }
+
+            if (other.gameObject.CompareTag(TagName.Ground) || other.gameObject.CompareTag(TagName.Player))
                 pooling.Return(gameObject, .2f).Forget();
+        }
+
+        protected virtual void OnDisable()
+        {
+            EnemyPosition.RemovePos(transform);
         }
     }
 }

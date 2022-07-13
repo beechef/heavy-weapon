@@ -65,6 +65,10 @@ MonoBehaviour:
     m_Address: Assets/Prefabs/Bullets/SmallBullet.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: da746c8fcbecd0449b88900e0f6a3cb0
+    m_Address: Assets/Prefabs/Enemies/Cruise.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 8ea525bc0b8118747a01b0c4c1320442, type: 2}
   m_SchemaSet:

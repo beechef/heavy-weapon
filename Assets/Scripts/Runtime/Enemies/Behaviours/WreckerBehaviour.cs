@@ -18,7 +18,7 @@ namespace Runtime.Enemies.Behaviours
         private Vector3 _endPoint;
         private float _time = 1f;
 
-        int _sign = -1;
+        sbyte _sign = -1;
 
         protected virtual void OnEnable()
         {
@@ -47,6 +47,14 @@ namespace Runtime.Enemies.Behaviours
 
             rb.MovePosition(Vector3.Lerp(_startPoint, _endPoint, _time));
             _time += _stats.moveSpeed * Time.fixedDeltaTime / 5f;
+        }
+
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            if (other.collider.CompareTag(TagName.Wall))
+            {
+                _time = 1f;
+            }
         }
     }
 }

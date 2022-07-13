@@ -7,10 +7,7 @@ namespace Runtime.Enemies.CombatSystems
 {
     public class BallCombatSystem : BasicCombatSystem
     {
-        [SerializeField] private float ballRadius = 1f;
         [Range(0, 2)] [SerializeField] private float explosionRadius;
-
-        private readonly Collider2D[] _colliders = new Collider2D[5];
 
         protected override void OnEnable()
         {
@@ -26,6 +23,9 @@ namespace Runtime.Enemies.CombatSystems
                 var randomNumber = Random.Range(0, bulletPrefabs.Count);
                 GameObject go = await pooling.GetAsync(bulletPrefabs[randomNumber], attackPoint.position + RandomPos(),
                     RandomQuaternion());
+
+                GODictionary.BasicBulletStatsSystemGOs[go].IncreaseAttack(Stats.attack);
+                
                 await UniTask.Delay(TimeSpan.FromSeconds(Stats.attackDelay));
             }
         }
@@ -40,7 +40,8 @@ namespace Runtime.Enemies.CombatSystems
             return Quaternion.Euler(0f, 0f, Random.Range(-90f, 90f));
         }
 
-        private void OnCollision(Collider2D other)
+
+        protected override void OnCollisionEnter2D(Collision2D other)
         {
             if (other.gameObject.CompareTag(TagName.Ground))
             {
@@ -53,20 +54,6 @@ namespace Runtime.Enemies.CombatSystems
             {
                 vulnerable.TakeDamage(Stats.attack);
             }
-        }
-
-
-        private void FixedUpdate()
-        {
-            var quantity = Physics2D.OverlapCircleNonAlloc(attackPoint.position, ballRadius, _colliders);
-            for (int i = 0; i < quantity; i++)
-            {
-                OnCollision(_colliders[i]);
-            }
-        }
-
-        protected override void OnCollisionEnter2D(Collision2D other)
-        {
         }
     }
 }
