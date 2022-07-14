@@ -12,12 +12,12 @@ namespace Runtime.Enemies.Behaviours
         [SerializeField] private float minAngle;
         [SerializeField] private float maxAngle;
 
-        private BasicStats _stat;
+        private BasicStats _stats;
         private float _duration = 1.5f;
 
         private void OnEnable()
         {
-            _stat = statsSystem.Stats;
+            _stats = statsSystem.Stats;
         }
 
         private void Start()
@@ -28,16 +28,16 @@ namespace Runtime.Enemies.Behaviours
         private async void Rotate()
         {
             await transform.DORotateQuaternion(Quaternion.Euler(new Vector3(0f, 0f, minAngle)),
-                _duration / _stat.moveSpeed).SetEase(Ease.OutSine);
+                _duration / _stats.moveSpeed).SetEase(Ease.OutSine);
 
             await transform.DORotateQuaternion(Quaternion.Euler(new Vector3(0f, 0f, 0f)),
-                _duration / _stat.moveSpeed).SetEase(Ease.InSine);
+                _duration / _stats.moveSpeed).SetEase(Ease.InSine);
 
             await transform.DORotateQuaternion(Quaternion.Euler(new Vector3(0f, 0f, maxAngle)),
-                _duration / _stat.moveSpeed).SetEase(Ease.OutSine);
+                _duration / _stats.moveSpeed).SetEase(Ease.OutSine);
 
             await transform.DORotateQuaternion(Quaternion.Euler(new Vector3(0f, 0f, 0f)),
-                _duration / _stat.moveSpeed).SetEase(Ease.InSine);
+                _duration / _stats.moveSpeed).SetEase(Ease.InSine);
             Rotate();
         }
     }

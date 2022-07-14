@@ -1,4 +1,5 @@
 using System.Collections;
+using Runtime.Player;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,10 +11,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField]private FloatVarible moveDirXValue;
     [SerializeField] private BoolVariable canGetInput;
+    [SerializeField] private PlayerStatsSystem playerStatsSystem;
+
+    private PlayerStats _stats;
     private void Start()
     {
         isMoveRight.value = true;
         animator.SetFloat("MoveDir",1);
+        _stats = playerStatsSystem.Stats;
     }
     void Update()
     {
@@ -25,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         {
             moveDirXValue.value = Input.GetAxis("Horizontal");
         }
-        Move(moveDirXValue.value);
+        Move(moveDirXValue.value * _stats.moveSpeed);
     }
     private void Move(float moveSpeed)
 

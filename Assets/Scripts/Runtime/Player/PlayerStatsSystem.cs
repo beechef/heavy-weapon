@@ -1,22 +1,16 @@
-﻿using Runtime.Enemies.Stats;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Runtime.Enemies.StatsSystems
+namespace Runtime.Player
 {
-    public class BasicStatsSystem : MonoBehaviour
+    public class PlayerStatsSystem : MonoBehaviour
     {
-        public static float AttackScale = 1f;
-        public static float AttackSpeedScale = 1f;
-        public static float MaxHealthScale = 1f;
-        public static float ScoreScale = 1f;
+        [SerializeField] private PlayerStats stats;
 
-        [SerializeField] private BasicStats stats;
-
-        public BasicStats Stats => stats;
+        public PlayerStats Stats => stats;
 
         protected virtual void Awake()
         {
-            GODictionary.AddBasicEnemyStatsSystemGO(gameObject, this);
+            GODictionary.AddPlayerStatsSystem(gameObject, this);
         }
 
         protected virtual void OnEnable()
@@ -27,12 +21,11 @@ namespace Runtime.Enemies.StatsSystems
         protected virtual void OnInit()
         {
             stats = Instantiate(stats);
+            RestoreFullHealth();
+        }
 
-            stats.maxHealth *= MaxHealthScale;
-            stats.attack *= AttackScale;
-            stats.attackSpeed *= AttackSpeedScale;
-            stats.score *= ScoreScale;
-
+        public void RestoreFullHealth()
+        {
             stats.health = stats.maxHealth;
         }
 

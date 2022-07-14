@@ -8,12 +8,7 @@ namespace Runtime.Enemies.CombatSystems
     public class BallCombatSystem : BasicCombatSystem
     {
         [Range(0, 2)] [SerializeField] private float explosionRadius;
-
-        protected override void OnEnable()
-        {
-            base.OnEnable();
-            anim.GetAnimator().speed = Stats.moveSpeed;
-        }
+        
 
         protected override async UniTask SpawnBullet()
         {

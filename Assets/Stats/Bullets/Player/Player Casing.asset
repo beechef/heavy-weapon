@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7025c48625e84f679d8f42efceaf90f2, type: 3}
-  m_Name: Player Lightning Bullet
+  m_Name: Player Casing
   m_EditorClassIdentifier: 
-  attack: 150
+  attack: 0
   attackSpeed: 0
   health: 0
   maxHealth: 0
-  moveSpeed: 8
+  moveSpeed: 1
   score: 0

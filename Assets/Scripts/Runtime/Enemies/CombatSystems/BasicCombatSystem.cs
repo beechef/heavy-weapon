@@ -19,15 +19,12 @@ namespace Runtime.Enemies.CombatSystems
         [SerializeField] protected Pooling pooling;
         [SerializeField] protected Transform attackPoint;
         [SerializeField] protected SavedData savedData;
+        [SerializeField] protected bool isDeadTouch = false;
 
         protected Stats.BasicStats Stats;
         protected float LastAttack = 0f;
         protected bool IsDeath;
         private bool _issavedDataNotNull;
-
-        private void Start()
-        {
-        }
 
         protected virtual void OnEnable()
         {
@@ -89,8 +86,6 @@ namespace Runtime.Enemies.CombatSystems
 
         public virtual void Death(float delay)
         {
-            if (_issavedDataNotNull)
-                savedData.Score += Stats.score;
             IsDeath = true;
             coll.enabled = false;
             PlaySound(deathClip);
@@ -103,6 +98,8 @@ namespace Runtime.Enemies.CombatSystems
             anim.Hit();
             if (!statsSystem.TakeDamage(damage)) return;
             Death(.2f);
+            if (_issavedDataNotNull)
+                savedData.Score += Stats.score;
         }
 
         protected virtual void OnCollisionEnter2D(Collision2D other)
@@ -112,7 +109,8 @@ namespace Runtime.Enemies.CombatSystems
                 vulnerable.TakeDamage(Stats.attack);
             }
 
-            if (other.gameObject.CompareTag(TagName.Ground) || other.gameObject.CompareTag(TagName.Player))
+            if (other.gameObject.CompareTag(TagName.Ground) ||
+                (other.gameObject.CompareTag(TagName.Player) && isDeadTouch))
                 pooling.Return(gameObject, .2f).Forget();
         }
 

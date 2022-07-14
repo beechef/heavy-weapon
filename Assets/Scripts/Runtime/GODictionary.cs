@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Runtime.Interfaces;
+using Runtime.Player;
 using UnityEngine;
 
 namespace Runtime
@@ -20,12 +21,15 @@ namespace Runtime
             private set;
         }
 
+        public static Dictionary<GameObject, PlayerStatsSystem> PlayerStatsSystems { get; private set; }
+
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         public static void Initial()
         {
             VulnerableGOs = new Dictionary<GameObject, IVulnerable>();
             BasicEnemyStatsSystemGOs = new Dictionary<GameObject, Enemies.StatsSystems.BasicStatsSystem>();
             BasicBulletStatsSystemGOs = new Dictionary<GameObject, Bullets.StatsSystems.BasicStatsSystem>();
+            PlayerStatsSystems = new Dictionary<GameObject, PlayerStatsSystem>();
         }
 
         public static void AddVulnerableGO(GameObject key, IVulnerable vulnerable)
@@ -58,6 +62,16 @@ namespace Runtime
         public static void RemoveBasicBulletStatsSystemGO(GameObject key)
         {
             BasicBulletStatsSystemGOs.Remove(key);
+        }
+
+        public static void AddPlayerStatsSystem(GameObject key, PlayerStatsSystem stats)
+        {
+            PlayerStatsSystems.Add(key, stats);
+        }
+
+        public static void RemovePlayerStatsSystem(GameObject key)
+        {
+            PlayerStatsSystems.Remove(key);
         }
     }
 }

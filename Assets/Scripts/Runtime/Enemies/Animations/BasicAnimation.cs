@@ -12,7 +12,6 @@ namespace Runtime.Enemies.Animations
         [SerializeField] protected string attackAnim = "Attack";
         [SerializeField] protected string deathAnim = "Death";
 
-        public Animator GetAnimator() => animator;
 
         public virtual void Idle()
         {

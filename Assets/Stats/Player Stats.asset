@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7025c48625e84f679d8f42efceaf90f2, type: 3}
-  m_Name: Player Lightning Bullet
+  m_Script: {fileID: 11500000, guid: 70f31c84738449e5bf588c57d26ced53, type: 3}
+  m_Name: Player Stats
   m_EditorClassIdentifier: 
-  attack: 150
-  attackSpeed: 0
+  attack: 10
+  attackSpeed: 4
+  moveSpeed: 1
+  amountAttackPoint: 3
   health: 0
-  maxHealth: 0
-  moveSpeed: 8
-  score: 0
+  maxHealth: 100
+  lives: 3

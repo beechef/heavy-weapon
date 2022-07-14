@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7025c48625e84f679d8f42efceaf90f2, type: 3}
   m_Name: Player Basic Bullet
   m_EditorClassIdentifier: 
-  attack: 10
+  attack: 100
+  attackSpeed: 0
   health: 0
   maxHealth: 0
-  moveSpeed: 3
+  moveSpeed: 7
+  score: 0

@@ -18,6 +18,7 @@ namespace Runtime.Bullets
         [SerializeField] protected Collider2D coll;
         [SerializeField] protected Pooling pooling;
         [SerializeField] protected SavedData savedData;
+        private bool _issavedDataNotNull;
         public BasicStats Stats { get; protected set; }
 
         protected virtual void OnEnable()
@@ -28,6 +29,7 @@ namespace Runtime.Bullets
         protected virtual void Awake()
         {
             GODictionary.AddVulnerableGO(gameObject, this);
+            _issavedDataNotNull = savedData != null;
         }
 
         protected virtual void OnInit()
@@ -58,7 +60,6 @@ namespace Runtime.Bullets
 
         protected virtual async void Death()
         {
-            savedData.Score += Stats.score;
             coll.enabled = false;
             anim.Death();
             PlayAudio(deathClip);
@@ -79,6 +80,8 @@ namespace Runtime.Bullets
             if (statsSystem.TakeDamage(damage))
             {
                 Death();
+                if (_issavedDataNotNull)
+                    savedData.Score += Stats.score;
             }
         }
     }
