@@ -17,14 +17,10 @@ namespace Runtime.Enemies.CombatSystems
         [SerializeField] protected AudioClip deathClip;
         [SerializeField] protected Collider2D coll;
         [SerializeField] protected Pooling pooling;
-        [SerializeField] protected Transform attackPoint;
-        [SerializeField] protected SavedData savedData;
-        [SerializeField] protected bool isDeadTouch = false;
+        [SerializeField] public Transform attackPoint;
 
         protected Stats.BasicStats Stats;
         protected float LastAttack = 0f;
-        protected bool IsDeath;
-        private bool _issavedDataNotNull;
 
         protected virtual void OnEnable()
         {
@@ -33,28 +29,24 @@ namespace Runtime.Enemies.CombatSystems
 
         protected virtual void OnInit()
         {
-            IsDeath = false;
             coll.enabled = true;
             Stats = statsSystem.Stats;
             audioSource.loop = false;
             audioSource.playOnAwake = false;
-            EnemyPosition.AddPos(transform);
         }
 
-        protected virtual void Awake()
+        protected virtual void Start()
         {
             GODictionary.AddVulnerableGO(gameObject, this);
-            _issavedDataNotNull = savedData != null;
         }
 
         public override bool IsCanAttack()
         {
-            return Time.time - LastAttack >= 1f / Stats.attackSpeed;
+            return Time.time - LastAttack >= Stats.attackSpeed;
         }
 
         public override void Attack()
         {
-            if (IsDeath) return;
             if (!IsCanAttack()) return;
             LastAttack = Time.time;
 
@@ -71,52 +63,36 @@ namespace Runtime.Enemies.CombatSystems
                 var randomNumber = Random.Range(0, bulletPrefabs.Count);
                 GameObject go = await pooling.GetAsync(bulletPrefabs[randomNumber], attackPoint.position,
                     attackPoint.rotation);
-                GODictionary.BasicBulletStatsSystemGOs[go].IncreaseAttack(Stats.attack);
                 await UniTask.Delay(TimeSpan.FromSeconds(Stats.attackDelay));
             }
         }
 
-        protected void PlaySound(AudioClip audioClip)
+        protected void PlaySound(AudioClip clip)
         {
-            if (audioClip == null) return;
             audioSource.Stop();
-            audioSource.clip = audioClip;
+            audioSource.clip = clip;
             audioSource.Play();
         }
 
-        public virtual void Death(float delay)
+        public virtual void Death()
         {
-            IsDeath = true;
             coll.enabled = false;
             PlaySound(deathClip);
             anim.Death();
-            pooling.Return(gameObject, delay).Forget();
+            pooling.Return(gameObject, .2f).Forget();
         }
 
         public override void TakeDamage(float damage)
         {
             anim.Hit();
             if (!statsSystem.TakeDamage(damage)) return;
-            Death(.2f);
-            if (_issavedDataNotNull)
-                savedData.Score += Stats.score;
+            Death();
         }
 
-        protected virtual void OnCollisionEnter2D(Collision2D other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            if (GODictionary.VulnerableGOs.TryGetValue(other.gameObject, out var vulnerable))
-            {
-                vulnerable.TakeDamage(Stats.attack);
-            }
-
-            if (other.gameObject.CompareTag(TagName.Ground) ||
-                (other.gameObject.CompareTag(TagName.Player) && isDeadTouch))
+            if (other.CompareTag(TagName.Ground))
                 pooling.Return(gameObject, .2f).Forget();
-        }
-
-        protected virtual void OnDisable()
-        {
-            EnemyPosition.RemovePos(transform);
         }
     }
 }

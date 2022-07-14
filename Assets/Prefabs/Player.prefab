@@ -199,7 +199,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 114708431
-  m_SortingLayer: 0
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_Sprite: {fileID: -2003542671, guid: c12da6cc97c5e4b49846cae262cd4ac2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -283,7 +283,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -782802483
-  m_SortingLayer: 0
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3c023909646200e4a82dc91a03a7732c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -367,7 +367,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 114708431
-  m_SortingLayer: 0
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: -2004682928, guid: 2fe12d9bec3879546a53818cdd836cbc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -422,11 +422,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4248698412167995032}
-  - component: {fileID: 1154971971}
   - component: {fileID: 4248698412167995038}
   - component: {fileID: 4248698412167995039}
+  - component: {fileID: 4248698412167995036}
   - component: {fileID: 4248698412167995033}
   - component: {fileID: 1154971972}
+  - component: {fileID: 1154971971}
   - component: {fileID: 1154971969}
   m_Layer: 0
   m_Name: Player
@@ -453,32 +454,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1154971971
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4248698412167995028}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.06}
-    newSize: {x: 1.28, y: 1.06}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.28, y: 1.06}
-  m_EdgeRadius: 0
 --- !u!212 &4248698412167995038
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -518,7 +493,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 114708431
-  m_SortingLayer: 0
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 614299916, guid: 3b480db9543f54c4ea061eb0c40205a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -544,6 +519,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controlTransform: {fileID: 4248698411899564142}
+--- !u!114 &4248698412167995036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4248698412167995028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef3599ea40d5564493705cfe94b8b6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barrelTrans: {fileID: 4248698411754545590}
+  podTrans: {fileID: 4248698411471576383}
+  bulletPrefab: {fileID: 4047733367032560384, guid: c69621f693643564bb10f18af9362139, type: 3}
+  casingPrefab: {fileID: 1389068352347714041, guid: b5a4a65ba5c8e224dbc346572256e0c4, type: 3}
+  tankFireAudio: {fileID: 4248698410354188944}
 --- !u!95 &4248698412167995033
 Animator:
   serializedVersion: 4
@@ -576,11 +568,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c740028347095c448f6621b0054af01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameState: {fileID: 0}
-  isMoveRight: {fileID: 0}
+  speed: 10
+  isMoveRight: 0
   animator: {fileID: 4248698412167995033}
-  moveDirXValue: {fileID: 0}
-  canGetInput: {fileID: 0}
+--- !u!61 &1154971971
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4248698412167995028}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.06}
+    newSize: {x: 1.28, y: 1.06}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.28, y: 1.06}
+  m_EdgeRadius: 0
 --- !u!120 &1154971969
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -620,7 +636,7 @@ LineRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 114708431
-  m_SortingLayer: 0
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Positions:
   - {x: -4.14, y: 0, z: 0}

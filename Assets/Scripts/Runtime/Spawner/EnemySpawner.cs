@@ -33,7 +33,31 @@ namespace Runtime.Spawner
                 for (int i = 0; i < enemyPack.quantity; i++)
                 {
                     GameObject go = await spawner.GetAsync(enemyPack.enemyPrefab, enemyPack.transform.position,
-                        enemyPack.transform.rotation);
+                        Quaternion.identity);
+                    Transform cachedTransform = go.transform;
+
+                    switch (enemyPack.direction)
+                    {
+                        case Direction.Left:
+                        {
+                            cachedTransform.Rotate(Vector3.up * 180);
+                            break;
+                        }
+                        case Direction.Right:
+                        {
+                            break;
+                        }
+                        case Direction.Up:
+                        {
+                            cachedTransform.Rotate(Vector3.forward * 180);
+                            break;
+                        }
+                        case Direction.Down:
+                        {
+                            cachedTransform.Rotate(Vector3.back * 180);
+                            break;
+                        }
+                    }
 
                     await UniTask.Delay(TimeSpan.FromSeconds(enemyPack.delayTime));
                 }

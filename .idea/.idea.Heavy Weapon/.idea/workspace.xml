@@ -2,44 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce7e8cd7-a3b1-48cf-9d43-c9c8823b1bf4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerAnimation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerAnimation.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerCombatSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerCombatSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerStats.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerStats.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerStatsSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerStatsSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/BattleshipBehaviour.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/BattleshipBehaviour.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BattleshipCombatSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BattleshipCombatSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/GunCombatSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/GunCombatSystem.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Heavy Weapon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Heavy Weapon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Bullets/Player/Player Basic Bullet/Player Basic Bullet.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Bullets/Player/Player Basic Bullet/Player Basic Bullet.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Dumb Bomb.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Dumb Bomb.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Red Bomb.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Red Bomb.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Shield.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Shield.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Player/Player Basic Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Player/Player Basic Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Casing.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Casing.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Cruise.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Cruise.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Small Jet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Small Jet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/playerHolder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/playerHolder.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nhan.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Nhan.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayerLogic.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayerLogic.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/BasicBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/BasicBullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Animations/BasicAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Animations/BasicAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/RotateBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/RotateBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BallCombatSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BallCombatSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BasicCombatSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BasicCombatSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/StatsSystems/BasicStatsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/StatsSystems/BasicStatsSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/GODictionary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/GODictionary.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stats/Bullets/Player/Player Basic Bullet.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stats/Bullets/Player/Player Basic Bullet.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stats/Bullets/Player/Player Laser.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stats/Bullets/Player/Player Laser.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stats/Bullets/Player/Player Lightning Bullet.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stats/Bullets/Player/Player Lightning Bullet.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stats/Bullets/Player/Player Mega Laser.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stats/Bullets/Player/Player Mega Laser.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stats/Bullets/Player/Player Missile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stats/Bullets/Player/Player Missile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/BasicBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/BasicBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/HugeCopterCombatSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/HugeCopterCombatSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Controllers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Controllers/BasicController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Controllers/BasicController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,57 +41,46 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/DirectMoveBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/ForwardMoveBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Interfaces/IAttackable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Stats/BasicStats.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/PlayerPosition.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/DirectionCombatSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Shield.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/StatsSystems/BasicStatsSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/TraceBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/DropBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/CombatSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/StatsSystems/BasicStatsSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/TagName.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/MoveDownBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Spawner/EnemyPack.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/ReturnPooling.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/PoolingBullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/MoveAroundToPointBeHaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/MoveAroundToPointBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Controllers/BasicController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/HugeCopter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/LauncherCombatSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Pooling.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Spawner/EnemySpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/InitialPooling.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/BasicBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ReverseClip.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ReverseAnimationContext.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/HugeCopterBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/TurretCombatSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BasicCombatSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/FragmentedBullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/MoveToPointBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/ForceBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/Gravity.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/BattleshipBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/GunCombatSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/BasicBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/MoveDownBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/MoveUpBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/BattleshipBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BattleshipCombatSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/HugeCopterCombatSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/StatsSystems/BasicStatsSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/GunCombatSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/FragmentedBullet.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/AnimateLineRenderer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/EnemyPositions.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/PlayerPosition.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/MoveToPointBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/TagName.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/WreckerBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/FallBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Animations/FallAnimation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/FallBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/TraceBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/EnemyPosition.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/BounceBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/LightningBullet.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/LaserBullet.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/SavedData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Stats/BasicStats.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Stats/BasicStats.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Spawner/EnemyPack.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Spawner/EnemySpawner.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/GODictionary.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/RotateBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BallCombatSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Animations/BasicAnimation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerAnimation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerStatsSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/BasicBullet.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerStats.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BasicCombatSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerCombatSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/StatsSystems/BasicStatsSystem.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2BhJJB9rgYr0IQAWNq5chfxuza7" />
@@ -128,7 +92,6 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -168,13 +131,7 @@
       <workItem from="1657504167043" duration="13827000" />
       <workItem from="1657538257491" duration="4088000" />
       <workItem from="1657589565537" duration="493000" />
-      <workItem from="1657590183973" duration="5007000" />
-      <workItem from="1657618677144" duration="985000" />
-      <workItem from="1657632502704" duration="5603000" />
-      <workItem from="1657670397460" duration="29582000" />
-      <workItem from="1657765342475" duration="2000" />
-      <workItem from="1657780606070" duration="4346000" />
-      <workItem from="1657793302229" duration="7385000" />
+      <workItem from="1657590183973" duration="3757000" />
     </task>
     <servers />
   </component>

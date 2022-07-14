@@ -13,10 +13,9 @@ namespace Runtime.Enemy
             PlayerPositions.Add(playerPosition);
         }
 
-        public static Vector3 GetNearestPlayerPosition(Transform enemyTransform)
+        public static Vector3 GetNearestPlayerPosition(Vector3 enemyPosition)
         {
-            Vector3 nearestPlayerPosition = enemyTransform.up;
-            Vector3 enemyPosition = enemyTransform.position;
+            Vector3 nearestPlayerPosition = Vector3.down;
             float nearestDistance = float.MaxValue;
             foreach (var player in PlayerPositions)
             {

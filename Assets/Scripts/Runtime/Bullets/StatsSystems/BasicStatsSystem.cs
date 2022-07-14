@@ -8,11 +8,6 @@ namespace Runtime.Bullets.StatsSystems
         [SerializeField] protected BasicStats stats;
         public BasicStats Stats => stats;
 
-        protected virtual void Awake()
-        {
-            GODictionary.AddBasicBulletStatsSystemGO(gameObject, this);
-        }
-
         protected virtual void OnEnable()
         {
             OnInit();
@@ -30,16 +25,6 @@ namespace Runtime.Bullets.StatsSystems
         {
             stats.health = Mathf.Clamp(stats.health - damage, 0f, stats.maxHealth);
             return IsDead();
-        }
-
-        public virtual void IncreaseAttack(float attack)
-        {
-            stats.attack += attack;
-        }
-
-        public virtual void DecreaseAttack(float attack)
-        {
-            stats.attack -= attack;
         }
     }
 }

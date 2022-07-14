@@ -6,10 +6,8 @@ namespace Runtime.Bullets.Stats
     public class BasicStats : ScriptableObject
     {
         public float attack;
-        public float attackSpeed;
-        [HideInInspector] public float health;
+        public float health;
         public float maxHealth;
         public float moveSpeed;
-        public float score;
     }
 }
