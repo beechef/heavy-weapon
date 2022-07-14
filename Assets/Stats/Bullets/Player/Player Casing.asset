@@ -16,5 +16,5 @@ MonoBehaviour:
   attackSpeed: 0
   health: 0
   maxHealth: 0
-  moveSpeed: 1
+  moveSpeed: 2
   score: 0

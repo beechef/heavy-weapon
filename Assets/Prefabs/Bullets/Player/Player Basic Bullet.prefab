@@ -92,7 +92,7 @@ MonoBehaviour:
   anim: {fileID: 4531707269649342907}
   statsSystem: {fileID: 4531707269649342906}
   audioSource: {fileID: 4531707269649342905}
-  startClip: {fileID: 0}
+  startClip: {fileID: 8300000, guid: 05774a5ceef320e48a5207de6a264231, type: 3}
   deathClip: {fileID: 8300000, guid: 98a813fe36a2b894dab526786f42556d, type: 3}
   coll: {fileID: 4531707269649342902}
   pooling: {fileID: 4531707269649342904}

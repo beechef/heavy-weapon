@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8689213770606426511}
   - component: {fileID: 8689213770606426509}
   - component: {fileID: 1698797519517759897}
+  - component: {fileID: 6128618740817244483}
   m_Layer: 6
   m_Name: GFX
   m_TagString: Enemy
@@ -147,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 8689213770734801192}
   statsSystem: {fileID: 8689213770734801196}
+  animationEvents: {fileID: 6128618740817244483}
   bulletPrefabs: []
   audioSource: {fileID: 8689213770734801199}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
@@ -155,6 +157,18 @@ MonoBehaviour:
   attackPoint: {fileID: 8689213770734801195}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
   isDeadTouch: 1
+--- !u!114 &6128618740817244483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8689213770606426505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8689213770734801194
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +200,7 @@ Transform:
   m_GameObject: {fileID: 8689213770734801194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.3225336, y: 1.0427109, z: 0.27773148}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8689213770606426510}

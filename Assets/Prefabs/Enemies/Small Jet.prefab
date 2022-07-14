@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 452459136128869263}
   - component: {fileID: 452459136128869260}
   - component: {fileID: 452459136128869261}
+  - component: {fileID: 3012388123673732583}
   m_Layer: 6
   m_Name: GFX
   m_TagString: Untagged
@@ -105,6 +106,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3012388123673732583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452459136128869262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &452459136536690630
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +151,7 @@ Transform:
   m_GameObject: {fileID: 452459136536690630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.98, y: 9.43, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 452459136128869263}
@@ -254,6 +267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 4830087761438021193}
   statsSystem: {fileID: 1333775108958516995}
+  animationEvents: {fileID: 3012388123673732583}
   bulletPrefabs:
   - DumbBomb
   audioSource: {fileID: 7982261943743185848}
@@ -262,6 +276,7 @@ MonoBehaviour:
   pooling: {fileID: -7829245269490917361}
   attackPoint: {fileID: 1107316379773103048}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  isDeadTouch: 0
 --- !u!82 &7982261943743185848
 AudioSource:
   m_ObjectHideFlags: 0

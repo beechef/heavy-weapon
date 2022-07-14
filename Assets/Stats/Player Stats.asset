@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Player Stats
   m_EditorClassIdentifier: 
   attack: 10
-  attackSpeed: 4
+  attackSpeed: 5.5
   moveSpeed: 1
   amountAttackPoint: 3
   health: 0

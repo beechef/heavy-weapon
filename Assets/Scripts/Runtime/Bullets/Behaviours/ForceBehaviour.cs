@@ -6,6 +6,7 @@ namespace Runtime.Bullets.Behaviours
 {
     public class ForceBehaviour : MonoBehaviour
     {
+        private const float ForcePower = 50f;
         [SerializeField] protected Rigidbody2D rb;
         [SerializeField] private BasicStatsSystem statsSystem;
 
@@ -19,7 +20,10 @@ namespace Runtime.Bullets.Behaviours
         private void OnInit()
         {
             _stats = statsSystem.Stats;
-            rb.velocity = transform.up * _stats.moveSpeed;
+            if (rb.isKinematic)
+                rb.velocity = transform.up * _stats.moveSpeed;
+            else
+                rb.AddForce(transform.up * _stats.moveSpeed * ForcePower, ForceMode2D.Force);
         }
     }
 }

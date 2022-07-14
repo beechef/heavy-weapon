@@ -12,6 +12,7 @@ namespace Runtime.Enemies.CombatSystems
     {
         [SerializeField] protected BasicAnimation anim;
         [SerializeField] protected StatsSystems.BasicStatsSystem statsSystem;
+        [SerializeField] protected AnimationEvents animationEvents;
         [SerializeField] protected List<string> bulletPrefabs;
         [SerializeField] protected AudioSource audioSource;
         [SerializeField] protected AudioClip deathClip;
@@ -45,6 +46,7 @@ namespace Runtime.Enemies.CombatSystems
         {
             GODictionary.AddVulnerableGO(gameObject, this);
             _issavedDataNotNull = savedData != null;
+            animationEvents.OnDeath(() => { pooling.Return(gameObject, .1f).Forget(); });
         }
 
         public override bool IsCanAttack()
@@ -90,14 +92,13 @@ namespace Runtime.Enemies.CombatSystems
             coll.enabled = false;
             PlaySound(deathClip);
             anim.Death();
-            pooling.Return(gameObject, delay).Forget();
         }
 
         public override void TakeDamage(float damage)
         {
             anim.Hit();
             if (!statsSystem.TakeDamage(damage)) return;
-            Death(.2f);
+            Death(.5f);
             if (_issavedDataNotNull)
                 savedData.Score += Stats.score;
         }

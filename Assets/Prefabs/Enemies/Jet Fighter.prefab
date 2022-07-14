@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 4293585806243371292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.8392899, y: 18.847511, z: -0.9246395}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2044214470052538520}
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 2771708957650649445}
   statsSystem: {fileID: 1584930884722510715}
+  animationEvents: {fileID: 887517355126421266}
   bulletPrefabs:
   - Red Bomb
   audioSource: {fileID: 6665175910467898614}
@@ -109,6 +110,7 @@ MonoBehaviour:
   pooling: {fileID: 3423497041979639667}
   attackPoint: {fileID: 1598048051829068213}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  isDeadTouch: 0
 --- !u!114 &1584930884722510715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,6 +260,7 @@ GameObject:
   - component: {fileID: 8683731448545383117}
   - component: {fileID: 1425530881915145985}
   - component: {fileID: 2771708957650649445}
+  - component: {fileID: 887517355126421266}
   m_Layer: 6
   m_Name: GFX
   m_TagString: Untagged
@@ -370,6 +373,18 @@ MonoBehaviour:
   moveForwardAnim: MoveForward
   attackAnim: Attack
   deathAnim: Death
+--- !u!114 &887517355126421266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8469919059231130847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8543358577370221640
 GameObject:
   m_ObjectHideFlags: 0

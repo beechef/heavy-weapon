@@ -18,6 +18,7 @@ namespace Runtime.Bullets
         [SerializeField] protected Collider2D coll;
         [SerializeField] protected Pooling pooling;
         [SerializeField] protected SavedData savedData;
+        [SerializeField] protected float fadeTime = .2f;
         private bool _issavedDataNotNull;
         public BasicStats Stats { get; protected set; }
 
@@ -63,7 +64,7 @@ namespace Runtime.Bullets
             coll.enabled = false;
             anim.Death();
             PlayAudio(deathClip);
-            await pooling.Return(gameObject, .2f);
+            await pooling.Return(gameObject, fadeTime);
         }
 
         protected virtual void OnCollisionEnter2D(Collision2D other)

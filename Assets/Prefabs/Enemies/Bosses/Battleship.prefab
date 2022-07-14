@@ -420,13 +420,14 @@ MonoBehaviour:
   anim: {fileID: 5977811724543752690}
   statsSystem: {fileID: 8845307679820908910}
   bulletPrefabs:
-  - TraceBomb
+  - Hell Fire
   audioSource: {fileID: 1613868786043322212}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 905577855460276798}
   pooling: {fileID: 3345571754815802880}
   attackPoint: {fileID: 3179172117022153639}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  isDeadTouch: 0
 --- !u!50 &1026410269625890159
 Rigidbody2D:
   serializedVersion: 4
@@ -668,13 +669,14 @@ MonoBehaviour:
   anim: {fileID: 1494568228446887288}
   statsSystem: {fileID: 43393295189172427}
   bulletPrefabs:
-  - TraceBomb
+  - Hell Fire
   audioSource: {fileID: 8230298260819007370}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 4401682524675409467}
   pooling: {fileID: 8407783261067491544}
   attackPoint: {fileID: 604521751884437888}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  isDeadTouch: 0
 --- !u!50 &8965383028675063861
 Rigidbody2D:
   serializedVersion: 4
@@ -912,13 +914,14 @@ MonoBehaviour:
   anim: {fileID: 9206401760474207960}
   statsSystem: {fileID: 9206401760474207961}
   bulletPrefabs:
-  - BombFragment
+  - Bomb Frag
   audioSource: {fileID: 9206401760474207942}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 9206401760474207943}
   pooling: {fileID: 9206401760474207940}
   attackPoint: {fileID: 9206401760572448112}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  isDeadTouch: 0
   attackPoint1: {fileID: 9206401760623692356}
 --- !u!114 &9206401760474207960
 MonoBehaviour:
@@ -1924,6 +1927,7 @@ MonoBehaviour:
   pooling: {fileID: 9206401761395491695}
   attackPoint: {fileID: 9206401761395491693}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  isDeadTouch: 0
   guns:
   - {fileID: 9206401761940485018}
   - {fileID: 9206401761430645190}
@@ -2141,13 +2145,14 @@ MonoBehaviour:
   anim: {fileID: 9206401761430645188}
   statsSystem: {fileID: 9206401761430645189}
   bulletPrefabs:
-  - BombFragment
+  - Bomb Frag
   audioSource: {fileID: 9206401761430645186}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 9206401761430645191}
   pooling: {fileID: 9206401761430645187}
   attackPoint: {fileID: 9206401760605613515}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  isDeadTouch: 0
   attackPoint1: {fileID: 9206401759950296860}
 --- !u!114 &9206401761430645188
 MonoBehaviour:
@@ -2581,13 +2586,14 @@ MonoBehaviour:
   anim: {fileID: 9206401761940485019}
   statsSystem: {fileID: 9206401761940485016}
   bulletPrefabs:
-  - BombFragment
+  - Bomb Frag
   audioSource: {fileID: 9206401761940485017}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 9206401761940485021}
   pooling: {fileID: 9206401761940484998}
   attackPoint: {fileID: 9206401760562434691}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  isDeadTouch: 0
   attackPoint1: {fileID: 9206401761397400025}
 --- !u!114 &9206401761940485019
 MonoBehaviour:
@@ -2829,13 +2835,14 @@ MonoBehaviour:
   anim: {fileID: 9206401761942822738}
   statsSystem: {fileID: 9206401761942822739}
   bulletPrefabs:
-  - BombFragment
+  - Bomb Frag
   audioSource: {fileID: 9206401761942822736}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 9206401761942822741}
   pooling: {fileID: 9206401761942822737}
   attackPoint: {fileID: 9206401760980278823}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  isDeadTouch: 0
   attackPoint1: {fileID: 9206401761463773036}
 --- !u!114 &9206401761942822738
 MonoBehaviour:

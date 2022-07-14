@@ -162,6 +162,7 @@ MonoBehaviour:
   pooling: {fileID: 410592761789408861}
   attackPoint: {fileID: 0}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  isDeadTouch: 0
 --- !u!114 &410592761789408857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,7 +446,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410592761990342895}
   m_LocalRotation: {x: -0, y: -0, z: 0.42261824, w: 0.90630776}
-  m_LocalPosition: {x: -0.067896724, y: -2.8530307, z: 0}
+  m_LocalPosition: {x: 0.05, y: -3.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1746,13 +1747,14 @@ MonoBehaviour:
   anim: {fileID: 410592763698291206}
   statsSystem: {fileID: 410592763698291209}
   bulletPrefabs:
-  - BombFragment
+  - Boulder
   audioSource: {fileID: 410592763698291208}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 410592763698291204}
   pooling: {fileID: 410592763698291211}
   attackPoint: {fileID: 410592761990342892}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  isDeadTouch: 0
   explosionRadius: 1
 --- !u!114 &410592763698291206
 MonoBehaviour:

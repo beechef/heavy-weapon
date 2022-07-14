@@ -431,3 +431,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCombatSystem: {fileID: 1914530111}
+--- !u!114 &3467273061623093888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8249067588648167071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c67d0250711e24983b7f6ded4b9cfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pos: {fileID: 11400000, guid: 5d5267fbe03490f408a01a24d81aefcb, type: 2}
