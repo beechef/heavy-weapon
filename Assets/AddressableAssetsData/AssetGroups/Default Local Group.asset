@@ -17,64 +17,52 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 556b4d29ec2e7a548889ca9c65e16e7a
   m_SerializeEntries:
-  - m_GUID: e9ca63e41b2d08f479189d2d0ab99150
-    m_Address: Assets/Prefabs/Enemies/Big Bomber.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: be723b110c32ac942aeb8d58d57c07e1
-    m_Address: Assets/Prefabs/Bullets/Shield.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 3631fc2961c613642ab7dae79faba45e
-    m_Address: Assets/Prefabs/Bullets/Enemies/Reb Bomb.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 471f8dbd7d83137409cfd67057303736
-    m_Address: Assets/Prefabs/Enemies/Jet Fighter.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 99840f74a7b208243a07b63c7f7ed329
-    m_Address: Assets/Prefabs/Bullets/Player/Player Missile.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 6040daa9b8340e04bad3768285c33b71
-    m_Address: Assets/Prefabs/Bullets/Player/Player Lightning Bullet.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 698463cf29f553b4f9b0ad9c6d9f7c93
-    m_Address: Assets/Prefabs/Bullets/Player/Player Basic Bullet.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 86da250bf9f8a9b4389d2f28eb69d75d
-    m_Address: Assets/Prefabs/Bullets/Player/Player Laser.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 3f46309a4b8b6744caa4d50932679794
-    m_Address: Assets/Prefabs/Bullets/Player/Player Megae Laser.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: aad5e981bec80d94d9bf78614320b8d8
-    m_Address: Assets/Prefabs/Bullets/Enemies/Dumb Bomb.prefab
+  - m_GUID: 898c06036536ff64e9f2b49e5a8d073e
+    m_Address: Assets/Prefabs/Enemies/SmallJet.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: ee8e0091ab699d54fa7f63d3c581026b
     m_Address: Assets/Prefabs/Enemies/Bomber.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 44f630aa520384247a447a0d934adb29
-    m_Address: Assets/Prefabs/Enemies/Prop Fighter.prefab
+  - m_GUID: c1964e6d5e1c2484396049e9688f2c81
+    m_Address: Assets/Prefabs/Enemies/DemoPoint.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 898c06036536ff64e9f2b49e5a8d073e
-    m_Address: Assets/Prefabs/Enemies/Small Jet.prefab
+  - m_GUID: a2a397675eefe9541b8db752598c5074
+    m_Address: Assets/Prefabs/Enemies/DemoFragmented.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: da746c8fcbecd0449b88900e0f6a3cb0
-    m_Address: Assets/Prefabs/Enemies/Cruise.prefab
+  - m_GUID: 0c134a59b3ba96f439c4c0b756432369
+    m_Address: Assets/Prefabs/Bullets/BombFragment.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: b5a4a65ba5c8e224dbc346572256e0c4
-    m_Address: Assets/Prefabs/Bullets/Player/Casing.prefab
+  - m_GUID: 20d23881a8b1d6141be84e3cbfd2ded8
+    m_Address: Assets/Prefabs/Bullets/FragmentedBomb.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: be723b110c32ac942aeb8d58d57c07e1
+    m_Address: Assets/Prefabs/Bullets/Shield.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6aab2dfdb8cf70a43ac9daeeb77ffb8f
+    m_Address: Assets/Prefabs/Bullets/TraceBomb.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: aad5e981bec80d94d9bf78614320b8d8
+    m_Address: Assets/Prefabs/Bullets/DumbBomb.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6b9d8538c593ed04591069b19a495cf8
+    m_Address: Assets/Prefabs/Bullets/FragmentedBomb 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6f600f1f8e7082b4288269129a7c3b5a
+    m_Address: Assets/Prefabs/Bullets/Point.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 180155e58e090fc418f6bb7317b430a3
+    m_Address: Assets/Prefabs/Bullets/SmallBullet.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

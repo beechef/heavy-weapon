@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f481551e40cf486482e8e1ba4aa06fce, type: 3}
   m_Name: Bomber
   m_EditorClassIdentifier: 
-  attack: 10
   health: 100
   maxHealth: 100
-  attackTimes: 2
-  attackDelay: 0.5
-  attackSpeed: 0.5
+  attackTimes: 1
+  attackDelay: 0.25
+  attackSpeed: 2.5
   moveSpeed: 2
-  score: 250

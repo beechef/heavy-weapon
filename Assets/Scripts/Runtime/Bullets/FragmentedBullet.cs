@@ -14,7 +14,7 @@ namespace Runtime.Bullets
             Vector2.right,
             Vector2.down + Vector2.left,
             Vector2.down + Vector2.right,
-        }; // Star Shape
+        };
 
 
         protected override void Death()
@@ -36,8 +36,6 @@ namespace Runtime.Bullets
             float rotationZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             GameObject go = await pooling.GetAsync(fragmentPrefab, transform.position,
                 Quaternion.Euler(0f, 0f, rotationZ - 90f));
-
-            GODictionary.BasicBulletStatsSystemGOs[go].IncreaseAttack(Stats.attack);
         }
     }
 }
