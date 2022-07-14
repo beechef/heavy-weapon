@@ -6,17 +6,21 @@ using UnityEngine.Events;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private GameStateSO GameState;
-    [SerializeField] private BoolVariable isMoveRight;
     private float _constantMoveSpeed = 0.5f;
     [SerializeField] private Animator animator;
+
     [SerializeField]private FloatVarible moveDirXValue;
     [SerializeField] private BoolVariable canGetInput;
     [SerializeField] private PlayerStatsSystem playerStatsSystem;
 
     private PlayerStats _stats;
+
+    [SerializeField] private SpriteRenderer tankMesh;
+    [SerializeField] private GameObject tankBarrel;
+
     private void Start()
     {
-        isMoveRight.value = true;
+        GameState.isMoveRight = true;
         animator.SetFloat("MoveDir",1);
         _stats = playerStatsSystem.Stats;
     }
@@ -26,18 +30,20 @@ public class PlayerMovement : MonoBehaviour
         {
             OnGameStart();
         }
-        if (canGetInput.value)
+        if (GameState.canGetInput)
         {
-            moveDirXValue.value = Input.GetAxis("Horizontal");
+            GameState.tankMoveSpeed = Input.GetAxis("Horizontal");
         }
+
         Move(moveDirXValue.value * _stats.moveSpeed);
+
     }
     private void Move(float moveSpeed)
 
     {
         Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
         float MoveRightVal=1;
-        if (!isMoveRight.value)
+        if (!GameState.isMoveRight)
         {
             _constantMoveSpeed = 0;
         }
@@ -64,16 +70,27 @@ public class PlayerMovement : MonoBehaviour
     public void OnGameStart()
     {
         Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
-        if (pos.x >= 0.5f && pos.x <= 0.51f)
+        if (pos.x >= 0.5f )
         {
-            moveDirXValue.value = 0;
+            GameState.tankMoveSpeed = 0;
             StartCoroutine(WaitToEnterPlayGameState(1.5f));
         }
     }
-
     IEnumerator WaitToEnterPlayGameState(float time)
     {
         yield return new WaitForSeconds(time);
         GameState.PlayGame();
+    }
+    public void PlayerDead()
+    {
+        GameState.Dead();
+        Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
+        if (pos.x >= 0.5f )
+        {
+            GameState.tankMoveSpeed = 0;
+            tankBarrel.SetActive(true);
+            tankMesh.enabled = true;
+            GameState.PlayGame();
+        }
     }
 }
