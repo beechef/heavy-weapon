@@ -4,14 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-
-  - BossPoint
-
-  - Ground
-
   - Enemy
-
-
+  - BossPoint
+  - Ground
+  - PlayerHolder
   layers:
   - Default
   - TransparentFX
@@ -19,19 +15,11 @@ TagManager:
   - 
   - Water
   - UI
-
-  - Player
-  - Point
   - 
   - 
   - 
-
-  - Enemy
-  - EnemyBullet
-  - Player
-  - PlayerBullet
-  - Ground
-
+  - 
+  - 
   - 
   - 
   - 
@@ -56,16 +44,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: BG1
-    uniqueID: 2051020567
-    locked: 0
-  - name: Ground
-    uniqueID: 3003877699
-    locked: 0
-  - name: Detail Bottom
-    uniqueID: 3512164813
-    locked: 0
-  - name: Player
-    uniqueID: 114708431
     locked: 0
