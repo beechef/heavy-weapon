@@ -9,6 +9,7 @@ namespace Runtime.Bullets.Behaviours
     {
         [SerializeField] private Rigidbody2D rb;
         [SerializeField] private BasicStatsSystem statsSystem;
+        [SerializeField] private bool isTracePlayer = true;
 
         private BasicStats _stats;
 
@@ -24,12 +25,15 @@ namespace Runtime.Bullets.Behaviours
 
         private void FixedUpdate()
         {
-            Vector3 cachedPosition = transform.position;
-            Vector3 playerPosition = PlayerPosition.GetNearestPlayerPosition(cachedPosition);
-            Vector3 dir = (playerPosition - cachedPosition).normalized *
+            Transform cachedTransform = transform;
+            Vector3 cachedPosition = cachedTransform.position;
+            Vector3 dstPosition = isTracePlayer
+                ? PlayerPosition.GetNearestPlayerPosition(cachedTransform)
+                : EnemyPosition.GetNearestEnemyPosition(cachedTransform, null).Position;
+            Vector3 dir = (dstPosition - cachedPosition).normalized *
                           _stats.moveSpeed;
             float rotationZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, 0f, rotationZ + 90f);
+            cachedTransform.rotation = Quaternion.Euler(0f, 0f, rotationZ - 90f);
             rb.velocity = dir;
         }
     }

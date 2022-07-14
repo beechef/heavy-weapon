@@ -1,4 +1,5 @@
 using System.Collections;
+using Runtime.Player;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,6 +8,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameStateSO GameState;
     private float _constantMoveSpeed = 0.5f;
     [SerializeField] private Animator animator;
+
+    [SerializeField]private FloatVarible moveDirXValue;
+    [SerializeField] private BoolVariable canGetInput;
+    [SerializeField] private PlayerStatsSystem playerStatsSystem;
+
+    private PlayerStats _stats;
+
     [SerializeField] private SpriteRenderer tankMesh;
     [SerializeField] private GameObject tankBarrel;
 
@@ -14,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     {
         GameState.isMoveRight = true;
         animator.SetFloat("MoveDir",1);
+        _stats = playerStatsSystem.Stats;
     }
     void Update()
     {
@@ -25,7 +34,9 @@ public class PlayerMovement : MonoBehaviour
         {
             GameState.tankMoveSpeed = Input.GetAxis("Horizontal");
         }
-        Move(GameState.tankMoveSpeed);
+
+        Move(moveDirXValue.value * _stats.moveSpeed);
+
     }
     private void Move(float moveSpeed)
 

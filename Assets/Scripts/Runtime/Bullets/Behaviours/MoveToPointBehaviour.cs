@@ -28,7 +28,7 @@ namespace Runtime.Bullets.Behaviours
         protected virtual void OnInit()
         {
             Stats = statsSystem.Stats;
-            SetPoint(PlayerPosition.GetNearestPlayerPosition(transform.position), 1.5f);
+            SetPoint(PlayerPosition.GetNearestPlayerPosition(transform), 1.5f);
         }
 
         protected virtual void RotateToDir(Vector2 dir)

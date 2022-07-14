@@ -25,7 +25,7 @@ namespace Runtime.Enemies.Behaviours
             _stats = statsSystem.Stats;
         }
 
-        protected virtual void Update()
+        protected virtual void FixedUpdate()
         {
             if (combatSystem.IsCanAttack())
             {
