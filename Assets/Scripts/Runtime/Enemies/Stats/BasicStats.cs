@@ -6,11 +6,12 @@ namespace Runtime.Enemies.Stats
     public class BasicStats : ScriptableObject
     {
         public float attack;
-        public float health;
+        [HideInInspector] public float health;
         public float maxHealth;
         public float attackTimes;
         public float attackDelay;
         public float attackSpeed;
         public float moveSpeed;
+        public float score;
     }
 }

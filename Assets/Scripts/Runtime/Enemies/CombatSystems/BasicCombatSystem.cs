@@ -17,11 +17,17 @@ namespace Runtime.Enemies.CombatSystems
         [SerializeField] protected AudioClip deathClip;
         [SerializeField] protected Collider2D coll;
         [SerializeField] protected Pooling pooling;
-        [SerializeField] public Transform attackPoint;
+        [SerializeField] protected Transform attackPoint;
+        [SerializeField] protected SavedData savedData;
 
         protected Stats.BasicStats Stats;
         protected float LastAttack = 0f;
         protected bool IsDeath;
+        private bool _issavedDataNotNull;
+
+        private void Start()
+        {
+        }
 
         protected virtual void OnEnable()
         {
@@ -41,6 +47,7 @@ namespace Runtime.Enemies.CombatSystems
         protected virtual void Awake()
         {
             GODictionary.AddVulnerableGO(gameObject, this);
+            _issavedDataNotNull = savedData != null;
         }
 
         public override bool IsCanAttack()
@@ -82,6 +89,8 @@ namespace Runtime.Enemies.CombatSystems
 
         public virtual void Death(float delay)
         {
+            if (_issavedDataNotNull)
+                savedData.Score += Stats.score;
             IsDeath = true;
             coll.enabled = false;
             PlaySound(deathClip);

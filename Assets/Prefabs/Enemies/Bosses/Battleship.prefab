@@ -426,6 +426,7 @@ MonoBehaviour:
   coll: {fileID: 905577855460276798}
   pooling: {fileID: 3345571754815802880}
   attackPoint: {fileID: 3179172117022153639}
+  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
 --- !u!50 &1026410269625890159
 Rigidbody2D:
   serializedVersion: 4
@@ -673,6 +674,7 @@ MonoBehaviour:
   coll: {fileID: 4401682524675409467}
   pooling: {fileID: 8407783261067491544}
   attackPoint: {fileID: 604521751884437888}
+  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
 --- !u!50 &8965383028675063861
 Rigidbody2D:
   serializedVersion: 4
@@ -916,6 +918,7 @@ MonoBehaviour:
   coll: {fileID: 9206401760474207943}
   pooling: {fileID: 9206401760474207940}
   attackPoint: {fileID: 9206401760572448112}
+  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
   attackPoint1: {fileID: 9206401760623692356}
 --- !u!114 &9206401760474207960
 MonoBehaviour:
@@ -1920,6 +1923,7 @@ MonoBehaviour:
   coll: {fileID: 9206401761395491690}
   pooling: {fileID: 9206401761395491695}
   attackPoint: {fileID: 9206401761395491693}
+  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
   guns:
   - {fileID: 9206401761940485018}
   - {fileID: 9206401761430645190}
@@ -2143,6 +2147,7 @@ MonoBehaviour:
   coll: {fileID: 9206401761430645191}
   pooling: {fileID: 9206401761430645187}
   attackPoint: {fileID: 9206401760605613515}
+  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
   attackPoint1: {fileID: 9206401759950296860}
 --- !u!114 &9206401761430645188
 MonoBehaviour:
@@ -2582,6 +2587,7 @@ MonoBehaviour:
   coll: {fileID: 9206401761940485021}
   pooling: {fileID: 9206401761940484998}
   attackPoint: {fileID: 9206401760562434691}
+  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
   attackPoint1: {fileID: 9206401761397400025}
 --- !u!114 &9206401761940485019
 MonoBehaviour:
@@ -2829,6 +2835,7 @@ MonoBehaviour:
   coll: {fileID: 9206401761942822741}
   pooling: {fileID: 9206401761942822737}
   attackPoint: {fileID: 9206401760980278823}
+  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
   attackPoint1: {fileID: 9206401761463773036}
 --- !u!114 &9206401761942822738
 MonoBehaviour:

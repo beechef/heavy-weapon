@@ -96,6 +96,7 @@ MonoBehaviour:
   deathClip: {fileID: 8300000, guid: 98a813fe36a2b894dab526786f42556d, type: 3}
   coll: {fileID: 4531707269649342902}
   pooling: {fileID: 4531707269649342904}
+  savedData: {fileID: 0}
 --- !u!114 &4531707269649342907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,7 +343,7 @@ Animator:
   m_GameObject: {fileID: 4531707269658793992}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 597f9e4eeb574c743b78593d029c4b71, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5183d71810f10f14c8b063eabba4014f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

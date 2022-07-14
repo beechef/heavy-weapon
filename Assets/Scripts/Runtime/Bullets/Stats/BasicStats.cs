@@ -7,8 +7,9 @@ namespace Runtime.Bullets.Stats
     {
         public float attack;
         public float attackSpeed;
-        public float health;
+        [HideInInspector] public float health;
         public float maxHealth;
         public float moveSpeed;
+        public float score;
     }
 }

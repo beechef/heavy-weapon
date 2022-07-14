@@ -17,6 +17,7 @@ namespace Runtime.Bullets
         [SerializeField] protected AudioClip deathClip;
         [SerializeField] protected Collider2D coll;
         [SerializeField] protected Pooling pooling;
+        [SerializeField] protected SavedData savedData;
         public BasicStats Stats { get; protected set; }
 
         protected virtual void OnEnable()
@@ -57,6 +58,7 @@ namespace Runtime.Bullets
 
         protected virtual async void Death()
         {
+            savedData.Score += Stats.score;
             coll.enabled = false;
             anim.Death();
             PlayAudio(deathClip);

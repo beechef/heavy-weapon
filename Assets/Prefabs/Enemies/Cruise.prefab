@@ -239,6 +239,7 @@ MonoBehaviour:
   coll: {fileID: 8689213770606426509}
   pooling: {fileID: 8689213770734801198}
   attackPoint: {fileID: 8689213770734801195}
+  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
 --- !u!114 &8689213770734801196
 MonoBehaviour:
   m_ObjectHideFlags: 0

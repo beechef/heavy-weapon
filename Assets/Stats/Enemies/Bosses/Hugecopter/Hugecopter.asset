@@ -19,3 +19,4 @@ MonoBehaviour:
   attackDelay: 0.5
   attackSpeed: 0.5
   moveSpeed: 2
+  score: 10000

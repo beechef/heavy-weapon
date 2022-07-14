@@ -193,6 +193,7 @@ MonoBehaviour:
   coll: {fileID: 3466574081133924479}
   pooling: {fileID: 3466574081133924478}
   attackPoint: {fileID: 3466574081900119262}
+  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
 --- !u!114 &3466574081133924477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,6 +846,7 @@ MonoBehaviour:
   coll: {fileID: 3466574081366582426}
   pooling: {fileID: 3466574081366582431}
   attackPoint: {fileID: 0}
+  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
   leftLauncher: {fileID: 3466574081695895018}
   rightLauncher: {fileID: 3466574081742200136}
   leftTurret: {fileID: 3466574081977804278}
@@ -1155,6 +1157,7 @@ MonoBehaviour:
   coll: {fileID: 3466574081695895021}
   pooling: {fileID: 3466574081695895020}
   attackPoint: {fileID: 3466574081695895008}
+  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
 --- !u!50 &2080661128569581832
 Rigidbody2D:
   serializedVersion: 4
@@ -1402,6 +1405,7 @@ MonoBehaviour:
   coll: {fileID: 3466574081742200503}
   pooling: {fileID: 3466574081742200502}
   attackPoint: {fileID: 3466574081742200137}
+  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
 --- !u!50 &5154181523609090239
 Rigidbody2D:
   serializedVersion: 4
@@ -1614,6 +1618,7 @@ MonoBehaviour:
   coll: {fileID: 3466574081977804171}
   pooling: {fileID: 3466574081977804172}
   attackPoint: {fileID: 3466574081382705937}
+  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
 --- !u!114 &3466574081977804170
 MonoBehaviour:
   m_ObjectHideFlags: 0

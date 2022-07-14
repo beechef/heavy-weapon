@@ -159,8 +159,9 @@ MonoBehaviour:
   audioSource: {fileID: 410592761789408858}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 410592761789408862}
-  pooling: {fileID: 0}
+  pooling: {fileID: 410592761789408861}
   attackPoint: {fileID: 0}
+  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
 --- !u!114 &410592761789408857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1751,6 +1752,7 @@ MonoBehaviour:
   coll: {fileID: 410592763698291204}
   pooling: {fileID: 410592763698291211}
   attackPoint: {fileID: 410592761990342892}
+  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
   explosionRadius: 1
 --- !u!114 &410592763698291206
 MonoBehaviour:
