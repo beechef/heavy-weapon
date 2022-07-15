@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7025c48625e84f679d8f42efceaf90f2, type: 3}
-  m_Name: Player Mega Laser
+  m_Name: Player Shield
   m_EditorClassIdentifier: 
-  attack: 200
-  attackSpeed: 10
+  attack: 99999
+  attackSpeed: 1
   health: 0
   maxHealth: 0
-  moveSpeed: 0
+  moveSpeed: 8
   score: 0

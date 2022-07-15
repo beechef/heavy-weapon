@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Runtime.Player
 {
@@ -17,6 +18,26 @@ namespace Runtime.Player
         protected virtual void OnEnable()
         {
             OnInit();
+        }
+
+        private void Update()
+        {
+            if (stats.megaLaserComplete >= 100f)
+            {
+                stats.isActivateMegaLaser = true;
+            }
+
+            if (stats.isActivateMegaLaser)
+            {
+                if (stats.megaLaserComplete <= 0f)
+                {
+                    stats.isActivateMegaLaser = false;
+                }
+                else
+                {
+                    stats.megaLaserComplete -= Time.deltaTime * 10f;
+                }
+            }
         }
 
         protected virtual void OnInit()

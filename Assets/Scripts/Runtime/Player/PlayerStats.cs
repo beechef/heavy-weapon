@@ -12,5 +12,9 @@ namespace Runtime.Player
         [HideInInspector] public float health;
         public float maxHealth;
         public int lives = 3;
+
+        public int nukeQuantity = 0;
+        public bool isActivateMegaLaser = false;
+        public float megaLaserComplete = 0f;
     }
 }

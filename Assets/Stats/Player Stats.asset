@@ -19,3 +19,6 @@ MonoBehaviour:
   health: 100
   maxHealth: 50
   lives: 3
+  nukeQuantity: 0
+  isActivateMegaLaser: 1
+  megaLaserComplete: 150

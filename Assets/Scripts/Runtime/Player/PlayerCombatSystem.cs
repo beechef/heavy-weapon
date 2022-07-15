@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using Runtime.Bullets;
 using Runtime.Enemies.Animations;
 using Runtime.Interfaces;
 using UnityEngine;
@@ -21,6 +22,7 @@ namespace Runtime.Player
         [SerializeField] private string bulletPrefab;
         [SerializeField] private string casingPrefab;
         [SerializeField] private string playerDeathPrefab;
+        [SerializeField] private LaserBullet megaLaser;
 
         private PlayerStats _stats;
         private float _lastAttack;
@@ -100,8 +102,7 @@ namespace Runtime.Player
             return Time.time - _lastAttack >= 1f / _stats.attackSpeed;
         }
 
-
-        public async void Attack()
+        private async void CommonAttack()
         {
             if (!IsCanAttack()) return;
             _lastAttack = Time.time;
@@ -115,6 +116,28 @@ namespace Runtime.Player
                     rotation);
                 GODictionary.BasicBulletStatsSystemGOs[go].IncreaseAttack(_stats.attack);
                 pooling.GetAsync(casingPrefab, position, rotation).Forget();
+            }
+        }
+
+        private async void MegaLaserAttack()
+        {
+            GameObject go = megaLaser.gameObject;
+            go.SetActive(true);
+            go.transform.position = attackPoints[0].position;
+            go.transform.rotation = attackPoints[0].rotation;
+            await UniTask.Delay(TimeSpan.FromSeconds(.1f));
+            go.SetActive(false);
+        }
+
+        public async void Attack()
+        {
+            if (_stats.isActivateMegaLaser)
+            {
+                MegaLaserAttack();
+            }
+            else
+            {
+                CommonAttack();
             }
         }
     }

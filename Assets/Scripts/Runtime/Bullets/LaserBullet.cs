@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using Runtime.Interfaces;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Runtime.Bullets
 {
@@ -8,13 +6,19 @@ namespace Runtime.Bullets
     {
         [SerializeField] private LineRenderer lineRenderer;
         [SerializeField] private LayerMask groundMask;
+        [SerializeField] private LayerMask enemyMask;
         private Vector3 _startPoint, _endPoint;
         private float _lastAttack;
 
         private void FixedUpdate()
         {
-            CreateLaser();
             Attack();
+        }
+
+        protected override void OnInit()
+        {
+            base.OnInit();
+            coll.enabled = false;
         }
 
         private void CreateLaser()
@@ -23,7 +27,6 @@ namespace Runtime.Bullets
             _startPoint = cachedTransform.position;
             var rayCastHit = Physics2D.Raycast(_startPoint, cachedTransform.up,
                 float.MaxValue, groundMask);
-
             _endPoint = rayCastHit.point;
             lineRenderer.SetPosition(0, _startPoint);
             lineRenderer.SetPosition(1, _endPoint);
@@ -33,11 +36,13 @@ namespace Runtime.Bullets
         {
         }
 
-        private void Attack()
+        public void Attack()
         {
+            CreateLaser();
             if (Time.time - _lastAttack <= 1f / Stats.attackSpeed) return;
             _lastAttack = Time.time;
-            var rayCastHits = Physics2D.RaycastAll(_startPoint, transform.up);
+            var rayCastHits = Physics2D.BoxCastAll(_startPoint, Vector2.one / 2f, 0f, transform.up,
+                float.MaxValue, enemyMask);
             foreach (var rayCastHit in rayCastHits)
             {
                 if (GODictionary.VulnerableGOs.TryGetValue(rayCastHit.collider.gameObject, out var vulnerable))

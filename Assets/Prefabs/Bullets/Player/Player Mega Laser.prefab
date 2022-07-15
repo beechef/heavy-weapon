@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 5436057501818952294}
   - component: {fileID: 5436057501818952293}
   m_Layer: 9
-  m_Name: Player Megae Laser
+  m_Name: Player Mega Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -195,10 +195,14 @@ MonoBehaviour:
   coll: {fileID: 5436057501818952603}
   pooling: {fileID: 5436057501818952293}
   savedData: {fileID: 0}
+  fadeTime: 0.2
   lineRenderer: {fileID: 5436057501818952291}
   groundMask:
     serializedVersion: 2
     m_Bits: 1024
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!114 &5436057501818952601
 MonoBehaviour:
   m_ObjectHideFlags: 0
