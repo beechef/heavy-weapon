@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8158331582872189817}
   - component: {fileID: 6122347038478777816}
   - component: {fileID: 1442089730139081906}
+  - component: {fileID: 3722086784558122200}
   m_Layer: 6
   m_Name: GFX
   m_TagString: Untagged
@@ -105,6 +106,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3722086784558122200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33802878391147141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &750344330479165627
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,8 +432,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 5977811724543752690}
   statsSystem: {fileID: 8845307679820908910}
+  animationEvents: {fileID: 3722086784558122200}
   bulletPrefabs:
   - Hell Fire
+  destroyParticlePrefab: Destroy Particle
   audioSource: {fileID: 1613868786043322212}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 905577855460276798}
@@ -668,8 +683,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 1494568228446887288}
   statsSystem: {fileID: 43393295189172427}
+  animationEvents: {fileID: 5670736501963428700}
   bulletPrefabs:
   - Hell Fire
+  destroyParticlePrefab: Destroy Particle
   audioSource: {fileID: 8230298260819007370}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 4401682524675409467}
@@ -709,6 +726,7 @@ GameObject:
   - component: {fileID: 2753309203610681542}
   - component: {fileID: 7771457684357375213}
   - component: {fileID: 5541292884496730286}
+  - component: {fileID: 5670736501963428700}
   m_Layer: 6
   m_Name: GFX
   m_TagString: Untagged
@@ -803,6 +821,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5670736501963428700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8264933428866737878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9206401759950296861
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,8 +943,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 9206401760474207960}
   statsSystem: {fileID: 9206401760474207961}
+  animationEvents: {fileID: 8552189809263734726}
   bulletPrefabs:
   - Bomb Frag
+  destroyParticlePrefab: Destroy Particle
   audioSource: {fileID: 9206401760474207942}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 9206401760474207943}
@@ -1337,6 +1369,7 @@ GameObject:
   - component: {fileID: 9206401760667445073}
   - component: {fileID: 9206401760667445075}
   - component: {fileID: 9206401760667445072}
+  - component: {fileID: 8649241505172046336}
   m_Layer: 6
   m_Name: GFX
   m_TagString: Untagged
@@ -1433,6 +1466,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8649241505172046336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9206401760667445086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9206401760749994161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,6 +1489,7 @@ GameObject:
   - component: {fileID: 9206401760749994160}
   - component: {fileID: 9206401760749994162}
   - component: {fileID: 9206401760749994163}
+  - component: {fileID: 6033947444846061533}
   m_Layer: 6
   m_Name: GFX
   m_TagString: Untagged
@@ -1540,6 +1586,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6033947444846061533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9206401760749994161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9206401760950187354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,6 +1609,7 @@ GameObject:
   - component: {fileID: 9206401760950187357}
   - component: {fileID: 9206401760950187359}
   - component: {fileID: 9206401760950187356}
+  - component: {fileID: 8091214308104968016}
   m_Layer: 6
   m_Name: GFX
   m_TagString: Untagged
@@ -1647,6 +1706,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8091214308104968016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9206401760950187354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9206401760980278820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,7 +1991,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 9206401761395491680}
   statsSystem: {fileID: 9206401761395491681}
+  animationEvents: {fileID: 4261281072234192421}
   bulletPrefabs: []
+  destroyParticlePrefab: Destroy Particle
   audioSource: {fileID: 9206401761395491694}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 9206401761395491690}
@@ -2144,8 +2217,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 9206401761430645188}
   statsSystem: {fileID: 9206401761430645189}
+  animationEvents: {fileID: 8649241505172046336}
   bulletPrefabs:
   - Bomb Frag
+  destroyParticlePrefab: Destroy Particle
   audioSource: {fileID: 9206401761430645186}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 9206401761430645191}
@@ -2355,6 +2430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9206401761482263856}
   - component: {fileID: 9206401761482263859}
+  - component: {fileID: 4261281072234192421}
   m_Layer: 6
   m_Name: GFX
   m_TagString: Enemy
@@ -2399,6 +2475,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4261281072234192421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9206401761482263857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9206401761802784849
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,6 +2498,7 @@ GameObject:
   - component: {fileID: 9206401761802784848}
   - component: {fileID: 9206401761802784850}
   - component: {fileID: 9206401761802784851}
+  - component: {fileID: 8552189809263734726}
   m_Layer: 6
   m_Name: GFX
   m_TagString: Untagged
@@ -2506,6 +2595,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8552189809263734726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9206401761802784849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9206401761940484996
 GameObject:
   m_ObjectHideFlags: 0
@@ -2585,8 +2686,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 9206401761940485019}
   statsSystem: {fileID: 9206401761940485016}
+  animationEvents: {fileID: 6033947444846061533}
   bulletPrefabs:
   - Bomb Frag
+  destroyParticlePrefab: Destroy Particle
   audioSource: {fileID: 9206401761940485017}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 9206401761940485021}
@@ -2834,8 +2937,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 9206401761942822738}
   statsSystem: {fileID: 9206401761942822739}
+  animationEvents: {fileID: 8091214308104968016}
   bulletPrefabs:
   - Bomb Frag
+  destroyParticlePrefab: Destroy Particle
   audioSource: {fileID: 9206401761942822736}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 9206401761942822741}

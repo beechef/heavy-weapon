@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6446016621671502656}
   - component: {fileID: 6446016621671502659}
   - component: {fileID: 6446016621671502658}
+  - component: {fileID: 3047922974452237317}
   m_Layer: 7
   m_Name: GFX
   m_TagString: Untagged
@@ -122,6 +123,18 @@ MonoBehaviour:
   moveForwardAnim: MoveForward
   hitAnim: Hit
   deathAnim: Death
+--- !u!114 &3047922974452237317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6446016621671502717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6446016621820413574
 GameObject:
   m_ObjectHideFlags: 0

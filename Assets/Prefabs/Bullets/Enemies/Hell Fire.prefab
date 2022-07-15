@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1480598248668010311}
   m_Layer: 7
   m_Name: Hell Fire
-  m_TagString: Untagged
+  m_TagString: FireStreak
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,6 +97,7 @@ MonoBehaviour:
   coll: {fileID: 2863968505478113131}
   pooling: {fileID: 9121671741600558911}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  fadeTime: 0.2
 --- !u!114 &8328648191014877889
 MonoBehaviour:
   m_ObjectHideFlags: 0

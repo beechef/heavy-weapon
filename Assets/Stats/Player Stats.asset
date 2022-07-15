@@ -16,6 +16,6 @@ MonoBehaviour:
   attackSpeed: 5.5
   moveSpeed: 1
   amountAttackPoint: 3
-  health: 0
-  maxHealth: 100
+  health: 100
+  maxHealth: 50
   lives: 3

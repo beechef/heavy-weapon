@@ -7,6 +7,7 @@ namespace Runtime.Player
         [SerializeField] private PlayerStats stats;
 
         public PlayerStats Stats => stats;
+        private bool _isFirst = false;
 
         protected virtual void Awake()
         {
@@ -20,7 +21,12 @@ namespace Runtime.Player
 
         protected virtual void OnInit()
         {
-            stats = Instantiate(stats);
+            if (!_isFirst)
+            {
+                _isFirst = true;
+                stats = Instantiate(stats);
+            }
+
             RestoreFullHealth();
         }
 

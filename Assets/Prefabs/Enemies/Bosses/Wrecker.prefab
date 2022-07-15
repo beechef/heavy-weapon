@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 410592761789408858}
   - component: {fileID: 410592761789408861}
   - component: {fileID: 410592761789408860}
+  - component: {fileID: 4877159987007349645}
   m_Layer: 6
   m_Name: Tower
   m_TagString: Enemy
@@ -155,7 +156,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 410592761789408857}
   statsSystem: {fileID: 410592761789408859}
+  animationEvents: {fileID: 4877159987007349645}
   bulletPrefabs: []
+  destroyParticlePrefab: Destroy Particle
   audioSource: {fileID: 410592761789408858}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 410592761789408862}
@@ -338,6 +341,18 @@ MonoBehaviour:
   statsSystem: {fileID: 410592761789408859}
   minMoveDistance: 2
   maxMoveDistance: 3
+--- !u!114 &4877159987007349645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410592761789408800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &410592761979309030
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,6 +479,7 @@ GameObject:
   - component: {fileID: 410592762005029260}
   - component: {fileID: 410592762005029259}
   - component: {fileID: 7165804697534307440}
+  - component: {fileID: 2102865413377665132}
   m_Layer: 6
   m_Name: Ball
   m_TagString: Untagged
@@ -558,6 +574,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2102865413377665132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410592762005029263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &410592762123866297
 GameObject:
   m_ObjectHideFlags: 0
@@ -1746,8 +1774,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 410592763698291206}
   statsSystem: {fileID: 410592763698291209}
+  animationEvents: {fileID: 2102865413377665132}
   bulletPrefabs:
   - Boulder
+  destroyParticlePrefab: Destroy Particle
   audioSource: {fileID: 410592763698291208}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 410592763698291204}

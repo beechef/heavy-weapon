@@ -14,6 +14,7 @@ namespace Runtime.Enemies.CombatSystems
         [SerializeField] protected StatsSystems.BasicStatsSystem statsSystem;
         [SerializeField] protected AnimationEvents animationEvents;
         [SerializeField] protected List<string> bulletPrefabs;
+        [SerializeField] protected string destroyParticlePrefab = "Destroy Particle";
         [SerializeField] protected AudioSource audioSource;
         [SerializeField] protected AudioClip deathClip;
         [SerializeField] protected Collider2D coll;
@@ -86,12 +87,15 @@ namespace Runtime.Enemies.CombatSystems
             audioSource.Play();
         }
 
-        public virtual void Death(float delay)
+        public async virtual void Death(float delay)
         {
             IsDeath = true;
             coll.enabled = false;
             PlaySound(deathClip);
             anim.Death();
+            GameObject go = await pooling.GetAsync(destroyParticlePrefab, transform.position,
+                Quaternion.Euler(-90f, 0f, 0f));
+            pooling.Return(go, 2f).Forget();
         }
 
         public override void TakeDamage(float damage)

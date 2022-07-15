@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 8707645782788008788}
   m_Layer: 7
   m_Name: Red Bomb
-  m_TagString: Untagged
+  m_TagString: FireStreak
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,6 +218,7 @@ MonoBehaviour:
   coll: {fileID: 8707645782788008779}
   pooling: {fileID: 8707645782788008791}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  fadeTime: 0.2
 --- !u!114 &8707645782788008777
 MonoBehaviour:
   m_ObjectHideFlags: 0

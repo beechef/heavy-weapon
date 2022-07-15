@@ -1,12 +1,25 @@
 using Runtime.Enemy;
 using UnityEngine;
 
-public class UpdatePosition : MonoBehaviour
+namespace Runtime
 {
-    [SerializeField] private PlayerPosition pos;
-
-    void Update()
+    public class UpdatePosition : MonoBehaviour
     {
-        pos.SetPosition(transform.position);
+        [SerializeField] private PlayerPosition pos;
+
+        private void OnEnable()
+        {
+            PlayerPosition.AddPlayerPosition(pos);
+        }
+
+        void Update()
+        {
+            pos.SetPosition(transform.position);
+        }
+
+        private void OnDisable()
+        {
+            PlayerPosition.RemovePlayerPosition(pos);
+        }
     }
 }

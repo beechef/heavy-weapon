@@ -55,6 +55,13 @@ MonoBehaviour:
       m_SubObjectType: 
       m_EditorAssetChanged: 0
     prepoolAmount: 15
+  - key: Destroy Particle
+    Object:
+      m_AssetGUID: c07dc038ffeb5014b82c075e31b5852f
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    prepoolAmount: 25
 --- !u!1 &1490607675595165032
 GameObject:
   m_ObjectHideFlags: 0

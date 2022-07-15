@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using Runtime.Enemies.Animations;
 using Runtime.Interfaces;
 using UnityEngine;
 
@@ -11,12 +12,26 @@ namespace Runtime.Player
         [SerializeField] private PlayerStatsSystem statsSystem;
         [SerializeField] private PlayerAnimation anim;
         [SerializeField] private Pooling pooling;
+        [SerializeField] private Collider2D coll;
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioClip deathClip;
+        [SerializeField] private AnimationEvents animationEvents;
+        [SerializeField] private GameObject barrel;
         [SerializeField] private List<Transform> attackPoints;
         [SerializeField] private string bulletPrefab;
         [SerializeField] private string casingPrefab;
+        [SerializeField] private string playerDeathPrefab;
 
         private PlayerStats _stats;
         private float _lastAttack;
+        private bool _isDeath;
+
+        private void Start()
+        {
+            _stats = statsSystem.Stats;
+            GODictionary.AddVulnerableGO(gameObject, this);
+            animationEvents.OnDeath(() => { gameObject.SetActive(false); });
+        }
 
         private void OnEnable()
         {
@@ -25,14 +40,34 @@ namespace Runtime.Player
 
         private void OnInit()
         {
-            _stats = statsSystem.Stats;
-            GODictionary.AddVulnerableGO(gameObject, this);
+            _isDeath = false;
+            coll.enabled = true;
+            audioSource.loop = false;
+            audioSource.playOnAwake = false;
+            barrel.SetActive(true);
         }
 
-        private void Death()
+        protected void PlaySound(AudioClip audioClip)
+        {
+            if (audioClip == null) return;
+            audioSource.Stop();
+            audioSource.clip = audioClip;
+            audioSource.Play();
+        }
+
+        private async void Death()
         {
             _stats.lives--;
-            // anim.Death();
+            _isDeath = true;
+            coll.enabled = false;
+            PlaySound(deathClip);
+            anim.Death();
+            barrel.SetActive(false);
+            ScreenEffects.Instance.Blink(Color.white, .25f);
+
+            GameObject go = await pooling.GetAsync(playerDeathPrefab, transform.position,
+                Quaternion.Euler(-90f, 0f, 0f));
+            pooling.Return(go, 2f).Forget();
             if (_stats.lives <= 0)
             {
                 Debug.Log("Lose!");
@@ -43,14 +78,17 @@ namespace Runtime.Player
             }
         }
 
-        private void Reborn()
+        private async void Reborn()
         {
+            await UniTask.Delay(TimeSpan.FromSeconds(3.5f));
+            gameObject.SetActive(true);
             statsSystem.RestoreFullHealth();
         }
 
         public void TakeDamage(float damage)
         {
-            // anim.Hit();
+            if (_isDeath) return;
+            anim.Hit();
             if (statsSystem.TakeDamage(damage))
             {
                 Death();

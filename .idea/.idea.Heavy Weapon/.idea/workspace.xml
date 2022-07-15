@@ -2,35 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce7e8cd7-a3b1-48cf-9d43-c9c8823b1bf4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Animations/AnimationEvents.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Animations/AnimationEvents.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Ground.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Ground.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/ScreenEffects.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/ScreenEffects.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Heavy Weapon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Heavy Weapon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Bullets/BombFragment.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Bullets/DumbBomb.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/bombfrag.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/bombfrag.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/boulder.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/boulder.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/bulletglow.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/bulletglow.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/bulletglow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/bulletglow.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/explosion.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/explosion.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/hellfire.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/hellfire.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Player/Player Basic Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Player/Player Basic Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Trail.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Trail.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Big Bomber.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Big Bomber.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Bomber.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Bomber.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Tank_Move.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Tank_Move.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Bullets/Enemies/Bomb Frag/Death.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Bullets/Enemies/Bomb Frag/Death.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Bullets/Enemies/Bomb Frag/MoveFoward.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Bullets/Enemies/Bomb Frag/MoveFoward.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/fire.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/fire.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Rock.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Rock.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Bomb Frag.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Bomb Frag.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Dumb Bomb.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Dumb Bomb.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Hell Fire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Hell Fire.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Red Bomb.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Red Bomb.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Collision Particle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Collision Particle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Bosses/Battleship.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Bosses/Battleship.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Bosses/Hugecopter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Bosses/Hugecopter.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Bosses/Wrecker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Bosses/Wrecker.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Cruise.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Cruise.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Jet Fighter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Jet Fighter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Prop Fighter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Prop Fighter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Small Jet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Small Jet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Pooling Manager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Pooling Manager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/playerHolder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/playerHolder.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayerLogic.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayerLogic.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/BasicBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/BasicBullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/ForceBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/ForceBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/Gravity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/Gravity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nhan-Demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Nhan-Demo.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BasicCombatSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BasicCombatSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/PlayerPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/PlayerPosition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerCombatSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerCombatSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerStatsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerStatsSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Runtime.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Runtime.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/TagName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/TagName.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/UpdatePosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/UpdatePosition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Stats/Player Stats.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stats/Player Stats.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,12 +62,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/LauncherCombatSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Pooling.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/InitialPooling.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ReverseClip.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ReverseAnimationContext.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/HugeCopterBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/TurretCombatSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/BattleshipBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/BasicBehaviour.cs" />
@@ -75,9 +74,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/FragmentedBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/AnimateLineRenderer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/EnemyPositions.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/PlayerPosition.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/MoveToPointBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/TagName.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/WreckerBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/FallBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Animations/FallAnimation.cs" />
@@ -97,17 +94,25 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BallCombatSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Animations/BasicAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerAnimation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerStatsSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerStats.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerCombatSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/StatsSystems/BasicStatsSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/BasicBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/ForceBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/Gravity.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BasicCombatSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Animations/AnimationEvents.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/TagName.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BasicCombatSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Ground.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerStatsSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/PlayerPosition.asset" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/UpdatePosition.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/PlayerPosition.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/ScrennEffect.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/ScreenEffect.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/ScreenEffects.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerCombatSystem.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2BhJJB9rgYr0IQAWNq5chfxuza7" />
@@ -166,7 +171,10 @@
       <workItem from="1657765342475" duration="2000" />
       <workItem from="1657780606070" duration="4346000" />
       <workItem from="1657793302229" duration="7980000" />
-      <workItem from="1657808329883" duration="4602000" />
+      <workItem from="1657808329883" duration="5867000" />
+      <workItem from="1657850076366" duration="3357000" />
+      <workItem from="1657869430831" duration="847000" />
+      <workItem from="1657875682294" duration="8066000" />
     </task>
     <servers />
   </component>

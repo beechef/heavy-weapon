@@ -51,6 +51,7 @@ GameObject:
   - component: {fileID: 3466574081133924478}
   - component: {fileID: 3466574081133924472}
   - component: {fileID: 6021707402468923299}
+  - component: {fileID: 7758757501857101123}
   m_Layer: 6
   m_Name: Right Turret
   m_TagString: Enemy
@@ -186,14 +187,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 3466574081133924477}
   statsSystem: {fileID: 3466574081133924472}
+  animationEvents: {fileID: 7758757501857101123}
   bulletPrefabs:
-  - SmallBullet
+  - Bomb Frag
+  destroyParticlePrefab: Destroy Particle
   audioSource: {fileID: 3466574081133924476}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 3466574081133924479}
   pooling: {fileID: 3466574081133924478}
   attackPoint: {fileID: 3466574081900119262}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  isDeadTouch: 0
 --- !u!114 &3466574081133924477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +358,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7758757501857101123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466574081133924467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3466574081186535010
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,13 +856,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 3466574081366582430}
   statsSystem: {fileID: 3466574081366582417}
+  animationEvents: {fileID: 20336723067353650}
   bulletPrefabs: []
+  destroyParticlePrefab: Destroy Particle
   audioSource: {fileID: 3466574081366582419}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 3466574081366582426}
   pooling: {fileID: 3466574081366582431}
   attackPoint: {fileID: 0}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  isDeadTouch: 0
   leftLauncher: {fileID: 3466574081695895018}
   rightLauncher: {fileID: 3466574081742200136}
   leftTurret: {fileID: 3466574081977804278}
@@ -923,14 +942,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3466574081678507643}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3466574081695895008}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!1 &3466574081695895011
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,14 +1169,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 3466574081695895009}
   statsSystem: {fileID: 3466574081695895022}
+  animationEvents: {fileID: 2580103677405796081}
   bulletPrefabs:
-  - TraceBomb
+  - Hell Fire
+  destroyParticlePrefab: Destroy Particle
   audioSource: {fileID: 3466574081695895023}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 3466574081695895021}
   pooling: {fileID: 3466574081695895020}
-  attackPoint: {fileID: 3466574081695895008}
+  attackPoint: {fileID: 3466574081678507640}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  isDeadTouch: 0
 --- !u!50 &2080661128569581832
 Rigidbody2D:
   serializedVersion: 4
@@ -1398,14 +1420,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 3466574081742200498}
   statsSystem: {fileID: 3466574081742200501}
+  animationEvents: {fileID: 5582766608235266400}
   bulletPrefabs:
-  - TraceBomb
+  - Hell Fire
+  destroyParticlePrefab: Destroy Particle
   audioSource: {fileID: 3466574081742200500}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 3466574081742200503}
   pooling: {fileID: 3466574081742200502}
-  attackPoint: {fileID: 3466574081742200137}
+  attackPoint: {fileID: 3466574082781469009}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  isDeadTouch: 0
 --- !u!50 &5154181523609090239
 Rigidbody2D:
   serializedVersion: 4
@@ -1476,6 +1501,7 @@ GameObject:
   - component: {fileID: 3466574081977804172}
   - component: {fileID: 3466574081977804279}
   - component: {fileID: 5000143447633712453}
+  - component: {fileID: 1345737506856029595}
   m_Layer: 6
   m_Name: Left Turret
   m_TagString: Enemy
@@ -1611,14 +1637,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 3466574081977804170}
   statsSystem: {fileID: 3466574081977804279}
+  animationEvents: {fileID: 1345737506856029595}
   bulletPrefabs:
-  - SmallBullet
+  - Bomb Frag
+  destroyParticlePrefab: Destroy Particle
   audioSource: {fileID: 3466574081977804173}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 3466574081977804171}
   pooling: {fileID: 3466574081977804172}
   attackPoint: {fileID: 3466574081382705937}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  isDeadTouch: 0
 --- !u!114 &3466574081977804170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1779,6 +1808,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1345737506856029595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466574081977804174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3466574082369635124
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,6 +1831,7 @@ GameObject:
   - component: {fileID: 3466574082369635123}
   - component: {fileID: 3466574082369635122}
   - component: {fileID: 3466574082369635125}
+  - component: {fileID: 20336723067353650}
   m_Layer: 6
   m_Name: GFX
   m_TagString: Enemy
@@ -1884,6 +1926,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &20336723067353650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466574082369635124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3466574082455125220
 GameObject:
   m_ObjectHideFlags: 0
@@ -1895,6 +1949,7 @@ GameObject:
   - component: {fileID: 3466574082455125221}
   - component: {fileID: 3466574082455125219}
   - component: {fileID: 3466574082455125218}
+  - component: {fileID: 5582766608235266400}
   m_Layer: 6
   m_Name: GFX
   m_TagString: Untagged
@@ -1989,6 +2044,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5582766608235266400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466574082455125220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3466574082781469008
 GameObject:
   m_ObjectHideFlags: 0
@@ -2012,14 +2079,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3466574082781469008}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3466574081742200137}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!1 &3466574082824492407
 GameObject:
   m_ObjectHideFlags: 0
@@ -2031,6 +2098,7 @@ GameObject:
   - component: {fileID: 3466574082824492404}
   - component: {fileID: 3466574082824492402}
   - component: {fileID: 3466574082824492405}
+  - component: {fileID: 2580103677405796081}
   m_Layer: 6
   m_Name: GFX
   m_TagString: Untagged
@@ -2125,6 +2193,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2580103677405796081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466574082824492407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3466574082915764980
 GameObject:
   m_ObjectHideFlags: 0

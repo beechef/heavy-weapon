@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
             GameState.tankMoveSpeed = Input.GetAxis("Horizontal");
         }
 
-        Move(moveDirXValue.value * _stats.moveSpeed);
+        Move(_stats.moveSpeed);
 
     }
     private void Move(float moveSpeed)

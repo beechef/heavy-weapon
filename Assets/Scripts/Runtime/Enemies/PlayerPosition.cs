@@ -13,10 +13,15 @@ namespace Runtime.Enemy
             PlayerPositions.Add(playerPosition);
         }
 
+        public static void RemovePlayerPosition(PlayerPosition playerPosition)
+        {
+            PlayerPositions.Remove(playerPosition);
+        }
+
         public static Vector3 GetNearestPlayerPosition(Transform enemyTransform)
         {
-            Vector3 nearestPlayerPosition = enemyTransform.up;
             Vector3 enemyPosition = enemyTransform.position;
+            Vector3 nearestPlayerPosition = enemyPosition + enemyTransform.up;
             float nearestDistance = float.MaxValue;
             foreach (var player in PlayerPositions)
             {
@@ -33,11 +38,6 @@ namespace Runtime.Enemy
         }
 
         public Vector3 Position { get; private set; }
-
-        public PlayerPosition()
-        {
-            AddPlayerPosition(this);
-        }
 
         public void SetPosition(Vector3 position)
         {
