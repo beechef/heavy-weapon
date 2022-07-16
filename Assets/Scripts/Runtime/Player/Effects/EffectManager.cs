@@ -7,12 +7,13 @@ namespace Runtime.Player.Effects
     {
         [SerializeField] private EffectRenderer effectRendererPrefab;
         [SerializeField] private Transform effectRenderQueue;
-        private List<Effect> _effects = new List<Effect>();
-        private Dictionary<Effect, EffectRenderer> _effectRenderers = new Dictionary<Effect, EffectRenderer>();
+        private readonly List<Effect> _effects = new List<Effect>();
+        private readonly Dictionary<Effect, EffectRenderer> _effectRenderers = new Dictionary<Effect, EffectRenderer>();
 
         private void Awake()
         {
             GODictionary.AddEffectManager(gameObject, this);
+            effectRenderQueue = GameObject.FindWithTag(TagName.RenderEffectQueue).transform;
         }
 
         private void Update()

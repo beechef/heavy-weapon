@@ -20,6 +20,11 @@ namespace Runtime.Enemies.Behaviours
 
         sbyte _sign = -1;
 
+        public void Stop()
+        {
+            enabled = false;
+        }
+
         protected virtual void OnEnable()
         {
             OnInit();

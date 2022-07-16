@@ -870,6 +870,7 @@ MonoBehaviour:
   rightLauncher: {fileID: 3466574081742200136}
   leftTurret: {fileID: 3466574081977804278}
   rightTurret: {fileID: 3466574081133924464}
+  hugeCopterBehaviour: {fileID: 3466574081366582428}
 --- !u!114 &3466574081366582428
 MonoBehaviour:
   m_ObjectHideFlags: 0

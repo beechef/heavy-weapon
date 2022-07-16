@@ -1,5 +1,6 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
+using Runtime.Enemies.Behaviours;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -8,7 +9,12 @@ namespace Runtime.Enemies.CombatSystems
     public class BallCombatSystem : BasicCombatSystem
     {
         [Range(0, 2)] [SerializeField] private float explosionRadius;
+        [SerializeField] private RotateBehaviour rotateBehaviour;
         
+        public void Stop()
+        {
+            rotateBehaviour.enabled = false;
+        }
 
         protected override async UniTask SpawnBullet()
         {
@@ -20,7 +26,7 @@ namespace Runtime.Enemies.CombatSystems
                     RandomQuaternion());
 
                 GODictionary.BasicBulletStatsSystemGOs[go].IncreaseAttack(Stats.attack);
-                
+
                 await UniTask.Delay(TimeSpan.FromSeconds(Stats.attackDelay));
             }
         }

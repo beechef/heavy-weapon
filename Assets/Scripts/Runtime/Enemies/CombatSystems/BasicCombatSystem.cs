@@ -7,7 +7,6 @@ using Random = UnityEngine.Random;
 
 namespace Runtime.Enemies.CombatSystems
 {
-    [RequireComponent(typeof(Collider2D))]
     public class BasicCombatSystem : CombatSystem
     {
         [SerializeField] protected BasicAnimation anim;
@@ -87,7 +86,7 @@ namespace Runtime.Enemies.CombatSystems
             audioSource.Play();
         }
 
-        public async virtual void Death(float delay)
+        public async virtual UniTask Death(float delay)
         {
             IsDeath = true;
             coll.enabled = false;
@@ -100,6 +99,7 @@ namespace Runtime.Enemies.CombatSystems
 
         public override void TakeDamage(float damage)
         {
+            if (IsDeath) return;
             anim.Hit();
             if (!statsSystem.TakeDamage(damage)) return;
             Death(.5f);

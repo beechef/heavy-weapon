@@ -1,4 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using System;
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Runtime.Enemies.Stats;
 using Runtime.Enemies.StatsSystems;
@@ -27,18 +28,26 @@ namespace Runtime.Enemies.Behaviours
 
         private async void Rotate()
         {
-            await transform.DORotateQuaternion(Quaternion.Euler(new Vector3(0f, 0f, minAngle)),
-                _duration / _stats.moveSpeed).SetEase(Ease.OutSine);
+            try
+            {
+                if (enabled == false) return;
+                await transform.DORotateQuaternion(Quaternion.Euler(new Vector3(0f, 0f, minAngle)),
+                    _duration / _stats.moveSpeed).SetEase(Ease.OutSine);
 
-            await transform.DORotateQuaternion(Quaternion.Euler(new Vector3(0f, 0f, 0f)),
-                _duration / _stats.moveSpeed).SetEase(Ease.InSine);
+                await transform.DORotateQuaternion(Quaternion.Euler(new Vector3(0f, 0f, 0f)),
+                    _duration / _stats.moveSpeed).SetEase(Ease.InSine);
 
-            await transform.DORotateQuaternion(Quaternion.Euler(new Vector3(0f, 0f, maxAngle)),
-                _duration / _stats.moveSpeed).SetEase(Ease.OutSine);
+                await transform.DORotateQuaternion(Quaternion.Euler(new Vector3(0f, 0f, maxAngle)),
+                    _duration / _stats.moveSpeed).SetEase(Ease.OutSine);
 
-            await transform.DORotateQuaternion(Quaternion.Euler(new Vector3(0f, 0f, 0f)),
-                _duration / _stats.moveSpeed).SetEase(Ease.InSine);
-            Rotate();
+                await transform.DORotateQuaternion(Quaternion.Euler(new Vector3(0f, 0f, 0f)),
+                    _duration / _stats.moveSpeed).SetEase(Ease.InSine);
+                Rotate();
+            }
+            catch (Exception e)
+            {
+                // ignored
+            }
         }
     }
 }

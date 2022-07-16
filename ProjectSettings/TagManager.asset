@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - FireStreak
   - Wall
+  - Render Effect Queue
   layers:
   - Default
   - TransparentFX
