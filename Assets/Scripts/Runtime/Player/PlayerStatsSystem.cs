@@ -39,10 +39,12 @@ namespace Runtime.Player
                 }
             }
 
+
             if (IsDead())
             {
                 _explosion.ExplosionByPress();
             }
+
         }
 
         protected virtual void OnInit()

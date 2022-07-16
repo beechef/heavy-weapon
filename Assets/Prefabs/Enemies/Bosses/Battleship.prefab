@@ -204,7 +204,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839718793815044151}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1218,6 +1218,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9206401760606714530}
   - component: {fileID: 9206401760606714533}
+  - component: {fileID: 6199789671283124312}
+  - component: {fileID: 4244023616788928127}
   m_Layer: 6
   m_Name: Main
   m_TagString: Untagged
@@ -1233,7 +1235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9206401760606714531}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.84, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1292,6 +1294,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6199789671283124312
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9206401760606714531}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3d0745543fac9864e982a06cb30722d6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4244023616788928127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9206401760606714531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9206401760617663540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,7 +1350,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9206401760617663540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1825,7 +1859,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01720643, y: 1.8315158}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1958,7 +1992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c01abc1e6e4ce8898c13a3fbe9d2f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 9206401761482263859}
+  animator: {fileID: 6199789671283124312}
   idleAnim: Idle
   hitAnim: Hit
   moveForwardAnim: MoveForward
@@ -1991,7 +2025,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 9206401761395491680}
   statsSystem: {fileID: 9206401761395491681}
-  animationEvents: {fileID: 4261281072234192421}
+
+  animationEvents: {fileID: 4244023616788928127}
+
   bulletPrefabs: []
   destroyParticlePrefab: Destroy Particle
   audioSource: {fileID: 9206401761395491694}
@@ -2001,6 +2037,9 @@ MonoBehaviour:
   attackPoint: {fileID: 9206401761395491693}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
   isDeadTouch: 0
+
+  healthBar: {fileID: 5237312709064096705, guid: 1d124bdfebf49e44fbb7be3cf2eed98f, type: 3}
+
   guns:
   - {fileID: 9206401761940485018}
   - {fileID: 9206401761430645190}
@@ -2079,7 +2118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9206401761419037320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.853, z: 0}
+  m_LocalPosition: {x: 0, y: -0.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2429,6 +2468,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9206401761482263856}
+
   - component: {fileID: 9206401761482263859}
   - component: {fileID: 4261281072234192421}
   m_Layer: 6
@@ -2455,6 +2495,7 @@ Transform:
   m_Father: {fileID: 9206401761395491693}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+
 --- !u!95 &9206401761482263859
 Animator:
   serializedVersion: 4
