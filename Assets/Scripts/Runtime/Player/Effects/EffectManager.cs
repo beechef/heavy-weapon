@@ -7,13 +7,17 @@ namespace Runtime.Player.Effects
     {
         [SerializeField] private EffectRenderer effectRendererPrefab;
         [SerializeField] private Transform effectRenderQueue;
+
         private readonly List<Effect> _effects = new List<Effect>();
         private readonly Dictionary<Effect, EffectRenderer> _effectRenderers = new Dictionary<Effect, EffectRenderer>();
+
 
         private void Awake()
         {
             GODictionary.AddEffectManager(gameObject, this);
+
             effectRenderQueue = GameObject.FindWithTag(TagName.RenderEffectQueue).transform;
+
         }
 
         private void Update()
@@ -38,7 +42,9 @@ namespace Runtime.Player.Effects
             for (int i = 0; i < _effects.Count; i++)
             {
                 Effect effect = _effects[i];
+
                 if (effect.Name.Equals(effectName)) return i;
+
             }
 
             return -1;
@@ -59,7 +65,9 @@ namespace Runtime.Player.Effects
                 }
                 case EffectType.Replace:
                 {
+
                     int index = FindEffectByName(effect.Name);
+
                     if (index == -1)
                     {
                         effect.OnStart();

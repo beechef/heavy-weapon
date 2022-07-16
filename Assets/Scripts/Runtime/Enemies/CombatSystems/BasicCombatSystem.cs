@@ -20,7 +20,9 @@ namespace Runtime.Enemies.CombatSystems
         [SerializeField] protected Pooling pooling;
         [SerializeField] protected Transform attackPoint;
         [SerializeField] protected SavedData savedData;
+        [SerializeField] protected GameStateSO state;
         [SerializeField] protected bool isDeadTouch = false;
+
 
         protected Stats.BasicStats Stats => statsSystem.Stats;
         protected float LastAttack = 0f;
@@ -40,14 +42,14 @@ namespace Runtime.Enemies.CombatSystems
             audioSource.playOnAwake = false;
             EnemyPosition.AddPos(transform);
         }
-
         protected virtual void Awake()
         {
             GODictionary.AddVulnerableGO(gameObject, this);
+
             IssavedDataNotNull = savedData != null;
+
             animationEvents.OnDeath(() => { pooling.Return(gameObject, .1f).Forget(); });
         }
-
         public override bool IsCanAttack()
         {
             return Time.time - LastAttack >= 1f / Stats.attackSpeed;
@@ -85,7 +87,9 @@ namespace Runtime.Enemies.CombatSystems
             audioSource.Play();
         }
 
+
         public async virtual UniTask Death(float delay)
+
         {
             IsDeath = true;
             coll.enabled = false;
@@ -102,7 +106,9 @@ namespace Runtime.Enemies.CombatSystems
             anim.Hit();
             if (!statsSystem.TakeDamage(damage)) return;
             Death(.5f);
+
             if (IssavedDataNotNull)
+
                 savedData.Score += Stats.score;
         }
 

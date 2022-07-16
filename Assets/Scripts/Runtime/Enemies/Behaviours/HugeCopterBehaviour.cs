@@ -15,6 +15,7 @@ namespace Runtime.Enemies.Behaviours
         [SerializeField] private float minMoveDistance;
         [SerializeField] private float maxMoveDistance;
         [SerializeField] private float timeSwitchLauncher;
+        
         private BasicStats _stats;
         private Vector2 _moveDir;
         private float _timeMove;
@@ -35,7 +36,6 @@ namespace Runtime.Enemies.Behaviours
             SwitchLauncher();
             Attack();
         }
-
         private void OnInit()
         {
             _stats = statsSystem.Stats;

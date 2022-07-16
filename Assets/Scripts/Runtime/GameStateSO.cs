@@ -22,12 +22,17 @@ public class GameStateSO : ScriptableObject
         EndGame,
         GameOver,
         BossFight,
-        Dead
+        Revive,
+        FinishMission
     }
 
     public void StartGame()
     {
         State = GameState.StartGame;
+    }
+    public void Revive()
+    {
+        State = GameState.Revive;
     }
 
     public void EndGame()
@@ -50,10 +55,11 @@ public class GameStateSO : ScriptableObject
         State = GameState.BossFight;
     }
 
-    public void Dead()
+    public void FinishMission()
     {
-        State = GameState.Dead;
+        State = GameState.FinishMission;
     }
+    
 
     public void UpdateState()
     {
@@ -69,13 +75,16 @@ public class GameStateSO : ScriptableObject
                 OnBossFight();
                 break;
             case GameState.EndGame:
-                OnFinishGame();
+                OnBossKilled();
                 break;
             case GameState.GameOver:
                 OnGameOver();
                 break;
-            case GameState.Dead:
-                OnPlayerDead();
+            case GameState.Revive:
+                OnRevive();
+                break;
+            case GameState.FinishMission:
+                OnFinishLevel();
                 break;
             default:
                 OnGameOver();
@@ -106,12 +115,12 @@ public class GameStateSO : ScriptableObject
         moveLeftSpeed = 0;
     }
 
-    void OnFinishGame()
+    void OnBossKilled()
     {
         canGetInput = false;
         isMoveRight = true;
-        moveLeftSpeed = 2f;
-        tankMoveSpeed = 1.5f;
+        moveLeftSpeed = 1.2f;
+        tankMoveSpeed = 0;
     }
 
     void OnGameOver()
@@ -121,13 +130,26 @@ public class GameStateSO : ScriptableObject
         moveLeftSpeed = 0;
         tankMoveSpeed = 0;
     }
-    void OnPlayerDead()
+    public void OnPlayerDead()
     {
-        if(lives<0)
+        if(lives<=0)
         {
-            GameOver();
+            GameOver();                                                                         
         }
         lives -= 1;
-        
+    }
+
+    private void OnRevive()
+    {
+        canGetInput = false;
+        isMoveRight = true;
+    }
+
+    public void OnFinishLevel()
+    {
+        canGetInput = false;
+        isMoveRight = false;
+        moveLeftSpeed = 0;
+        tankMoveSpeed = 0f;
     }
 }

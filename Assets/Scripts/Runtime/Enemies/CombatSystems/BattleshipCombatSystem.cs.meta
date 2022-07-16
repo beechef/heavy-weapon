@@ -1,3 +1,21 @@
-﻿fileFormatVersion: 2
+fileFormatVersion: 2
 guid: 7067421e1df74526b83021fd7fe051b3
-timeCreated: 1657592631
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - anim: {instanceID: 0}
+  - statsSystem: {instanceID: 0}
+  - animationEvents: {instanceID: 0}
+  - audioSource: {instanceID: 0}
+  - deathClip: {instanceID: 0}
+  - coll: {instanceID: 0}
+  - pooling: {instanceID: 0}
+  - attackPoint: {instanceID: 0}
+  - savedData: {instanceID: 0}
+  - state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

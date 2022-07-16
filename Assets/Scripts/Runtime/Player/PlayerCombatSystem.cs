@@ -24,6 +24,9 @@ namespace Runtime.Player
         [SerializeField] private string playerDeathPrefab;
         [SerializeField] private LaserBullet megaLaser;
 
+        [SerializeField] private PlayerMovement playerMovement;
+        [SerializeField] private GameStateSO state;
+
         private PlayerStats _stats;
         private float _lastAttack;
         private bool _isDeath;
@@ -76,15 +79,21 @@ namespace Runtime.Player
             }
             else
             {
+                state.Revive();
+                
+                state.tankMoveSpeed = 0;
                 Reborn();
+                playerMovement.Revieve();
             }
         }
 
         private async void Reborn()
         {
             await UniTask.Delay(TimeSpan.FromSeconds(3.5f));
+            transform.position = playerMovement.startPos;
             gameObject.SetActive(true);
             statsSystem.RestoreFullHealth();
+            
         }
 
         public void TakeDamage(float damage)

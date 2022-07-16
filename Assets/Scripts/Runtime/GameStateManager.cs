@@ -12,7 +12,7 @@ public class GameStateManager : MonoBehaviour
         State.lives = 3;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         State.UpdateState();
     }

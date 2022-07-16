@@ -9,7 +9,9 @@ namespace Runtime.Player.Effects
         public float Value;
         public float Duration;
         public float MaxDuration;
+
         public abstract string Name { get; }
+
         public abstract bool IsEnd();
 
         public abstract void OnStart();
