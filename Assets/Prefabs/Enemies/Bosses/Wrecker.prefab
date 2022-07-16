@@ -256,6 +256,7 @@ MonoBehaviour:
   attackPoint: {fileID: 2742255894620584897}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
   isDeadTouch: 0
+  healthBar: {fileID: 5237312709064096705, guid: 1d124bdfebf49e44fbb7be3cf2eed98f, type: 3}
   ballCombatSystem: {fileID: 2742255896469733351}
   wreckerBehaviour: {fileID: 8237188076017235420}
 --- !u!1 &2742255894620584896

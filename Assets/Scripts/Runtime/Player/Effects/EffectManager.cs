@@ -38,7 +38,7 @@ namespace Runtime.Player.Effects
             for (int i = 0; i < _effects.Count; i++)
             {
                 Effect effect = _effects[i];
-                if (effect.Name().Equals(effectName)) return i;
+                if (effect.Name.Equals(effectName)) return i;
             }
 
             return -1;
@@ -59,7 +59,7 @@ namespace Runtime.Player.Effects
                 }
                 case EffectType.Replace:
                 {
-                    int index = FindEffectByName(effect.Name());
+                    int index = FindEffectByName(effect.Name);
                     if (index == -1)
                     {
                         effect.OnStart();

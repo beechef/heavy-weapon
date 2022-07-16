@@ -10,6 +10,7 @@ TagManager:
   - FireStreak
   - Wall
   - Render Effect Queue
+  - Boss Health Bar
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - PlayerBullet
   - Ground
   - Wall
-  - 
+  - Supplier
   - 
   - 
   - 

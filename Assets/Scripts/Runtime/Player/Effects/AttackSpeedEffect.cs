@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 namespace Runtime.Player.Effects
 {
@@ -8,7 +7,7 @@ namespace Runtime.Player.Effects
         private const string AttackSpeed = "AttackSpeed";
         private PlayerStatsSystem _statsSystem;
 
-        public override string Name() => AttackSpeed;
+        public override string Name => AttackSpeed;
 
         public override bool IsEnd() => Duration <= 0f;
 
