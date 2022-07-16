@@ -12,16 +12,24 @@ namespace Runtime.Enemies.CombatSystems
     {
         [SerializeField] protected BasicAnimation anim;
         [SerializeField] protected StatsSystems.BasicStatsSystem statsSystem;
+        [SerializeField] protected AnimationEvents animationEvents;
         [SerializeField] protected List<string> bulletPrefabs;
+        [SerializeField] protected string destroyParticlePrefab = "Destroy Particle";
         [SerializeField] protected AudioSource audioSource;
         [SerializeField] protected AudioClip deathClip;
         [SerializeField] protected Collider2D coll;
         [SerializeField] protected Pooling pooling;
-        [SerializeField] public Transform attackPoint;
-
+        [SerializeField] protected Transform attackPoint;
+        [SerializeField] protected SavedData savedData;
+        [SerializeField] protected GameStateSO state;
+        [SerializeField] protected bool isDeadTouch = false;
         protected Stats.BasicStats Stats;
         protected float LastAttack = 0f;
-
+        protected bool IsDeath;
+        
+        
+        private bool _issavedDataNotNull;
+        
         protected virtual void OnEnable()
         {
             OnInit();
@@ -29,24 +37,27 @@ namespace Runtime.Enemies.CombatSystems
 
         protected virtual void OnInit()
         {
+            IsDeath = false;
             coll.enabled = true;
             Stats = statsSystem.Stats;
             audioSource.loop = false;
             audioSource.playOnAwake = false;
+            EnemyPosition.AddPos(transform);
         }
-
-        protected virtual void Start()
+        protected virtual void Awake()
         {
             GODictionary.AddVulnerableGO(gameObject, this);
+            _issavedDataNotNull = savedData != null;
+            animationEvents.OnDeath(() => { pooling.Return(gameObject, .1f).Forget(); });
         }
-
         public override bool IsCanAttack()
         {
-            return Time.time - LastAttack >= Stats.attackSpeed;
+            return Time.time - LastAttack >= 1f / Stats.attackSpeed;
         }
 
         public override void Attack()
         {
+            if (IsDeath) return;
             if (!IsCanAttack()) return;
             LastAttack = Time.time;
 
@@ -63,36 +74,54 @@ namespace Runtime.Enemies.CombatSystems
                 var randomNumber = Random.Range(0, bulletPrefabs.Count);
                 GameObject go = await pooling.GetAsync(bulletPrefabs[randomNumber], attackPoint.position,
                     attackPoint.rotation);
+                GODictionary.BasicBulletStatsSystemGOs[go].IncreaseAttack(Stats.attack);
                 await UniTask.Delay(TimeSpan.FromSeconds(Stats.attackDelay));
             }
         }
 
-        protected void PlaySound(AudioClip clip)
+        protected void PlaySound(AudioClip audioClip)
         {
+            if (audioClip == null) return;
             audioSource.Stop();
-            audioSource.clip = clip;
+            audioSource.clip = audioClip;
             audioSource.Play();
         }
 
-        public virtual void Death()
+        public async virtual void Death(float delay)
         {
+            IsDeath = true;
             coll.enabled = false;
             PlaySound(deathClip);
             anim.Death();
-            pooling.Return(gameObject, .2f).Forget();
+            GameObject go = await pooling.GetAsync(destroyParticlePrefab, transform.position,
+                Quaternion.Euler(-90f, 0f, 0f));
+            pooling.Return(go, 2f).Forget();
         }
 
         public override void TakeDamage(float damage)
         {
             anim.Hit();
             if (!statsSystem.TakeDamage(damage)) return;
-            Death();
+            Death(.5f);
+            if (_issavedDataNotNull)
+                savedData.Score += Stats.score;
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
+        protected virtual void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.CompareTag(TagName.Ground))
+            if (GODictionary.VulnerableGOs.TryGetValue(other.gameObject, out var vulnerable))
+            {
+                vulnerable.TakeDamage(Stats.attack);
+            }
+
+            if (other.gameObject.CompareTag(TagName.Ground) ||
+                (other.gameObject.CompareTag(TagName.Player) && isDeadTouch))
                 pooling.Return(gameObject, .2f).Forget();
+        }
+
+        protected virtual void OnDisable()
+        {
+            EnemyPosition.RemovePos(transform);
         }
     }
 }

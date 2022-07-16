@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Shield
   m_EditorClassIdentifier: 
   attack: 0
+  attackSpeed: 0
   health: 0
   maxHealth: 50
   moveSpeed: 0
+  score: 250

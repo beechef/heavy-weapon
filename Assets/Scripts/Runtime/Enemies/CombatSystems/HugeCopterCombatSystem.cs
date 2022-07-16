@@ -11,9 +11,9 @@ namespace Runtime.Enemies.CombatSystems
 
         private BasicCombatSystem _currentLauncher;
 
-        protected override void Start()
+        protected override void Awake()
         {
-            base.Start();
+            base.Awake();
             _currentLauncher = leftLauncher;
         }
 

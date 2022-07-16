@@ -14,7 +14,6 @@ public class GameStateSO : ScriptableObject
     public bool canGetInput;
     public int lives;
     public GameState State;
-    [SerializeField] private UnityEvent playerDead;
 
     public enum GameState
     {
@@ -144,7 +143,6 @@ public class GameStateSO : ScriptableObject
     {
         canGetInput = false;
         isMoveRight = true;
-        tankMoveSpeed = 0.5f;
     }
 
     public void OnFinishLevel()

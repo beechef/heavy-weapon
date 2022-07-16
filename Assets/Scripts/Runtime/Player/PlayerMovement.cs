@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer tankMesh;
     [SerializeField] private GameObject tankBarrel;
-    private Vector2 startPos;
+    public Vector2 startPos;
     [SerializeField] private UnityEvent playerRevive;
     private bool isReviveEventInvoke;
     private Vector3 pos;
@@ -32,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
         if (GameState.State == GameStateSO.GameState.Revive)
         {
             CheckEventInvoke();
-            Revieve();
         }
         if (GameState.canGetInput)
         {
@@ -82,20 +81,13 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(time);
         GameState.PlayGame();
     }
-
-    public void PlayerDead()
-    {
-        if (GameState.State == GameStateSO.GameState.GameOver)
-        {
-            return;
-        }
-        StartCoroutine(WaitToRespawn(1));
-    }
+    
     public void Revieve()
     {
         isReviveEventInvoke = true;
         tankMesh.enabled = true;
         tankBarrel.SetActive(true);
+        GameState.tankMoveSpeed =0.5f;
         if (pos.x >= 0.5f &&GameState.State ==GameStateSO.GameState.Revive)
         {
             GameState.tankMoveSpeed = 0;
@@ -111,14 +103,6 @@ public class PlayerMovement : MonoBehaviour
             
         }
     }
-
-    IEnumerator WaitToRespawn(float time)
-    {
-        yield return new WaitForSeconds(time);
-        transform.position = startPos;
-        GameState.Revive();
-    }
-
     private void CheckEventInvoke()
     {
         if (isReviveEventInvoke)

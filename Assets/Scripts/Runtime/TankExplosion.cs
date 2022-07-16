@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 public class TankExplosion : MonoBehaviour
 {
@@ -14,7 +13,7 @@ public class TankExplosion : MonoBehaviour
     [SerializeField] private UnityEvent tankExplosionEvent;
     private void Start()
     {
-        explosionEffect.Stop();
+        //explosionEffect.Stop();
     }
 
     public void Update()
@@ -31,7 +30,7 @@ public class TankExplosion : MonoBehaviour
     {
         tankBarrel.SetActive(false);
         tankMesh.enabled = false;
-        explosionEffect.Play();
+        //explosionEffect.Play();
         explosionAudio.Play();
     }
 }

@@ -15,8 +15,6 @@ namespace Runtime.Enemies.CombatSystems
             LastAttack = Time.time;
 
             SpawnBullet().Forget();
-
-            anim.Attack();
         }
 
         protected override async UniTask SpawnBullet()
@@ -29,6 +27,10 @@ namespace Runtime.Enemies.CombatSystems
                     attackPoint.rotation);
                 GameObject go1 = await pooling.GetAsync(bulletPrefabs[randomNumber], attackPoint1.position,
                     attackPoint1.rotation);
+                
+                GODictionary.BasicBulletStatsSystemGOs[go].IncreaseAttack(Stats.attack);
+                GODictionary.BasicBulletStatsSystemGOs[go1].IncreaseAttack(Stats.attack);
+
                 await UniTask.Delay(TimeSpan.FromSeconds(Stats.attackDelay));
             }
         }

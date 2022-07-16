@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 350
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -131,10 +131,10 @@ TextureImporter:
       name: bulletglow_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 4
-        width: 190
-        height: 73
+        x: 0
+        y: 0
+        width: 50
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +152,10 @@ TextureImporter:
       name: bulletglow_1
       rect:
         serializedVersion: 2
-        x: 206
-        y: 3
-        width: 194
-        height: 77
+        x: 50
+        y: 0
+        width: 50
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,7 +163,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bb06eca8d97926459b646b1be775eca
+      spriteID: 122a3777073205746bd692bef7487cf6
       internalID: 1236889077
       vertices: []
       indices: 
