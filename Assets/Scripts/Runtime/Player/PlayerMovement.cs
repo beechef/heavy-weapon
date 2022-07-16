@@ -9,17 +9,30 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer tankMesh;
     [SerializeField] private GameObject tankBarrel;
+    private Vector2 startPos;
+    [SerializeField] private UnityEvent playerRevive;
+    private bool isReviveEventInvoke;
+    private Vector3 pos;
 
     private void Start()
     {
+        isReviveEventInvoke = false;
+            startPos = transform.position;
         GameState.isMoveRight = true;
         animator.SetFloat("MoveDir",1);
     }
     void Update()
     {
+        pos = Camera.main.WorldToViewportPoint(transform.position);
         if (GameState.State == GameStateSO.GameState.StartGame)
         {
             OnGameStart();
+        }
+
+        if (GameState.State == GameStateSO.GameState.Revive)
+        {
+            CheckEventInvoke();
+            Revieve();
         }
         if (GameState.canGetInput)
         {
@@ -30,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
     private void Move(float moveSpeed)
 
     {
-        Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
+      
         float MoveRightVal=1;
         if (!GameState.isMoveRight)
         {
@@ -58,7 +71,6 @@ public class PlayerMovement : MonoBehaviour
     }
     public void OnGameStart()
     {
-        Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
         if (pos.x >= 0.5f )
         {
             GameState.tankMoveSpeed = 0;
@@ -70,16 +82,50 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(time);
         GameState.PlayGame();
     }
+
     public void PlayerDead()
     {
-        GameState.Dead();
-        Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
-        if (pos.x >= 0.5f )
+        if (GameState.State == GameStateSO.GameState.GameOver)
+        {
+            return;
+        }
+        StartCoroutine(WaitToRespawn(1));
+    }
+    public void Revieve()
+    {
+        isReviveEventInvoke = true;
+        tankMesh.enabled = true;
+        tankBarrel.SetActive(true);
+        if (pos.x >= 0.5f &&GameState.State ==GameStateSO.GameState.Revive)
         {
             GameState.tankMoveSpeed = 0;
-            tankBarrel.SetActive(true);
-            tankMesh.enabled = true;
-            GameState.PlayGame();
+            isReviveEventInvoke = false;
+            if (GameState.moveLeftSpeed > 0)
+            {
+                GameState.PlayGame();
+            }
+            else
+            {
+                GameState.BossFight();
+            }
+            
         }
     }
-}
+
+    IEnumerator WaitToRespawn(float time)
+    {
+        yield return new WaitForSeconds(time);
+        transform.position = startPos;
+        GameState.Revive();
+    }
+
+    private void CheckEventInvoke()
+    {
+        if (isReviveEventInvoke)
+        {
+            return;
+        }
+        playerRevive.Invoke();
+    }
+    }
+

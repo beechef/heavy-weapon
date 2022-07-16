@@ -2,14 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class TankExplosion : MonoBehaviour
 {
     [SerializeField] private ParticleSystem explosionEffect;
     [SerializeField] private AudioSource explosionAudio;
-    [SerializeField] private GameStateSO gameState;
     [SerializeField] private SpriteRenderer tankMesh;
     [SerializeField] private GameObject tankBarrel;
+    [SerializeField] private UnityEvent tankExplosionEvent;
     private void Start()
     {
         explosionEffect.Stop();
@@ -17,13 +19,15 @@ public class TankExplosion : MonoBehaviour
 
     public void Update()
     {
-        if (gameState.State == GameStateSO.GameState.Dead)
-        {
-            Exposion();
-        }
+        
     }
 
-    public void Exposion()
+    public void ExplosionByPress()
+    {
+        tankExplosionEvent.Invoke();
+    }
+
+    public void ExplsionEffect()
     {
         tankBarrel.SetActive(false);
         tankMesh.enabled = false;

@@ -9,15 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99fbca08d9c6a6e47939b1c99896ed2b, type: 3}
-  m_Name: GameState
+  m_Script: {fileID: 11500000, guid: 388930f5c7d7d2f4a97e34ce636d59e0, type: 3}
+  m_Name: PlayerDeadEvt
   m_EditorClassIdentifier: 
-  isMoveRight: 0
-  moveLeftSpeed: 0
-  tankMoveSpeed: 0
-  canGetInput: 1
-  lives: 2
-  State: 4
-  playerDead:
-    m_PersistentCalls:
-      m_Calls: []
