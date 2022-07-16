@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
-
 using UnityEngine.UI;
-
 
 namespace Runtime.Player.Effects
 {
@@ -10,9 +8,7 @@ namespace Runtime.Player.Effects
         private const string Attack = "Attack";
         private PlayerStatsSystem _statsSystem;
 
-
-        public override string Name => Attack;
-
+        public override string Name() => Attack;
 
 
         public override bool IsEnd() => Duration <= 0f;

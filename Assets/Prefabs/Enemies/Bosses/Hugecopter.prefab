@@ -866,14 +866,10 @@ MonoBehaviour:
   attackPoint: {fileID: 0}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
   isDeadTouch: 0
-
-  healthBar: {fileID: 5237312709064096705, guid: 1d124bdfebf49e44fbb7be3cf2eed98f, type: 3}
-
   leftLauncher: {fileID: 3466574081695895018}
   rightLauncher: {fileID: 3466574081742200136}
   leftTurret: {fileID: 3466574081977804278}
   rightTurret: {fileID: 3466574081133924464}
-  hugeCopterBehaviour: {fileID: 3466574081366582428}
 --- !u!114 &3466574081366582428
 MonoBehaviour:
   m_ObjectHideFlags: 0

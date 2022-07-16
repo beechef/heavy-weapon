@@ -24,7 +24,7 @@ namespace Runtime
         }
 
 
-        public async UniTask Return(GameObject go, float delay = 0f)
+        public async UniTask Return(GameObject go, float delay)
         {
             await UniTask.Delay(TimeSpan.FromSeconds(delay));
             go.SetActive(false);

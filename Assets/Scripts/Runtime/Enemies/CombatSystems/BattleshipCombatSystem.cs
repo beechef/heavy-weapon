@@ -3,15 +3,13 @@ using UnityEngine;
 
 namespace Runtime.Enemies.CombatSystems
 {
-    public class BattleshipCombatSystem : BossCombatSystem
+    public class BattleshipCombatSystem : BasicCombatSystem
     {
         [SerializeField] private List<GunCombatSystem> guns;
         [SerializeField] private List<BasicCombatSystem> launchers;
 
         public override void Attack()
         {
-            if (IsDeath) return;
-
             if (!IsCanAttack()) return;
             LastAttack = Time.time;
 
