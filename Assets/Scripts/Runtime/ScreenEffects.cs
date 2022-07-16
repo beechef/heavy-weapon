@@ -1,7 +1,4 @@
-
-﻿using DG.Tweening;
-using UnityEngine;
-
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace Runtime
@@ -12,9 +9,6 @@ namespace Runtime
 
         [SerializeField] private Image image;
 
-        private Camera _camera;
-
-
         private void Awake()
         {
             if (Instance != null)
@@ -23,9 +17,6 @@ namespace Runtime
             }
 
             Instance = this;
-
-            _camera = Camera.main;
-
         }
 
         public void Blink(Color color, float time)
@@ -33,12 +24,5 @@ namespace Runtime
             image.color = color;
             image.CrossFadeAlpha(0f, time, false);
         }
-
-
-        public void Shake(float duration, float strength = 5f)
-        {
-            _camera.DOShakeRotation(duration, strength);
-        }
-
     }
 }

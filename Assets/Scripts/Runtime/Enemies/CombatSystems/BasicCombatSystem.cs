@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 
 namespace Runtime.Enemies.CombatSystems
 {
+    [RequireComponent(typeof(Collider2D))]
     public class BasicCombatSystem : CombatSystem
     {
         [SerializeField] protected BasicAnimation anim;
@@ -22,13 +23,13 @@ namespace Runtime.Enemies.CombatSystems
         [SerializeField] protected SavedData savedData;
         [SerializeField] protected GameStateSO state;
         [SerializeField] protected bool isDeadTouch = false;
-
-
-        protected Stats.BasicStats Stats => statsSystem.Stats;
+        protected Stats.BasicStats Stats;
         protected float LastAttack = 0f;
         protected bool IsDeath;
-        protected bool IssavedDataNotNull;
-
+        
+        
+        private bool _issavedDataNotNull;
+        
         protected virtual void OnEnable()
         {
             OnInit();
@@ -38,6 +39,7 @@ namespace Runtime.Enemies.CombatSystems
         {
             IsDeath = false;
             coll.enabled = true;
+            Stats = statsSystem.Stats;
             audioSource.loop = false;
             audioSource.playOnAwake = false;
             EnemyPosition.AddPos(transform);
@@ -45,9 +47,7 @@ namespace Runtime.Enemies.CombatSystems
         protected virtual void Awake()
         {
             GODictionary.AddVulnerableGO(gameObject, this);
-
-            IssavedDataNotNull = savedData != null;
-
+            _issavedDataNotNull = savedData != null;
             animationEvents.OnDeath(() => { pooling.Return(gameObject, .1f).Forget(); });
         }
         public override bool IsCanAttack()
@@ -87,9 +87,7 @@ namespace Runtime.Enemies.CombatSystems
             audioSource.Play();
         }
 
-
-        public async virtual UniTask Death(float delay)
-
+        public async virtual void Death(float delay)
         {
             IsDeath = true;
             coll.enabled = false;
@@ -102,13 +100,10 @@ namespace Runtime.Enemies.CombatSystems
 
         public override void TakeDamage(float damage)
         {
-            if (IsDeath) return;
             anim.Hit();
             if (!statsSystem.TakeDamage(damage)) return;
             Death(.5f);
-
-            if (IssavedDataNotNull)
-
+            if (_issavedDataNotNull)
                 savedData.Score += Stats.score;
         }
 

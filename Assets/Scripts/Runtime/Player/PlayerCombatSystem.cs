@@ -23,7 +23,6 @@ namespace Runtime.Player
         [SerializeField] private string casingPrefab;
         [SerializeField] private string playerDeathPrefab;
         [SerializeField] private LaserBullet megaLaser;
-
         [SerializeField] private PlayerMovement playerMovement;
         [SerializeField] private GameStateSO state;
 
@@ -86,7 +85,6 @@ namespace Runtime.Player
                 playerMovement.Revieve();
             }
         }
-
         private async void Reborn()
         {
             await UniTask.Delay(TimeSpan.FromSeconds(3.5f));
