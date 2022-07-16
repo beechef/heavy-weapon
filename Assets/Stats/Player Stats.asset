@@ -15,10 +15,10 @@ MonoBehaviour:
   attack: 10
   attackSpeed: 5.5
   moveSpeed: 1
-  amountAttackPoint: 3
+  amountAttackPoint: 1
   health: 100
   maxHealth: 50
   lives: 3
   nukeQuantity: 0
-  isActivateMegaLaser: 1
-  megaLaserComplete: 150
+  isActivateMegaLaser: 0
+  megaLaserComplete: 0

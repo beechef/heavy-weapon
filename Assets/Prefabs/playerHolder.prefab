@@ -334,6 +334,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4248698412167995038, guid: 0da58bf6830eacf41a7d1fef1a8d89bd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1154971969, guid: 0da58bf6830eacf41a7d1fef1a8d89bd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0da58bf6830eacf41a7d1fef1a8d89bd, type: 3}
@@ -463,6 +467,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &928538877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8249067588648167071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed41a1b2c0e4246bfc2b941dec5dd55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectRendererPrefab: {fileID: 6575472138806742266, guid: 4b13eedea0979b348b39c7531ee7216e, type: 3}
+  effectRenderQueue: {fileID: 0}
 --- !u!114 &1914530108
 MonoBehaviour:
   m_ObjectHideFlags: 0

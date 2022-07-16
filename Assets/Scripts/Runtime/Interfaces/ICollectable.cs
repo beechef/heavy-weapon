@@ -1,7 +1,9 @@
-﻿namespace Runtime.Interfaces
+﻿using UnityEngine;
+
+namespace Runtime.Interfaces
 {
     public interface ICollectable
     {
-        public void Collect();
+        public void Collect(GameObject go);
     }
 }

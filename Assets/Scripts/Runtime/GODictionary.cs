@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Runtime.Interfaces;
 using Runtime.Player;
+using Runtime.Player.Effects;
 using UnityEngine;
 
 namespace Runtime
@@ -22,6 +23,7 @@ namespace Runtime
         }
 
         public static Dictionary<GameObject, PlayerStatsSystem> PlayerStatsSystems { get; private set; }
+        public static Dictionary<GameObject, EffectManager> PlayerEffectManagers { get; private set; }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         public static void Initial()
@@ -30,6 +32,7 @@ namespace Runtime
             BasicEnemyStatsSystemGOs = new Dictionary<GameObject, Enemies.StatsSystems.BasicStatsSystem>();
             BasicBulletStatsSystemGOs = new Dictionary<GameObject, Bullets.StatsSystems.BasicStatsSystem>();
             PlayerStatsSystems = new Dictionary<GameObject, PlayerStatsSystem>();
+            PlayerEffectManagers = new Dictionary<GameObject, EffectManager>();
         }
 
         public static void AddVulnerableGO(GameObject key, IVulnerable vulnerable)
@@ -72,6 +75,16 @@ namespace Runtime
         public static void RemovePlayerStatsSystem(GameObject key)
         {
             PlayerStatsSystems.Remove(key);
+        }
+
+        public static void AddEffectManager(GameObject key, EffectManager stats)
+        {
+            PlayerEffectManagers.Add(key, stats);
+        }
+
+        public static void RemoveEffectManager(GameObject key)
+        {
+            PlayerEffectManagers.Remove(key);
         }
     }
 }

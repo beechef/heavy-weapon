@@ -32,5 +32,13 @@ namespace Runtime.Bullets.Behaviours
                 _isGround = true;
             }
         }
+
+        private void OnCollisionExit2D(Collision2D other)
+        {
+            if (other.gameObject.CompareTag(TagName.Ground))
+            {
+                _isGround = false;
+            }
+        }
     }
 }
