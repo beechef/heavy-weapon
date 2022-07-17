@@ -1,5 +1,4 @@
-﻿using Cysharp.Threading.Tasks;
-using Runtime.Bullets.Animations;
+﻿using Runtime.Bullets.Animations;
 using Runtime.Bullets.StatsSystems;
 using Runtime.Interfaces;
 using UnityEngine;
@@ -7,7 +6,6 @@ using BasicStats = Runtime.Bullets.Stats.BasicStats;
 
 namespace Runtime.Bullets
 {
-    [RequireComponent(typeof(Collider2D))]
     public class BasicBullet : MonoBehaviour, IVulnerable
     {
         [SerializeField] private BasicAnimation anim;

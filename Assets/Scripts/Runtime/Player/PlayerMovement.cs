@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         {
             GameState.tankMoveSpeed = Input.GetAxis("Horizontal");
         }
+
         Move(GameState.tankMoveSpeed);
     }
     private void Move(float moveSpeed)
