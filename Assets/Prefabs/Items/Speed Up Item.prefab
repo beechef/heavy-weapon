@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1222942871757938967}
   - component: {fileID: 1222942871757938966}
   - component: {fileID: 1222942871757938969}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Speed Up Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textRendererRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   icon: {fileID: 1160357347, guid: 6d9e4c6ad038c794380f62e0aaaccc37, type: 3}
-  value: 10
+  value: 1
   duration: 10
 --- !u!114 &1222942871757938969
 MonoBehaviour:

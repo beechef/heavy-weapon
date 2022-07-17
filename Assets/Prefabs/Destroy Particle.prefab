@@ -117,9 +117,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-
       scalar: 1.25
-
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -289,9 +287,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 0.15
-
       minScalar: 0.1
-
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4844,9 +4840,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-
   m_SortingOrder: 5
-
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -9716,6 +9710,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
+  m_SortingOrder: 4
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0

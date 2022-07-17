@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3880031536201592033}
   - component: {fileID: 3868275100422751488}
   - component: {fileID: 443445712353257287}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Spread Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}

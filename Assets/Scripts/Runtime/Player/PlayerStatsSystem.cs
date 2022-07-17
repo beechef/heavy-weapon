@@ -22,7 +22,7 @@ namespace Runtime.Player
 
         private void Update()
         {
-            if (stats.megaLaserComplete >= 100f)
+            if (stats.megaLaserComplete >= 99f)
             {
                 stats.isActivateMegaLaser = true;
             }
@@ -44,7 +44,6 @@ namespace Runtime.Player
             {
                 _explosion.ExplosionByPress();
             }
-
         }
 
         protected virtual void OnInit()

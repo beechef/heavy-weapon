@@ -16,7 +16,7 @@ namespace Runtime.Player.Effects
         {
             GODictionary.AddEffectManager(gameObject, this);
 
-            effectRenderQueue = GameObject.FindWithTag(TagName.RenderEffectQueue).transform;
+            effectRenderQueue = GameObject.FindWithTag(TagName.EffectRenderQueue).transform;
 
         }
 
