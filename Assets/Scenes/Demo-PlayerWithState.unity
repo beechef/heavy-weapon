@@ -2533,6 +2533,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1494580284}
     m_Modifications:
+    - target: {fileID: 6667361166556089599, guid: 86e758f4a8a75964f90076b72ec44644, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6667361166845156420, guid: 86e758f4a8a75964f90076b72ec44644, type: 3}
       propertyPath: gameStateSo
       value: 
