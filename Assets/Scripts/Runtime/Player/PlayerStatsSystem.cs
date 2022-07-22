@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Runtime.Items;
 using UnityEngine;
 
 namespace Runtime.Player
@@ -7,6 +7,7 @@ namespace Runtime.Player
     {
         [SerializeField] private PlayerStats stats;
         [SerializeField] private TankExplosion _explosion;
+        [SerializeField] private ProgressRenderer progressRenderer;
         public PlayerStats Stats => stats;
         private bool _isFirst = false;
 
@@ -22,24 +23,7 @@ namespace Runtime.Player
 
         private void Update()
         {
-            if (stats.megaLaserComplete >= 99f)
-            {
-                stats.isActivateMegaLaser = true;
-            }
-
-            if (stats.isActivateMegaLaser)
-            {
-                if (stats.megaLaserComplete <= 0f)
-                {
-                    stats.isActivateMegaLaser = false;
-                }
-                else
-                {
-                    stats.megaLaserComplete -= Time.deltaTime * 10f;
-                }
-            }
-
-
+            UpdateMegaLaserProgress();
             if (IsDead())
             {
                 _explosion.ExplosionByPress();
@@ -70,14 +54,26 @@ namespace Runtime.Player
             return IsDead();
         }
 
-        public virtual void IncreaseAttack(float attack)
+        public void UpdateMegaLaserProgress()
         {
-            stats.attack += attack;
-        }
+            if (stats.megaLaserComplete >= 99f)
+            {
+                stats.isActivateMegaLaser = true;
+            }
 
-        public virtual void DecreaseAttack(float attack)
-        {
-            stats.attack -= attack;
+            if (stats.isActivateMegaLaser)
+            {
+                if (stats.megaLaserComplete <= 0f)
+                {
+                    stats.isActivateMegaLaser = false;
+                }
+                else
+                {
+                    stats.megaLaserComplete -= Time.deltaTime * 10f;
+                }
+            }
+
+            progressRenderer.Render(stats.megaLaserComplete, 100f);
         }
     }
 }

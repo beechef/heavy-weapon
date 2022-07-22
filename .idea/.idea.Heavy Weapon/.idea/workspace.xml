@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce7e8cd7-a3b1-48cf-9d43-c9c8823b1bf4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Items/ProgressRenderer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Items/ProgressRenderer.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Heavy Weapon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Heavy Weapon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Boss Health Bar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Boss Health Bar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Collision Particle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Collision Particle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Destroy Particle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Destroy Particle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Demo-PlayerWithState.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Demo-PlayerWithState.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/Effects/EffectManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/Effects/EffectManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/megameter.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/megameter.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Attack Item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Attack Item.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Attack Speed Item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Attack Speed Item.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Mega Laser Item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Mega Laser Item.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Speed Up Item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Speed Up Item.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Spread Item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Spread Item.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Supplier.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Supplier.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/LaserBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/LaserBullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Items/MegaLaserItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Items/MegaLaserItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerStatsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerStatsSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Spawner/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Spawner/EnemySpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/TagName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/TagName.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/TankExplosion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/TankExplosion.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +42,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Spawner/EnemyPack.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Behaviours/RotateBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BallCombatSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/Animations/BasicAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerAnimation.cs" />
@@ -58,7 +59,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/ScreenEffects.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerStats.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerCombatSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/LaserBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/RotateBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/CircleRoationBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/Behaviours/CircleRotationBehaviour.cs" />
@@ -73,7 +73,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Items/MegaLaser.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Items/BlinkText.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Items/CollectionText.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Items/MegaLaserItem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Items/SpreadItem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Items/Item.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Items/CollectionTextRenderer.cs" />
@@ -81,15 +80,19 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Items/AttackSpeedItem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Items/SpeedUpItem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/Effects/Effect.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/Effects/AttackEffect.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/Effects/SpeedUpEffect.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/Effects/AttackSpeedEffect.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/Effects/EffectManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/Effects/EffectRenderer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/TagName.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerStatsSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Spawner/EnemySpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/TankExplosion.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/Effects/AttackEffect.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Items/ProgressRenderer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Player/PlayerStatsSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Items/MegaLaserItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Bullets/LaserBullet.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2BhJJB9rgYr0IQAWNq5chfxuza7" />
@@ -157,6 +160,7 @@
       <workItem from="1657955966754" duration="7929000" />
       <workItem from="1657970433616" duration="3987000" />
       <workItem from="1658021609739" duration="1336000" />
+      <workItem from="1658371246654" duration="2079000" />
     </task>
     <servers />
   </component>

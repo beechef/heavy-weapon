@@ -28,6 +28,8 @@ namespace Runtime.Bullets
             var rayCastHit = Physics2D.Raycast(_startPoint, cachedTransform.up,
                 float.MaxValue, groundMask);
             _endPoint = rayCastHit.point;
+            _startPoint.z = -1;
+            _endPoint.z = -1;
             lineRenderer.SetPosition(0, _startPoint);
             lineRenderer.SetPosition(1, _endPoint);
         }

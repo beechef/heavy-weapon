@@ -9,8 +9,8 @@ namespace Runtime.Items
 
         public override void Collect(GameObject go)
         {
-            PlayerStats stats = GODictionary.PlayerStatsSystems[go].Stats;
-            stats.megaLaserComplete += value;
+            PlayerStatsSystem statsSystem = GODictionary.PlayerStatsSystems[go];
+            statsSystem.Stats.megaLaserComplete += value;
         }
 
         protected override string GetCollectionText() => "Mega Laser Complete 25%";
