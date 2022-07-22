@@ -5,7 +5,9 @@ namespace Runtime.Items
 {
     public abstract class Item : MonoBehaviour, ICollectable
     {
-        [SerializeField] private CollectionTextRenderer textRendererRenderer;
+        [SerializeField] private TextRenderer textRendererRenderer;
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioClip collectionClip;
         public abstract void Collect(GameObject go);
 
         protected abstract string GetCollectionText();
@@ -16,7 +18,9 @@ namespace Runtime.Items
             if (go.CompareTag(TagName.Player))
             {
                 Collect(go);
-                Destroy(gameObject);
+                audioSource.clip = collectionClip;
+                audioSource.Play();
+                Destroy(gameObject, .1f);
                 textRendererRenderer = Instantiate(textRendererRenderer);
                 textRendererRenderer.Render(transform.position + Vector3.up * 2f, GetCollectionText(), 1.5f);
             }

@@ -233,6 +233,7 @@ MonoBehaviour:
   pooling: {fileID: 6446016621820413573}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
   fadeTime: 1
+  textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
 --- !u!114 &6446016621820413579
 MonoBehaviour:
   m_ObjectHideFlags: 0

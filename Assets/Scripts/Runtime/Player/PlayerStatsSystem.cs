@@ -1,4 +1,5 @@
-﻿using Runtime.Items;
+﻿using System;
+using Runtime.Items;
 using UnityEngine;
 
 namespace Runtime.Player
@@ -11,6 +12,8 @@ namespace Runtime.Player
         public PlayerStats Stats => stats;
         private bool _isFirst = false;
 
+        public Action OnInit;
+
         protected virtual void Awake()
         {
             GODictionary.AddPlayerStatsSystem(gameObject, this);
@@ -18,7 +21,7 @@ namespace Runtime.Player
 
         protected virtual void OnEnable()
         {
-            OnInit();
+            Init();
         }
 
         private void Update()
@@ -30,12 +33,13 @@ namespace Runtime.Player
             }
         }
 
-        protected virtual void OnInit()
+        protected virtual void Init()
         {
             if (!_isFirst)
             {
                 _isFirst = true;
                 stats = Instantiate(stats);
+                OnInit?.Invoke();
             }
 
             RestoreFullHealth();
@@ -56,6 +60,7 @@ namespace Runtime.Player
 
         public void UpdateMegaLaserProgress()
         {
+            stats.megaLaserComplete = Mathf.Clamp(stats.megaLaserComplete, 0f, 100f);
             if (stats.megaLaserComplete >= 99f)
             {
                 stats.isActivateMegaLaser = true;

@@ -2,7 +2,7 @@
 
 namespace Runtime.Bullets
 {
-    public class PlayerShield : BasicBullet
+    public class PlayerShield : Shield
     {
         protected override void OnCollisionEnter2D(Collision2D other)
         {

@@ -146,7 +146,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2852884483529615994}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfbfae71eb8f412bbf12dfa4d1417d32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statsSystem: {fileID: 2852884485298147435}
+  statsSystem: {fileID: 760162235957132259}
 --- !u!1 &2852884485298147434
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,9 +180,10 @@ GameObject:
   - component: {fileID: 2852884485298147444}
   - component: {fileID: 2852884485298147447}
   - component: {fileID: 2852884485298147446}
-  - component: {fileID: 2852884485298147435}
   - component: {fileID: 2852884485298147433}
   - component: {fileID: 2852884485298147432}
+  - component: {fileID: 7827035501486477496}
+  - component: {fileID: 760162235957132259}
   m_Layer: 9
   m_Name: Player Shield
   m_TagString: Untagged
@@ -256,7 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2852884483243592015}
-  statsSystem: {fileID: 2852884485298147435}
+  statsSystem: {fileID: 0}
   audioSource: {fileID: 2852884485298147433}
   startClip: {fileID: 0}
   deathClip: {fileID: 0}
@@ -264,19 +265,9 @@ MonoBehaviour:
   pooling: {fileID: 2852884485298147432}
   savedData: {fileID: 0}
   fadeTime: 0.2
---- !u!114 &2852884485298147435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2852884485298147434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9e7fe964bd74f9a9dd0672699df78fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: fc0c66e6c5d3b194b872ad898d983da4, type: 2}
+  renderer: {fileID: 2852884483243592013}
+  scale: 1
+  isPlayOnAwake: 1
 --- !u!82 &2852884485298147433
 AudioSource:
   m_ObjectHideFlags: 0
@@ -385,3 +376,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1969491cda1a4180a23fe6c2760c804e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7827035501486477496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2852884485298147434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4303c0727424be7891cca39b35840ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shield: {fileID: 2852884485298147446}
+  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  statsSystem: {fileID: 760162235957132259}
+  moveSpeedLevelSheet:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+--- !u!114 &760162235957132259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2852884485298147434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bece89b0cf5f45999f6dbd5b88e62a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 11400000, guid: fc0c66e6c5d3b194b872ad898d983da4, type: 2}
+  shieldController: {fileID: 7827035501486477496}

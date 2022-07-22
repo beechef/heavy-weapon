@@ -24,5 +24,11 @@ namespace Runtime
         {
             _onScoreChange += action;
         }
+
+        public IntVariable spreadLevel;
+        public IntVariable laserLevel;
+        public IntVariable shieldLevel;
+        public IntVariable missileLevel;
+        public IntVariable lightningLevel;
     }
 }

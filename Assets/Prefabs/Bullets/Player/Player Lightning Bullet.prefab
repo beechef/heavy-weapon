@@ -148,7 +148,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.15
+  m_Time: 0.1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -157,7 +157,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.13599968
+        value: 0.29776192
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -169,7 +169,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 0.74730253, b: 1, a: 1}
+      key0: {r: 0, g: 0.13326836, b: 1, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -260,7 +260,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.15
+  m_Radius: 0.1
 --- !u!50 &5373306724623505700
 Rigidbody2D:
   serializedVersion: 4
@@ -302,6 +302,7 @@ MonoBehaviour:
   coll: {fileID: 5373306724623505752}
   pooling: {fileID: 5373306724623505697}
   savedData: {fileID: 0}
+  fadeTime: 0.2
 --- !u!114 &5373306724623505702
 MonoBehaviour:
   m_ObjectHideFlags: 0

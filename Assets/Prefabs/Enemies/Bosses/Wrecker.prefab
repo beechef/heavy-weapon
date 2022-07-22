@@ -257,6 +257,7 @@ MonoBehaviour:
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
   state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
   isDeadTouch: 0
+  textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   healthBar: {fileID: 5237312709064096705, guid: 1d124bdfebf49e44fbb7be3cf2eed98f, type: 3}
   effectDuration: 1.5
   ballCombatSystem: {fileID: 2742255896469733351}
@@ -1791,6 +1792,7 @@ MonoBehaviour:
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
   state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
   isDeadTouch: 0
+  textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   explosionRadius: 1
   rotateBehaviour: {fileID: 2742255896469733347}
 --- !u!114 &2742255896469733350

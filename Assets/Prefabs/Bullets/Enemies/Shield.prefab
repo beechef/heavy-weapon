@@ -74,9 +74,9 @@ MonoBehaviour:
   coll: {fileID: 3152116375479419733}
   pooling: {fileID: 5352208805738215640}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
-  renderer: {fileID: 3152116375943159602}
+  fadeTime: 0.2
+  textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   scale: 1
-  isPlayOnAwake: 1
 --- !u!114 &3152116375479419735
 MonoBehaviour:
   m_ObjectHideFlags: 0

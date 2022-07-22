@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Runtime.Enemies.Animations;
+using Runtime.Items;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -22,6 +23,7 @@ namespace Runtime.Enemies.CombatSystems
         [SerializeField] protected SavedData savedData;
         [SerializeField] protected GameStateSO state;
         [SerializeField] protected bool isDeadTouch = false;
+        [SerializeField] protected TextRenderer textRenderer;
 
 
         protected Stats.BasicStats Stats => statsSystem.Stats;
@@ -48,7 +50,7 @@ namespace Runtime.Enemies.CombatSystems
             return state.State == GameStateSO.GameState.PlayGame;
         }
 
-       
+
         protected virtual void Awake()
         {
             GODictionary.AddVulnerableGO(gameObject, this);
@@ -57,9 +59,10 @@ namespace Runtime.Enemies.CombatSystems
 
             animationEvents.OnDeath(() => { pooling.Return(gameObject, .1f).Forget(); });
         }
+
         public override bool IsCanAttack()
         {
-            return Time.time - LastAttack >= 1f / Stats.attackSpeed &&isOnGameplayState();
+            return Time.time - LastAttack >= 1f / Stats.attackSpeed && isOnGameplayState();
         }
 
         public override void Attack()
@@ -115,8 +118,11 @@ namespace Runtime.Enemies.CombatSystems
             Death(.5f);
 
             if (IssavedDataNotNull)
-
+            {
                 savedData.Score += Stats.score;
+                textRenderer = Instantiate(textRenderer);
+                textRenderer.Render(transform.position + transform.up, Stats.score.ToString(), 2f, false);
+            }
         }
 
         protected virtual void OnCollisionEnter2D(Collision2D other)

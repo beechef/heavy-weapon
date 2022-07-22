@@ -197,8 +197,9 @@ MonoBehaviour:
   pooling: {fileID: 3466574081133924478}
   attackPoint: {fileID: 3466574081900119262}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
-  state: {fileID: 0}
+  state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
   isDeadTouch: 0
+  textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
 --- !u!114 &3466574081133924477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -868,6 +869,7 @@ MonoBehaviour:
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
   state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
   isDeadTouch: 0
+  textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   healthBar: {fileID: 5237312709064096705, guid: 1d124bdfebf49e44fbb7be3cf2eed98f, type: 3}
   effectDuration: 1.5
   leftLauncher: {fileID: 3466574081695895018}
@@ -1184,8 +1186,9 @@ MonoBehaviour:
   pooling: {fileID: 3466574081695895020}
   attackPoint: {fileID: 3466574081678507640}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
-  state: {fileID: 0}
+  state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
   isDeadTouch: 0
+  textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
 --- !u!50 &2080661128569581832
 Rigidbody2D:
   serializedVersion: 4
@@ -1436,8 +1439,9 @@ MonoBehaviour:
   pooling: {fileID: 3466574081742200502}
   attackPoint: {fileID: 3466574082781469009}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
-  state: {fileID: 0}
+  state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
   isDeadTouch: 0
+  textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
 --- !u!50 &5154181523609090239
 Rigidbody2D:
   serializedVersion: 4
@@ -1654,8 +1658,9 @@ MonoBehaviour:
   pooling: {fileID: 3466574081977804172}
   attackPoint: {fileID: 3466574081382705937}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
-  state: {fileID: 0}
+  state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
   isDeadTouch: 0
+  textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
 --- !u!114 &3466574081977804170
 MonoBehaviour:
   m_ObjectHideFlags: 0
