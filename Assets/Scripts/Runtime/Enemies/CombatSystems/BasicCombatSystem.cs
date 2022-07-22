@@ -42,6 +42,13 @@ namespace Runtime.Enemies.CombatSystems
             audioSource.playOnAwake = false;
             EnemyPosition.AddPos(transform);
         }
+
+        public bool isOnGameplayState()
+        {
+            return state.State == GameStateSO.GameState.PlayGame;
+        }
+
+       
         protected virtual void Awake()
         {
             GODictionary.AddVulnerableGO(gameObject, this);
@@ -52,7 +59,7 @@ namespace Runtime.Enemies.CombatSystems
         }
         public override bool IsCanAttack()
         {
-            return Time.time - LastAttack >= 1f / Stats.attackSpeed;
+            return Time.time - LastAttack >= 1f / Stats.attackSpeed &&isOnGameplayState();
         }
 
         public override void Attack()

@@ -7,6 +7,6 @@ public class MainMenuManager : MonoBehaviour
 {
     private void OnEnable()
     {
-        Cursor.visible = true;
+       
     }
 }
