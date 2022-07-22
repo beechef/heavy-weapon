@@ -6,7 +6,6 @@ namespace Runtime.Player
     public class PlayerStatsSystem : MonoBehaviour
     {
         [SerializeField] private PlayerStats stats;
-        [SerializeField] private TankExplosion _explosion;
         public PlayerStats Stats => stats;
         private bool _isFirst = false;
 
@@ -37,12 +36,6 @@ namespace Runtime.Player
                 {
                     stats.megaLaserComplete -= Time.deltaTime * 10f;
                 }
-            }
-
-
-            if (IsDead())
-            {
-                _explosion.ExplosionByPress();
             }
         }
 
