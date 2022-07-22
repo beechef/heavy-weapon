@@ -21,13 +21,14 @@ namespace Runtime.Player
 
         private void OnEnable()
         {
-            if (level.value == 0) return;
+            if (level.Value == 0) return;
             shield.SetActive(true);
         }
+        
 
         public void Init()
         {
-            var index = Mathf.Clamp(this.level.value, 0, moveSpeedLevelSheet.Count);
+            var index = Mathf.Clamp(this.level.Value, 0, moveSpeedLevelSheet.Count);
             Stats.moveSpeed += moveSpeedLevelSheet[index];
         }
     }

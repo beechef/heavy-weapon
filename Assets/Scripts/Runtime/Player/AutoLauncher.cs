@@ -14,6 +14,8 @@ namespace Runtime.Player
         [SerializeField] private float attack;
         [SerializeField] private Pooling pooling;
 
+        [SerializeField] private bool isBlock;
+
         private float _lastAttack;
 
         [SerializeField] private List<float> levelAttackSpeedSheet = new List<float>()
@@ -26,29 +28,26 @@ namespace Runtime.Player
             0f, 10f, 15f, 20f, 30f
         };
 
-        private bool IsCanAttack => (level.value != 0 && Time.time - _lastAttack >= 1f / attackSpeed);
+        private bool IsCanAttack => (level.Value != 0 && Time.time - _lastAttack >= 1f / attackSpeed);
 
         private void Awake()
         {
-            var index = Mathf.Clamp(level.value, 0, levelAttackSpeedSheet.Count);
+            var index = Mathf.Clamp(level.Value, 0, levelAttackSpeedSheet.Count);
             attackSpeed += levelAttackSpeedSheet[index];
-            index = Mathf.Clamp(level.value, 0, levelAttackSheet.Count);
+            index = Mathf.Clamp(level.Value, 0, levelAttackSheet.Count);
             attack += levelAttackSheet[index];
-        }
-
-        private void Start()
-        {
-            if (level.value == 0) gameObject.SetActive(false);
         }
 
         private async void Update()
         {
-            if (IsCanAttack)
-            {
-                GameObject go = await pooling.GetAsync(missilePrefab, attackPoint.position, attackPoint.rotation);
-                GODictionary.BasicBulletStatsSystemGOs[go].Stats.attack += attack;
-                _lastAttack = Time.time;
-            }
+            gameObject.SetActive(level.Value != 0);
+            
+            if (isBlock) return;
+            if (!IsCanAttack) return;
+            
+            GameObject go = await pooling.GetAsync(missilePrefab, attackPoint.position, attackPoint.rotation);
+            GODictionary.BasicBulletStatsSystemGOs[go].Stats.attack += attack;
+            _lastAttack = Time.time;
         }
     }
 }

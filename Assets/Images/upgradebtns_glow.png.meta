@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1b27a0b8bbc3a4449b4848f8d0bed948
+guid: a13467dd10b8bec42a4d967398c7a2a9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,50 +100,89 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: buttonbracket_0
+      name: upgradebtns_glow_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2
-        width: 90
-        height: 26
+        y: 32
+        width: 39
+        height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 6, y: 8, z: 6, w: 7}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 341671941aee2a34c9db9e2770f74b1e
-      internalID: 1979473389
+      spriteID: aa490aa3f4bd4914690ef3ad9c286f97
+      internalID: 1813529050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgradebtns_glow_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 32
+        width: 39
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451e0350a0bb6b243b1addb7a790d258
+      internalID: -1318457989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgradebtns_glow_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 39
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77fbc2308efa5a478cec1bf0439561f
+      internalID: -998378529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgradebtns_glow_3
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 1
+        width: 39
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b921f45d8a067364c87e27a9b0a7d16d
+      internalID: 568104272
       vertices: []
       indices: 
       edges: []
@@ -151,7 +190,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 06c8eefe3d5810c4bb37b7f4f453766e
     internalID: 0
     vertices: []
     indices: 
@@ -159,7 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      buttonbracket_0: 1979473389
+      upgradebtns_glow_0: 1813529050
+      upgradebtns_glow_2: -998378529
+      upgradebtns_glow_3: 568104272
+      upgradebtns_glow_1: -1318457989
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

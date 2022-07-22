@@ -140,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textRendererRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   audioSource: {fileID: -6207965006284851425}
-  collectionClip: {fileID: 8300000, guid: 2596ba86724547c418d7859f5a4a0f2f, type: 3}
+  collectionClip: {fileID: 8300000, guid: 4c73b1b149dcb0f4cb02911f46a6f395, type: 3}
   icon: {fileID: 1160357347, guid: 6d9e4c6ad038c794380f62e0aaaccc37, type: 3}
   value: 1
   duration: 10

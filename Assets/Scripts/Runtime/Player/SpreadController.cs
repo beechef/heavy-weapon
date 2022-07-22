@@ -18,7 +18,7 @@ namespace Runtime.Player
 
         private void Init()
         {
-            var index = Mathf.Clamp(level.value, 0, levelSheet.Count);
+            var index = Mathf.Clamp(level.Value, 0, levelSheet.Count);
             Stats.amountAttackPoint += levelSheet[index];
         }
 

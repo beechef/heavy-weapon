@@ -30,5 +30,6 @@ namespace Runtime
         public IntVariable shieldLevel;
         public IntVariable missileLevel;
         public IntVariable lightningLevel;
+        public IntVariable pointsRemaining;
     }
 }

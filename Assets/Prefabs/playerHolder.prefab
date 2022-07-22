@@ -160,6 +160,7 @@ MonoBehaviour:
   attackSpeed: 0
   attack: 0
   pooling: {fileID: 1914530110}
+  isBlock: 0
   levelAttackSpeedSheet:
   - 0
   - 0.5
@@ -524,6 +525,7 @@ MonoBehaviour:
   attackSpeed: 0
   attack: 0
   pooling: {fileID: 1914530110}
+  isBlock: 0
   levelAttackSpeedSheet:
   - 0
   - 0.2
@@ -1122,7 +1124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5436057501818952290, guid: 3f46309a4b8b6744caa4d50932679794, type: 3}
       propertyPath: timeBetween
-      value: 0.01
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 5436057501818952290, guid: 3f46309a4b8b6744caa4d50932679794, type: 3}
       propertyPath: lineRenderer
@@ -1208,6 +1210,10 @@ PrefabInstance:
       propertyPath: coll
       value: 
       objectReference: {fileID: 1176370290}
+    - target: {fileID: 5436057501818952602, guid: 3f46309a4b8b6744caa4d50932679794, type: 3}
+      propertyPath: startClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c534daf82d2da4049aaec6ef1ccbbbdc, type: 3}
     m_RemovedComponents:
     - {fileID: 5436057501818952603, guid: 3f46309a4b8b6744caa4d50932679794, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3f46309a4b8b6744caa4d50932679794, type: 3}

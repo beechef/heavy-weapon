@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Runtime.Bullets
 {
@@ -10,15 +11,34 @@ namespace Runtime.Bullets
         private Vector3 _startPoint, _endPoint;
         private float _lastAttack;
 
+        private float _timeAudio;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            audioSource.loop = true;
+            audioSource.clip = startClip;
+            audioSource.Play();
+        }
+
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+            audioSource.time = _timeAudio;
+        }
+
         private void FixedUpdate()
         {
             Attack();
         }
 
+        private void OnDisable()
+        {
+            _timeAudio = audioSource.time;
+        }
+
         protected override void OnInit()
         {
-            base.OnInit();
-            coll.enabled = false;
         }
 
         private void CreateLaser()
