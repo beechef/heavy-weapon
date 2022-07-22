@@ -8,20 +8,17 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-
-  - component: {fileID: 410592761789408801}
-  - component: {fileID: 410592761789408863}
-  - component: {fileID: 410592761789408862}
-  - component: {fileID: 410592761789408855}
-  - component: {fileID: 410592761789408854}
-  - component: {fileID: 410592761789408857}
-  - component: {fileID: 410592761789408856}
-  - component: {fileID: 410592761789408859}
-  - component: {fileID: 410592761789408858}
-  - component: {fileID: 410592761789408861}
-  - component: {fileID: 410592761789408860}
-  - component: {fileID: 4877159987007349645}
-
+  - component: {fileID: 3968136853910458268}
+  - component: {fileID: 5254808002440511766}
+  - component: {fileID: 5621275357983238465}
+  - component: {fileID: 5224477287505375493}
+  - component: {fileID: 1964605753883621273}
+  - component: {fileID: 4616896981090615981}
+  - component: {fileID: 8237188076017235420}
+  - component: {fileID: 6261907608347935653}
+  - component: {fileID: 6877524281668576920}
+  - component: {fileID: 840553018548302784}
+  - component: {fileID: 3706328161945357904}
   m_Layer: 6
   m_Name: Tower
   m_TagString: Enemy
@@ -194,21 +191,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a55ee2586f6f414780bc1702b2af81e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-
-  anim: {fileID: 410592761789408857}
-  statsSystem: {fileID: 410592761789408859}
-  animationEvents: {fileID: 4877159987007349645}
-  bulletPrefabs: []
-  destroyParticlePrefab: Destroy Particle
-  audioSource: {fileID: 410592761789408858}
-  deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
-  coll: {fileID: 410592761789408862}
-  pooling: {fileID: 410592761789408861}
-  attackPoint: {fileID: 0}
-  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
-  isDeadTouch: 0
---- !u!114 &410592761789408857
-
+  rb: {fileID: 5254808002440511766}
+  statsSystem: {fileID: 6877524281668576920}
+  minMoveDistance: 1.5
+  maxMoveDistance: 3
+--- !u!114 &6261907608347935653
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,8 +255,10 @@ MonoBehaviour:
   pooling: {fileID: 840553018548302784}
   attackPoint: {fileID: 2742255894620584897}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
   isDeadTouch: 0
   healthBar: {fileID: 5237312709064096705, guid: 1d124bdfebf49e44fbb7be3cf2eed98f, type: 3}
+  effectDuration: 1.5
   ballCombatSystem: {fileID: 2742255896469733351}
   wreckerBehaviour: {fileID: 8237188076017235420}
 --- !u!1 &2742255894620584896
@@ -403,48 +392,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-
---- !u!114 &410592761789408861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410592761789408800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1969491cda1a4180a23fe6c2760c804e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &410592761789408860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410592761789408800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a55ee2586f6f414780bc1702b2af81e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 410592761789408855}
-  statsSystem: {fileID: 410592761789408859}
-  minMoveDistance: 2
-  maxMoveDistance: 3
---- !u!114 &4877159987007349645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410592761789408800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &410592761979309030
+--- !u!1 &2742255894811204719
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -601,15 +549,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-
   - component: {fileID: 2742255894833583623}
   - component: {fileID: 2742255894833583620}
-
-  - component: {fileID: 410592762005029260}
-  - component: {fileID: 410592762005029259}
-  - component: {fileID: 7165804697534307440}
-  - component: {fileID: 2102865413377665132}
-
   m_Layer: 6
   m_Name: Link_9
   m_TagString: Untagged
@@ -684,39 +625,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &7165804697534307440
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410592762005029263}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d0745543fac9864e982a06cb30722d6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2102865413377665132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410592762005029263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &410592762123866297
+--- !u!1 &2742255894961327449
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1868,7 +1777,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9401c824c7d4e6dbfdb2abbc99fc6aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-
   anim: {fileID: 2742255896469733350}
   statsSystem: {fileID: 2742255896469733353}
   animationEvents: {fileID: 4508705998630679948}
@@ -1876,12 +1784,12 @@ MonoBehaviour:
   - Boulder
   destroyParticlePrefab: Destroy Particle
   audioSource: {fileID: 2742255896469733352}
-
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 2742255896469733348}
   pooling: {fileID: 2742255896469733355}
   attackPoint: {fileID: 2742255894822565132}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
   isDeadTouch: 0
   explosionRadius: 1
   rotateBehaviour: {fileID: 2742255896469733347}

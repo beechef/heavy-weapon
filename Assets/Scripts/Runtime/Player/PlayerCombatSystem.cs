@@ -80,18 +80,18 @@ namespace Runtime.Player
             else
             {
                 state.Revive();
-                
-                state.tankMoveSpeed = 0;
+               
                 Reborn();
-                playerMovement.Revieve();
+                
             }
         }
 
         private async void Reborn()
         {
             await UniTask.Delay(TimeSpan.FromSeconds(3.5f));
-            transform.position = playerMovement.startPos;
             gameObject.SetActive(true);
+            transform.position = playerMovement.startPos;
+            state.tankMoveSpeed = 1f;
             statsSystem.RestoreFullHealth();
             
         }

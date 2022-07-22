@@ -77,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnGameStart()
     {
+        Move(GameState.tankMoveSpeed);
         if (pos.x >= 0.5f)
         {
             GameState.tankMoveSpeed = 0;

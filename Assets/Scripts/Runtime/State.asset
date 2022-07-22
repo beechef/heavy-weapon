@@ -12,12 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e6359ecce974b43a90de56f35d2920, type: 3}
   m_Name: State
   m_EditorClassIdentifier: 
-  isMoveRight: 0
-  moveLeftSpeed: 0
+  isMoveRight: 1
+  moveLeftSpeed: 1
   tankMoveSpeed: 0
-  canGetInput: 0
-  lives: 0
-  State: 0
-  playerDead:
-    m_PersistentCalls:
-      m_Calls: []
+  canGetInput: 1
+  lives: 3
+  State: 1

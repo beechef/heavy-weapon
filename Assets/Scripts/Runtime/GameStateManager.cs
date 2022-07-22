@@ -9,7 +9,7 @@ public class GameStateManager : MonoBehaviour
 
     private void Start()
     {
-        State.lives = 3;
+        State.StartGame();
     }
 
     void FixedUpdate()

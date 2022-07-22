@@ -442,6 +442,7 @@ MonoBehaviour:
   pooling: {fileID: 3345571754815802880}
   attackPoint: {fileID: 3179172117022153639}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  state: {fileID: 0}
   isDeadTouch: 0
 --- !u!50 &1026410269625890159
 Rigidbody2D:
@@ -693,6 +694,7 @@ MonoBehaviour:
   pooling: {fileID: 8407783261067491544}
   attackPoint: {fileID: 604521751884437888}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  state: {fileID: 0}
   isDeadTouch: 0
 --- !u!50 &8965383028675063861
 Rigidbody2D:
@@ -953,6 +955,7 @@ MonoBehaviour:
   pooling: {fileID: 9206401760474207940}
   attackPoint: {fileID: 9206401760572448112}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  state: {fileID: 0}
   isDeadTouch: 0
   attackPoint1: {fileID: 9206401760623692356}
 --- !u!114 &9206401760474207960
@@ -2025,9 +2028,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 9206401761395491680}
   statsSystem: {fileID: 9206401761395491681}
-
   animationEvents: {fileID: 4244023616788928127}
-
   bulletPrefabs: []
   destroyParticlePrefab: Destroy Particle
   audioSource: {fileID: 9206401761395491694}
@@ -2036,10 +2037,10 @@ MonoBehaviour:
   pooling: {fileID: 9206401761395491695}
   attackPoint: {fileID: 9206401761395491693}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
   isDeadTouch: 0
-
   healthBar: {fileID: 5237312709064096705, guid: 1d124bdfebf49e44fbb7be3cf2eed98f, type: 3}
-
+  effectDuration: 1.5
   guns:
   - {fileID: 9206401761940485018}
   - {fileID: 9206401761430645190}
@@ -2266,6 +2267,7 @@ MonoBehaviour:
   pooling: {fileID: 9206401761430645187}
   attackPoint: {fileID: 9206401760605613515}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  state: {fileID: 0}
   isDeadTouch: 0
   attackPoint1: {fileID: 9206401759950296860}
 --- !u!114 &9206401761430645188
@@ -2468,9 +2470,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9206401761482263856}
-
-  - component: {fileID: 9206401761482263859}
-  - component: {fileID: 4261281072234192421}
   m_Layer: 6
   m_Name: GFX
   m_TagString: Enemy
@@ -2495,39 +2494,6 @@ Transform:
   m_Father: {fileID: 9206401761395491693}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-
---- !u!95 &9206401761482263859
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9206401761482263857}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d0745543fac9864e982a06cb30722d6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4261281072234192421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9206401761482263857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 483fbc633a2845d6a5165056498b57ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &9206401761802784849
 GameObject:
   m_ObjectHideFlags: 0
@@ -2737,6 +2703,7 @@ MonoBehaviour:
   pooling: {fileID: 9206401761940484998}
   attackPoint: {fileID: 9206401760562434691}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  state: {fileID: 0}
   isDeadTouch: 0
   attackPoint1: {fileID: 9206401761397400025}
 --- !u!114 &9206401761940485019
@@ -2988,6 +2955,7 @@ MonoBehaviour:
   pooling: {fileID: 9206401761942822737}
   attackPoint: {fileID: 9206401760980278823}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  state: {fileID: 0}
   isDeadTouch: 0
   attackPoint1: {fileID: 9206401761463773036}
 --- !u!114 &9206401761942822738

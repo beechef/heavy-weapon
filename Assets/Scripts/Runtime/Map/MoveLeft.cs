@@ -1,21 +1,28 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.U2D;
 
 public class MoveLeft : MonoBehaviour
 {
-   [SerializeField] private Transform bosssPoint;
+    public float moveSpeed;
+    private SpriteRenderer sprite;
+    
 
-   [SerializeField] private GameStateSO gameState;
-
-   private void Start()
-   {
-      gameState.StartGame();
-      transform.position = Vector2.zero;
-      gameState.moveLeftSpeed = 0;
-   }
-   private void Update()
-   {
-      transform.Translate(-gameState.moveLeftSpeed*Time.deltaTime*Vector2.right);
-   }
-  
+    private void Start()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+    }
+    private void Update()
+    {
+       
+        if (transform.position.x < -(5.3+sprite.bounds.size.x/2))
+        {
+            Destroy(gameObject);
+        } 
+        transform.position += new Vector3(-moveSpeed * Time.deltaTime, 0);
+    }
+    
 }

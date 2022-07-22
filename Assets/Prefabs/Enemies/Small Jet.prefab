@@ -270,12 +270,14 @@ MonoBehaviour:
   animationEvents: {fileID: 3012388123673732583}
   bulletPrefabs:
   - DumbBomb
+  destroyParticlePrefab: Destroy Particle
   audioSource: {fileID: 7982261943743185848}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 5592890185998193510}
   pooling: {fileID: -7829245269490917361}
   attackPoint: {fileID: 1107316379773103048}
   savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
   isDeadTouch: 0
 --- !u!82 &7982261943743185848
 AudioSource:
