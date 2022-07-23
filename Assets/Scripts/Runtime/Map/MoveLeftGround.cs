@@ -20,7 +20,7 @@ public class MoveLeftGround : MonoBehaviour
        
         if (transform.position.x < -(5.3+sprite.bounds.size.x/2))
         {
-            Destroy(gameObject);
+            transform.position = transform.parent.position;
         } 
         transform.position += new Vector3(-moveSpeed * Time.deltaTime, 0);
     }

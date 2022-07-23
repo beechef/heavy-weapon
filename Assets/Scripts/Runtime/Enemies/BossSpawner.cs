@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Runtime;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -38,6 +39,8 @@ public class BossSpawner : MonoBehaviour
        {
            dangerEvent.Invoke();
            isInvokeEvent = true;
+        
+           ScreenEffects.Instance.Blink(Color.red, 0.5f);
        }
        
        if (Gameplaytime> DelayTime)

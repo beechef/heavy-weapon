@@ -32,7 +32,6 @@ namespace Runtime.Enemies.CombatSystems
                 pooling.Return(go, 2f).Forget();
                 await UniTask.Delay(TimeSpan.FromSeconds(.1f));
             }
-
             ScreenEffects.Instance.Blink(Color.white, effectDuration);
             ScreenEffects.Instance.Shake(effectDuration);
             Destroy(gameObject, effectDuration + 0.2f);

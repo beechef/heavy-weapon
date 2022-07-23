@@ -11,9 +11,12 @@ GameObject:
   - component: {fileID: 6340610615630147491}
   - component: {fileID: 6340610615630147490}
   - component: {fileID: 3825142745575254391}
-  m_Layer: 0
+  - component: {fileID: 2834432274023761590}
+  - component: {fileID: 4549677319955742799}
+  - component: {fileID: 2659513182346550619}
+  m_Layer: 10
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,3 +101,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2834432274023761590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6340610615630147167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1969491cda1a4180a23fe6c2760c804e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4549677319955742799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6340610615630147167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a1bba52577c497bbfc9086922563ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireStreakPrefab: {fileID: 9189834987313122854, guid: 987926c50e5ab30419b140813bfe741b, type: 3}
+  particlePrefab: Collision Particle
+  pooling: {fileID: 2834432274023761590}
+--- !u!65 &2659513182346550619
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6340610615630147167}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.8, y: 0.5477812, z: 0.2}
+  m_Center: {x: 0, y: -0.3261094, z: 0}

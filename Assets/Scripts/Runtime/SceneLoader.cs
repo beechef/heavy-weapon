@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    [SerializeField] private string sceneName;
 
     public void LoadNextScene()
     {
@@ -13,15 +12,14 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
-    public void LoadSceneByName()
+    public void LoadBySceneName(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
 
-
     public void LoadStartScene()
     {
-        // FindObjectOfType<GameState>().ResetState();
+       
         SceneManager.LoadScene(0);
     }
 
@@ -33,5 +31,14 @@ public class SceneLoader : MonoBehaviour
     public void Start()
     {
         Cursor.visible = false;
+    }
+
+    public void QuitGamePlayScene()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void Replay()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

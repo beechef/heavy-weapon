@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/MenuScenes/LevelChoseMap.unity
+    path: Assets/Scenes/MenuScenes/MissionMap.unity
     guid: 8a3a642c3102c2944a0f72c346ecde6e
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 3d29fb6a8e61090488d1f8f2ce699366, type: 2}
