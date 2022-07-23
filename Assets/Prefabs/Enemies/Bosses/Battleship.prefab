@@ -442,9 +442,11 @@ MonoBehaviour:
   pooling: {fileID: 3345571754815802880}
   attackPoint: {fileID: 3179172117022153639}
   inGameScores: {fileID: 11400000, guid: 7e9085e90a557004cab9f9f7b2461b35, type: 2}
-  state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
+  state: {fileID: 11400000, guid: cc54f984569fbaa4397d16ba59a143f4, type: 2}
   isDeadTouch: 0
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
+  shieldPrefab: {fileID: 0}
+  shieldRate: 35
 --- !u!50 &1026410269625890159
 Rigidbody2D:
   serializedVersion: 4
@@ -695,9 +697,11 @@ MonoBehaviour:
   pooling: {fileID: 8407783261067491544}
   attackPoint: {fileID: 604521751884437888}
   inGameScores: {fileID: 11400000, guid: 7e9085e90a557004cab9f9f7b2461b35, type: 2}
-  state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
+  state: {fileID: 11400000, guid: cc54f984569fbaa4397d16ba59a143f4, type: 2}
   isDeadTouch: 0
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
+  shieldPrefab: {fileID: 0}
+  shieldRate: 35
 --- !u!50 &8965383028675063861
 Rigidbody2D:
   serializedVersion: 4
@@ -957,9 +961,11 @@ MonoBehaviour:
   pooling: {fileID: 9206401760474207940}
   attackPoint: {fileID: 9206401760572448112}
   inGameScores: {fileID: 11400000, guid: 7e9085e90a557004cab9f9f7b2461b35, type: 2}
-  state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
+  state: {fileID: 11400000, guid: cc54f984569fbaa4397d16ba59a143f4, type: 2}
   isDeadTouch: 0
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
+  shieldPrefab: {fileID: 0}
+  shieldRate: 35
   attackPoint1: {fileID: 9206401760623692356}
 --- !u!114 &9206401760474207960
 MonoBehaviour:
@@ -2043,7 +2049,9 @@ MonoBehaviour:
   state: {fileID: 11400000, guid: cc54f984569fbaa4397d16ba59a143f4, type: 2}
   isDeadTouch: 0
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
-  healthBar: {fileID: 5237312709064096705, guid: 1d124bdfebf49e44fbb7be3cf2eed98f, type: 3}
+  shieldPrefab: {fileID: 0}
+  shieldRate: 35
+  healthBarRenderer: {fileID: 5237312709064096705, guid: 1d124bdfebf49e44fbb7be3cf2eed98f, type: 3}
   effectDuration: 1.5
   guns:
   - {fileID: 9206401761940485018}
@@ -2271,9 +2279,11 @@ MonoBehaviour:
   pooling: {fileID: 9206401761430645187}
   attackPoint: {fileID: 9206401760605613515}
   inGameScores: {fileID: 11400000, guid: 7e9085e90a557004cab9f9f7b2461b35, type: 2}
-  state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
+  state: {fileID: 11400000, guid: cc54f984569fbaa4397d16ba59a143f4, type: 2}
   isDeadTouch: 0
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
+  shieldPrefab: {fileID: 0}
+  shieldRate: 35
   attackPoint1: {fileID: 9206401759950296860}
 --- !u!114 &9206401761430645188
 MonoBehaviour:
@@ -2708,9 +2718,11 @@ MonoBehaviour:
   pooling: {fileID: 9206401761940484998}
   attackPoint: {fileID: 9206401760562434691}
   inGameScores: {fileID: 11400000, guid: 7e9085e90a557004cab9f9f7b2461b35, type: 2}
-  state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
+  state: {fileID: 11400000, guid: cc54f984569fbaa4397d16ba59a143f4, type: 2}
   isDeadTouch: 0
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
+  shieldPrefab: {fileID: 0}
+  shieldRate: 35
   attackPoint1: {fileID: 9206401761397400025}
 --- !u!114 &9206401761940485019
 MonoBehaviour:
@@ -2961,9 +2973,11 @@ MonoBehaviour:
   pooling: {fileID: 9206401761942822737}
   attackPoint: {fileID: 9206401760980278823}
   inGameScores: {fileID: 11400000, guid: 7e9085e90a557004cab9f9f7b2461b35, type: 2}
-  state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
+  state: {fileID: 11400000, guid: cc54f984569fbaa4397d16ba59a143f4, type: 2}
   isDeadTouch: 0
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
+  shieldPrefab: {fileID: 0}
+  shieldRate: 35
   attackPoint1: {fileID: 9206401761463773036}
 --- !u!114 &9206401761942822738
 MonoBehaviour:

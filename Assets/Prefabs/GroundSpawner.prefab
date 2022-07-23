@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundsCombie: {fileID: 6960162002417757977}
   ground: {fileID: 6340610615630147167, guid: e4ee07ed5f29c6342ace8e3db726a88f, type: 3}
+  _sprite: {fileID: 21300000, guid: cc50e813634a5da4b831349936330b8c, type: 3}
 --- !u!212 &6960162002417757956
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -54,7 +55,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6960162002417757977}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

@@ -12,10 +12,10 @@ public class GameStateSO : ScriptableObject
     public int ingameLives;
 
 
-    [SerializeField] private IntVariable pointsRemaining;
-    [SerializeField] private IntVariable currentMission;
-    [SerializeField] private IntVariable inGameScores;
-    [SerializeField] private IntVariable totalScores;
+    [SerializeField] public IntVariable pointsRemaining;
+    [SerializeField] public IntVariable currentMission;
+    [SerializeField] public IntVariable inGameScores;
+    [SerializeField] public IntVariable totalScores;
 
     public enum GameState
     {
@@ -31,6 +31,7 @@ public class GameStateSO : ScriptableObject
 
     public void StartGame()
     {
+        Time.timeScale = 1;
         State = GameState.StartGame;
     }
 
@@ -61,6 +62,7 @@ public class GameStateSO : ScriptableObject
 
     public void FinishMission()
     {
+       
         State = GameState.FinishMission;
     }
 
@@ -137,7 +139,7 @@ public class GameStateSO : ScriptableObject
     {
         canGetInput = false;
         isMoveRight = true;
-        moveLeftSpeed = 1.2f;
+        moveLeftSpeed = 1.5f;
         tankMoveSpeed = 0;
     }
 
@@ -161,8 +163,6 @@ public class GameStateSO : ScriptableObject
         isMoveRight = false;
         moveLeftSpeed = 0;
         tankMoveSpeed = 0f;
-        pointsRemaining.Value++;
-        totalScores.Value += inGameScores.Value;
-        currentMission.Value += 1;
+      
     }
 }

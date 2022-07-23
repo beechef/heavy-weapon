@@ -19,7 +19,6 @@ public class SpawnGasStation : MonoBehaviour
         if (state.State == GameStateSO.GameState.BossKilled)
         {
             StartCoroutine(waitToSpawnGasStation(4));
-
         }
         
     }
@@ -31,6 +30,6 @@ public class SpawnGasStation : MonoBehaviour
             if (gasStattionSpawned) yield break;
             var newGasStation = Instantiate(gasStation, transform.position, Quaternion.identity);
             gasStattionSpawned = true;
-            newGasStation.transform.parent = groundCombie.transform.GetChild(1).transform;
+            newGasStation.transform.parent = groundCombie.transform;
     }
 }

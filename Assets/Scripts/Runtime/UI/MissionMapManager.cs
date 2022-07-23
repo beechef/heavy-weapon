@@ -13,7 +13,7 @@ public class MissionMapManager : MonoBehaviour
 
    [SerializeField] private List<GameObject> missions;
    [SerializeField] private GameObject targetMission;
-   private Sequence mySequence = DOTween.Sequence();
+   private Sequence mySequence;
    private void Start()
    {
       targetMission.SetActive(true);
@@ -31,13 +31,12 @@ public class MissionMapManager : MonoBehaviour
 
    public void TargetMission(int i)
    {
-      
+      mySequence = DOTween.Sequence();
       mySequence.Append(targetMission.transform.DOMove(missions[i].transform.position,3f));
       mySequence.Insert(0,targetMission.transform.DOScale(0.3f,2f));
       StartCoroutine(WaitToEnableImage(2,i));
       
    }
-
    IEnumerator WaitToEnableImage(float time, int i)
    {
       var missionDes = missions[i].transform.GetChild(0);

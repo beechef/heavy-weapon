@@ -10,7 +10,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadMission()
     {
-        LoadBySceneName("Mission"+currentMission.Value);
+        LoadBySceneName("Mission"+(currentMission.Value+1));
     }
     public void LoadNextScene()
     {
