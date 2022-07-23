@@ -152,6 +152,13 @@ MonoBehaviour:
       m_SubObjectType: 
       m_EditorAssetChanged: 0
     prepoolAmount: 20
+  - key: Red Bomb Point
+    Object:
+      m_AssetGUID: fdd32f9c4db3f27448ec4879714ecb0a
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    prepoolAmount: 20
 --- !u!1 &1490607676045922889
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,6 +318,13 @@ MonoBehaviour:
       m_SubObjectType: 
       m_EditorAssetChanged: 0
     prepoolAmount: 30
+  - key: Player Lightning Bullet
+    Object:
+      m_AssetGUID: 6040daa9b8340e04bad3768285c33b71
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    prepoolAmount: 15
 --- !u!1 &1490607676904709088
 GameObject:
   m_ObjectHideFlags: 0

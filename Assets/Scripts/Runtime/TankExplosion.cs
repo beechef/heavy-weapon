@@ -1,36 +1,27 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TankExplosion : MonoBehaviour
+namespace Runtime
 {
-    [SerializeField] private ParticleSystem explosionEffect;
-    [SerializeField] private AudioSource explosionAudio;
-    [SerializeField] private SpriteRenderer tankMesh;
-    [SerializeField] private GameObject tankBarrel;
-    [SerializeField] private UnityEvent tankExplosionEvent;
-    private void Start()
+    public class TankExplosion : MonoBehaviour
     {
-        //explosionEffect.Stop();
-    }
+        [SerializeField] private ParticleSystem explosionEffect;
+        [SerializeField] private AudioSource explosionAudio;
+        [SerializeField] private SpriteRenderer tankMesh;
+        [SerializeField] private GameObject tankBarrel;
+        [SerializeField] private UnityEvent tankExplosionEvent;
+    
+        public void ExplosionByPress()
+        {
+            tankExplosionEvent.Invoke();
+        }
 
-    public void Update()
-    {
-        
-    }
-
-    public void ExplosionByPress()
-    {
-        tankExplosionEvent.Invoke();
-    }
-
-    public void ExplsionEffect()
-    {
-        tankBarrel.SetActive(false);
-        tankMesh.enabled = false;
-        //explosionEffect.Play();
-        explosionAudio.Play();
+        public void ExplsionEffect()
+        {
+            tankBarrel.SetActive(false);
+            tankMesh.enabled = false;
+            //explosionEffect.Play();
+            explosionAudio.Play();
+        }
     }
 }

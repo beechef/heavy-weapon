@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Runtime.Enemies.Animations;
+using Runtime.Items;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -19,15 +20,16 @@ namespace Runtime.Enemies.CombatSystems
         [SerializeField] protected Collider2D coll;
         [SerializeField] protected Pooling pooling;
         [SerializeField] protected Transform attackPoint;
-        [SerializeField] protected SavedData savedData;
+        [SerializeField] protected IntVariable inGameScores;
         [SerializeField] protected GameStateSO state;
         [SerializeField] protected bool isDeadTouch = false;
+        [SerializeField] protected TextRenderer textRenderer;
 
 
         protected Stats.BasicStats Stats => statsSystem.Stats;
         protected float LastAttack = 0f;
         protected bool IsDeath;
-        protected bool IssavedDataNotNull;
+        protected bool IsHasScore;
 
         protected virtual void OnEnable()
         {
@@ -48,18 +50,19 @@ namespace Runtime.Enemies.CombatSystems
             return state.State == GameStateSO.GameState.PlayGame;
         }
 
-       
+
         protected virtual void Awake()
         {
             GODictionary.AddVulnerableGO(gameObject, this);
 
-            IssavedDataNotNull = savedData != null;
+            IsHasScore = inGameScores != null;
 
             animationEvents.OnDeath(() => { pooling.Return(gameObject, .1f).Forget(); });
         }
+
         public override bool IsCanAttack()
         {
-            return Time.time - LastAttack >= 1f / Stats.attackSpeed &&isOnGameplayState();
+            return Time.time - LastAttack >= 1f / Stats.attackSpeed && isOnGameplayState();
         }
 
         public override void Attack()
@@ -114,9 +117,12 @@ namespace Runtime.Enemies.CombatSystems
             if (!statsSystem.TakeDamage(damage)) return;
             Death(.5f);
 
-            if (IssavedDataNotNull)
-
-                savedData.Score += Stats.score;
+            if (IsHasScore)
+            {
+                inGameScores.Value += Stats.score;
+                textRenderer = Instantiate(textRenderer);
+                textRenderer.Render(transform.position + transform.up, Stats.score.ToString(), 2f, false);
+            }
         }
 
         protected virtual void OnCollisionEnter2D(Collision2D other)

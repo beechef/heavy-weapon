@@ -10,6 +10,6 @@ namespace Runtime.Bullets.Stats
         [HideInInspector] public float health;
         public float maxHealth;
         public float moveSpeed;
-        public float score;
+        public int score;
     }
 }

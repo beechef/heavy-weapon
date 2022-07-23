@@ -1,6 +1,7 @@
 ﻿using Runtime.Bullets.Animations;
 using Runtime.Bullets.StatsSystems;
 using Runtime.Interfaces;
+using Runtime.Items;
 using UnityEngine;
 using BasicStats = Runtime.Bullets.Stats.BasicStats;
 
@@ -15,10 +16,11 @@ namespace Runtime.Bullets
         [SerializeField] protected AudioClip deathClip;
         [SerializeField] protected Collider2D coll;
         [SerializeField] protected Pooling pooling;
-        [SerializeField] protected SavedData savedData;
+        [SerializeField] protected IntVariable inGameScores;
         [SerializeField] protected float fadeTime = .2f;
-        private bool _issavedDataNotNull;
-        public BasicStats Stats { get; protected set; }
+        [SerializeField] protected TextRenderer textRenderer;
+        private bool _isHasScore;
+        public BasicStats Stats => statsSystem.Stats;
 
         protected virtual void OnEnable()
         {
@@ -28,13 +30,12 @@ namespace Runtime.Bullets
         protected virtual void Awake()
         {
             GODictionary.AddVulnerableGO(gameObject, this);
-            _issavedDataNotNull = savedData != null;
+            _isHasScore = inGameScores != null;
         }
 
         protected virtual void OnInit()
         {
             coll.enabled = true;
-            Stats = statsSystem.Stats;
             audioSource.loop = false;
             audioSource.playOnAwake = false;
             PlayAudio(startClip);
@@ -79,8 +80,12 @@ namespace Runtime.Bullets
             if (statsSystem.TakeDamage(damage))
             {
                 Death();
-                if (_issavedDataNotNull)
-                    savedData.Score += Stats.score;
+                if (_isHasScore)
+                {
+                    inGameScores.Value += Stats.score;
+                    textRenderer = Instantiate(textRenderer);
+                    textRenderer.Render(transform.position + transform.up, Stats.score.ToString(), 2f, false);
+                }
             }
         }
     }

@@ -254,9 +254,10 @@ MonoBehaviour:
   coll: {fileID: 5621275357983238465}
   pooling: {fileID: 840553018548302784}
   attackPoint: {fileID: 2742255894620584897}
-  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  inGameScores: {fileID: 11400000, guid: 7e9085e90a557004cab9f9f7b2461b35, type: 2}
   state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
   isDeadTouch: 0
+  textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   healthBar: {fileID: 5237312709064096705, guid: 1d124bdfebf49e44fbb7be3cf2eed98f, type: 3}
   effectDuration: 1.5
   ballCombatSystem: {fileID: 2742255896469733351}
@@ -305,7 +306,7 @@ AudioSource:
   m_GameObject: {fileID: 2742255894620584896}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 7426030619000300582, guid: eb426c861b7bd98449d5cda3f1d784c4, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -1788,9 +1789,10 @@ MonoBehaviour:
   coll: {fileID: 2742255896469733348}
   pooling: {fileID: 2742255896469733355}
   attackPoint: {fileID: 2742255894822565132}
-  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  inGameScores: {fileID: 11400000, guid: 7e9085e90a557004cab9f9f7b2461b35, type: 2}
   state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
   isDeadTouch: 0
+  textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   explosionRadius: 1
   rotateBehaviour: {fileID: 2742255896469733347}
 --- !u!114 &2742255896469733350
@@ -1833,7 +1835,7 @@ AudioSource:
   m_GameObject: {fileID: 2742255896469733357}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 7426030619000300582, guid: eb426c861b7bd98449d5cda3f1d784c4, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

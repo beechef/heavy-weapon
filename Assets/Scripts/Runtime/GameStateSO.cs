@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Runtime;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 [CreateAssetMenu]
 public class GameStateSO : ScriptableObject
@@ -14,6 +10,10 @@ public class GameStateSO : ScriptableObject
     public bool canGetInput;
     public int lives;
     public GameState State;
+
+    [SerializeField] private IntVariable pointsRemaining;
+    [SerializeField] private IntVariable inGameScores;
+    [SerializeField] private IntVariable totalScores;
 
     public enum GameState
     {
@@ -30,6 +30,7 @@ public class GameStateSO : ScriptableObject
     {
         State = GameState.StartGame;
     }
+
     public void Revive()
     {
         State = GameState.Revive;
@@ -59,7 +60,7 @@ public class GameStateSO : ScriptableObject
     {
         State = GameState.FinishMission;
     }
-    
+
 
     public void UpdateState()
     {
@@ -99,6 +100,7 @@ public class GameStateSO : ScriptableObject
         isMoveRight = true;
         moveLeftSpeed = 1f;
         tankMoveSpeed = 0.5f;
+        inGameScores.Value = 0;
     }
 
     void OnGamePlay()
@@ -130,12 +132,14 @@ public class GameStateSO : ScriptableObject
         moveLeftSpeed = 0;
         tankMoveSpeed = 0;
     }
+
     public void OnPlayerDead()
     {
-        if(lives<=0)
+        if (lives <= 0)
         {
-            GameOver();                                                                         
+            GameOver();
         }
+
         lives -= 1;
     }
 
@@ -151,5 +155,7 @@ public class GameStateSO : ScriptableObject
         isMoveRight = false;
         moveLeftSpeed = 0;
         tankMoveSpeed = 0f;
+        pointsRemaining.Value++;
+        totalScores.Value += inGameScores.Value;
     }
 }

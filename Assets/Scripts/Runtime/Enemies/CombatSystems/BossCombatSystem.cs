@@ -52,8 +52,8 @@ namespace Runtime.Enemies.CombatSystems
             if (statsSystem.IsDead())
             {
                 await Death(.5f);
-                if (IssavedDataNotNull)
-                    savedData.Score += Stats.score;
+                if (IsHasScore)
+                    inGameScores.Value += Stats.score;
                 Destroy(healthBar.gameObject, effectDuration + 0.2f);
             }
         }

@@ -150,13 +150,16 @@ MonoBehaviour:
   statsSystem: {fileID: 8689213770734801196}
   animationEvents: {fileID: 6128618740817244483}
   bulletPrefabs: []
+  destroyParticlePrefab: Destroy Particle
   audioSource: {fileID: 8689213770734801199}
   deathClip: {fileID: 8300000, guid: e4db17838fbde154f8179d9170e357b2, type: 3}
   coll: {fileID: 8689213770606426509}
   pooling: {fileID: 8689213770734801198}
   attackPoint: {fileID: 8689213770734801195}
-  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  inGameScores: {fileID: 11400000, guid: 7e9085e90a557004cab9f9f7b2461b35, type: 2}
+  state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
   isDeadTouch: 1
+  textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
 --- !u!114 &6128618740817244483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,7 +253,7 @@ AudioSource:
   m_GameObject: {fileID: 8689213770734801194}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 7426030619000300582, guid: eb426c861b7bd98449d5cda3f1d784c4, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

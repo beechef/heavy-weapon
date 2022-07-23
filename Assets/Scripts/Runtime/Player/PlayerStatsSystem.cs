@@ -1,4 +1,5 @@
 ﻿using System;
+using Runtime.Items;
 using UnityEngine;
 
 namespace Runtime.Player
@@ -6,8 +7,12 @@ namespace Runtime.Player
     public class PlayerStatsSystem : MonoBehaviour
     {
         [SerializeField] private PlayerStats stats;
+        [SerializeField] private TankExplosion _explosion;
+        [SerializeField] private ProgressRenderer progressRenderer;
         public PlayerStats Stats => stats;
         private bool _isFirst = false;
+
+        public Action OnInit;
 
         protected virtual void Awake()
         {
@@ -16,35 +21,25 @@ namespace Runtime.Player
 
         protected virtual void OnEnable()
         {
-            OnInit();
+            Init();
         }
 
         private void Update()
         {
-            if (stats.megaLaserComplete >= 99f)
+            UpdateMegaLaserProgress();
+            if (IsDead())
             {
-                stats.isActivateMegaLaser = true;
-            }
-
-            if (stats.isActivateMegaLaser)
-            {
-                if (stats.megaLaserComplete <= 0f)
-                {
-                    stats.isActivateMegaLaser = false;
-                }
-                else
-                {
-                    stats.megaLaserComplete -= Time.deltaTime * 10f;
-                }
+                _explosion.ExplosionByPress();
             }
         }
 
-        protected virtual void OnInit()
+        protected virtual void Init()
         {
             if (!_isFirst)
             {
                 _isFirst = true;
                 stats = Instantiate(stats);
+                OnInit?.Invoke();
             }
 
             RestoreFullHealth();
@@ -63,14 +58,27 @@ namespace Runtime.Player
             return IsDead();
         }
 
-        public virtual void IncreaseAttack(float attack)
+        public void UpdateMegaLaserProgress()
         {
-            stats.attack += attack;
-        }
+            stats.megaLaserComplete = Mathf.Clamp(stats.megaLaserComplete, 0f, 100f);
+            if (stats.megaLaserComplete >= 99f)
+            {
+                stats.isActivateMegaLaser = true;
+            }
 
-        public virtual void DecreaseAttack(float attack)
-        {
-            stats.attack -= attack;
+            if (stats.isActivateMegaLaser)
+            {
+                if (stats.megaLaserComplete <= 0f)
+                {
+                    stats.isActivateMegaLaser = false;
+                }
+                else
+                {
+                    stats.megaLaserComplete -= Time.deltaTime * 10f;
+                }
+            }
+
+            progressRenderer.Render(stats.megaLaserComplete, 100f);
         }
     }
 }

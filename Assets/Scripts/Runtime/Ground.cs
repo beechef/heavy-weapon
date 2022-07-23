@@ -1,4 +1,4 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using System;
 using UnityEngine;
 
 namespace Runtime
@@ -11,11 +11,25 @@ namespace Runtime
 
         private async void OnCollisionEnter2D(Collision2D other)
         {
-            if (!other.gameObject.CompareTag(TagName.FireStreak) || !other.gameObject.CompareTag(TagName.Enemy)) return;
+            if (!other.gameObject.CompareTag(TagName.FireStreak) && !other.gameObject.CompareTag(TagName.Enemy)) return;
             Vector3 pos = other.GetContact(0).point;
-            Instantiate(fireStreakPrefab, pos, Quaternion.identity);
+            Instantiate(fireStreakPrefab, pos, Quaternion.identity).transform.parent = transform;
             GameObject go = await pooling.GetAsync(particlePrefab, pos, Quaternion.Euler(-90f, 0f, 0f));
-            pooling.Return(go, 2f).Forget();
+            var parent = go.transform.parent;
+            var cachedParent = parent;
+            go.transform.parent = transform;
+            await pooling.Return(go, 2f);
+            parent = cachedParent;
+            go.transform.parent = parent;
+        }
+
+        private void OnDisable()
+        {
+            var cachedTransform = transform;
+            for (int i = 0; i < cachedTransform.childCount; i++)
+            {
+                Destroy(cachedTransform.GetChild(i).gameObject);
+            }
         }
     }
 }

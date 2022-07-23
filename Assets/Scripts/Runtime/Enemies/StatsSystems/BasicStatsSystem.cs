@@ -8,7 +8,7 @@ namespace Runtime.Enemies.StatsSystems
         public static float AttackScale = 1f;
         public static float AttackSpeedScale = 1f;
         public static float MaxHealthScale = 1f;
-        public static float ScoreScale = 1f;
+        public static int ScoreScale = 1;
 
         [SerializeField] private BasicStats stats;
 

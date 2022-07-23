@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 4673193404443558961}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -16.96, y: 0.8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4673193404586214026}
@@ -98,6 +98,8 @@ MonoBehaviour:
   coll: {fileID: 4673193404443558953}
   pooling: {fileID: 4673193404443558959}
   savedData: {fileID: 0}
+  fadeTime: 0.2
+  textRenderer: {fileID: 0}
 --- !u!114 &4673193404443558956
 MonoBehaviour:
   m_ObjectHideFlags: 0
