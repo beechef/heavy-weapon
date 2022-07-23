@@ -111,7 +111,7 @@ MonoBehaviour:
   pooling: {fileID: 5570724751831879819}
   attackPoint: {fileID: 5570724752303996158}
   inGameScores: {fileID: 11400000, guid: 7e9085e90a557004cab9f9f7b2461b35, type: 2}
-  state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
+  state: {fileID: 11400000, guid: df6815fb3d9907b40ab0625091eb9181, type: 2}
   isDeadTouch: 0
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
 --- !u!114 &5570724751831879813

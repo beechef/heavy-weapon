@@ -9,16 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70f31c84738449e5bf588c57d26ced53, type: 3}
-  m_Name: Player Stats
+  m_Script: {fileID: 11500000, guid: 388930f5c7d7d2f4a97e34ce636d59e0, type: 3}
+  m_Name: GameOver
   m_EditorClassIdentifier: 
-  attack: 10
-  attackSpeed: 5.5
-  moveSpeed: 1
-  amountAttackPoint: 1
-  health: 100
-  maxHealth: 50
-  lives: 3
-  nukeQuantity: 0
-  isActivateMegaLaser: 0
-  megaLaserComplete: 0

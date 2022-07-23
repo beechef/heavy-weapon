@@ -35,7 +35,7 @@ public class StartedUIManager : MonoBehaviour
             case GameStateSO.GameState.BossFight:
                 //OnBossFight();
                 break;
-            case GameStateSO.GameState.EndGame:
+            case GameStateSO.GameState.BossKilled:
                 //OnFinishGame();
                 break;
             case GameStateSO.GameState.GameOver:

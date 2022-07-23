@@ -1,27 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Runtime.Player;
 using UnityEngine;
 
 public class UpdateLives : MonoBehaviour
 {
-    [SerializeField] private GameStateSO GameState;
-    // Update is called once per frame
+    [SerializeField] private GameStateSO state;
     void Update()
     {
-        if (GameState.lives == 3)
+        switch (state.ingameLives)
         {
-            transform.GetChild(0).gameObject.SetActive(true);
-            transform.GetChild(1).gameObject.SetActive(true);
-        }else if (GameState.lives == 2)
-        {
-            transform.GetChild(0).gameObject.SetActive(true);
-            transform.GetChild(1).gameObject.SetActive(false);
+            case 3:
+                transform.GetChild(0).gameObject.SetActive(true);
+                transform.GetChild(1).gameObject.SetActive(true);
+                break;
+            case 2:
+                transform.GetChild(0).gameObject.SetActive(true);
+                transform.GetChild(1).gameObject.SetActive(false);
+                break;
+            default:
+                transform.GetChild(0).gameObject.SetActive(false);
+                transform.GetChild(1).gameObject.SetActive(false);
+                break;
         }
-        else
-        {
-            transform.GetChild(0).gameObject.SetActive(false);
-            transform.GetChild(1).gameObject.SetActive(false);
-        }
-
     }
 }

@@ -35,7 +35,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (GameState.State == GameStateSO.GameState.Revive)
         {
+            
             CheckEventInvoke();
+            Revieve();
         }
 
         if (GameState.canGetInput)
@@ -77,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnGameStart()
     {
-        Move(GameState.tankMoveSpeed);
+        
         if (pos.x >= 0.5f)
         {
             GameState.tankMoveSpeed = 0;
@@ -94,9 +96,6 @@ public class PlayerMovement : MonoBehaviour
     public void Revieve()
     {
         isReviveEventInvoke = true;
-        tankMesh.enabled = true;
-        tankBarrel.SetActive(true);
-        GameState.tankMoveSpeed = 0.5f;
         if (pos.x >= 0.5f && GameState.State == GameStateSO.GameState.Revive)
         {
             GameState.tankMoveSpeed = 0;
@@ -118,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-
         playerRevive.Invoke();
+        isReviveEventInvoke = false;
     }
 }

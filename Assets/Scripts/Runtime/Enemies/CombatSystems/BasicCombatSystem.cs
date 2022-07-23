@@ -47,7 +47,7 @@ namespace Runtime.Enemies.CombatSystems
 
         public bool isOnGameplayState()
         {
-            return state.State == GameStateSO.GameState.PlayGame;
+            return state.State == GameStateSO.GameState.PlayGame||state.State == GameStateSO.GameState.BossFight;
         }
 
 

@@ -1,17 +1,16 @@
 ﻿using System;
 using Runtime.Items;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Runtime.Player
 {
     public class PlayerStatsSystem : MonoBehaviour
     {
         [SerializeField] private PlayerStats stats;
-        [SerializeField] private TankExplosion _explosion;
         [SerializeField] private ProgressRenderer progressRenderer;
         public PlayerStats Stats => stats;
         private bool _isFirst = false;
-
         public Action OnInit;
 
         protected virtual void Awake()
@@ -27,10 +26,7 @@ namespace Runtime.Player
         private void Update()
         {
             UpdateMegaLaserProgress();
-            if (IsDead())
-            {
-                _explosion.ExplosionByPress();
-            }
+           
         }
 
         protected virtual void Init()
@@ -80,5 +76,6 @@ namespace Runtime.Player
 
             progressRenderer.Render(stats.megaLaserComplete, 100f);
         }
+        
     }
 }

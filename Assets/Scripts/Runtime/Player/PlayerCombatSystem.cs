@@ -23,7 +23,6 @@ namespace Runtime.Player
         [SerializeField] private string casingPrefab;
         [SerializeField] private string playerDeathPrefab;
         [SerializeField] private LaserBullet megaLaser;
-
         [SerializeField] private PlayerMovement playerMovement;
         [SerializeField] private GameStateSO state;
 
@@ -34,6 +33,7 @@ namespace Runtime.Player
         private void Start()
         {
             _stats = statsSystem.Stats;
+            state.ingameLives = _stats.lives;
             GODictionary.AddVulnerableGO(gameObject, this);
             animationEvents.OnDeath(() => { gameObject.SetActive(false); });
         }
@@ -63,6 +63,7 @@ namespace Runtime.Player
         private async void Death()
         {
             _stats.lives--;
+            state.ingameLives--;
             _isDeath = true;
             coll.enabled = false;
             PlaySound(deathClip);
@@ -75,12 +76,11 @@ namespace Runtime.Player
             pooling.Return(go, 2f).Forget();
             if (_stats.lives <= 0)
             {
-                Debug.Log("Lose!");
+               state.GameOver();
             }
             else
             {
-                state.Revive();
-               
+                state.PlayerDead();
                 Reborn();
                 
             }
@@ -91,9 +91,10 @@ namespace Runtime.Player
             await UniTask.Delay(TimeSpan.FromSeconds(3.5f));
             gameObject.SetActive(true);
             transform.position = playerMovement.startPos;
-            state.tankMoveSpeed = 1f;
+            state.Revive();
+            state.tankMoveSpeed = 0.5f;
             statsSystem.RestoreFullHealth();
-            
+
         }
 
         public void TakeDamage(float damage)
