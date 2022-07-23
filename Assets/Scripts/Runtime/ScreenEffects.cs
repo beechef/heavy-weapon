@@ -1,7 +1,5 @@
-
-﻿using DG.Tweening;
+using DG.Tweening;
 using UnityEngine;
-
 using UnityEngine.UI;
 
 namespace Runtime
@@ -25,12 +23,12 @@ namespace Runtime
             Instance = this;
 
             _camera = Camera.main;
-
         }
 
         public void Blink(Color color, float time)
         {
             image.color = color;
+            image.CrossFadeAlpha(1f, 0f, false);
             image.CrossFadeAlpha(0f, time, false);
         }
 
@@ -39,6 +37,5 @@ namespace Runtime
         {
             _camera.DOShakeRotation(duration, strength);
         }
-
     }
 }

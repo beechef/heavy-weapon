@@ -69,20 +69,19 @@ namespace Runtime.Player
             PlaySound(deathClip);
             anim.Death();
             barrel.SetActive(false);
-            ScreenEffects.Instance.Blink(Color.white, .25f);
+            ScreenEffects.Instance.Blink(Color.white, .75f);
 
             GameObject go = await pooling.GetAsync(playerDeathPrefab, transform.position,
                 Quaternion.Euler(-90f, 0f, 0f));
             pooling.Return(go, 2f).Forget();
             if (_stats.lives <= 0)
             {
-               state.GameOver();
+                state.GameOver();
             }
             else
             {
                 state.PlayerDead();
                 Reborn();
-                
             }
         }
 
@@ -94,7 +93,6 @@ namespace Runtime.Player
             state.Revive();
             state.tankMoveSpeed = 0.5f;
             statsSystem.RestoreFullHealth();
-
         }
 
         public void TakeDamage(float damage)

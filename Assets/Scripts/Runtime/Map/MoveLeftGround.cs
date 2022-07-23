@@ -8,6 +8,7 @@ using UnityEngine.U2D;
 public class MoveLeftGround : MonoBehaviour
 {
     public float moveSpeed;
+    [SerializeField] GameStateSO state;
     private SpriteRenderer sprite;
     
 
@@ -22,7 +23,7 @@ public class MoveLeftGround : MonoBehaviour
         {
             transform.position = transform.parent.position;
         } 
-        transform.position += new Vector3(-moveSpeed * Time.deltaTime, 0);
+        transform.position += new Vector3(-moveSpeed*state.moveLeftSpeed * Time.deltaTime, 0);
     }
     
 }

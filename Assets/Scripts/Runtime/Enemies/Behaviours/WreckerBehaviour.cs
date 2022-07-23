@@ -56,7 +56,7 @@ namespace Runtime.Enemies.Behaviours
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.collider.CompareTag(TagName.Wall))
+            if (other.gameObject.CompareTag(TagName.Wall))
             {
                 _time = 1f;
             }

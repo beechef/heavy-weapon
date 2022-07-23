@@ -124,7 +124,7 @@ namespace Runtime.Enemies.CombatSystems
 
         public override void TakeDamage(float damage)
         {
-            if (IsDeath) return;
+            if (IsDeath || !enabled) return;
             anim.Hit();
             if (!statsSystem.TakeDamage(damage)) return;
             Death(.5f);

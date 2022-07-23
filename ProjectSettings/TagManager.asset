@@ -11,6 +11,7 @@ TagManager:
   - Wall
   - Effect Render Queue
   - Boss Health Bar
+  - Boss Point
   layers:
   - Default
   - TransparentFX

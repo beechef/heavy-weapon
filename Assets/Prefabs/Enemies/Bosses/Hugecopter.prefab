@@ -200,6 +200,8 @@ MonoBehaviour:
   state: {fileID: 11400000, guid: df6815fb3d9907b40ab0625091eb9181, type: 2}
   isDeadTouch: 0
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
+  shieldPrefab: {fileID: 0}
+  shieldRate: 35
 --- !u!114 &3466574081133924477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -632,6 +634,7 @@ GameObject:
   - component: {fileID: 3466574081366582417}
   - component: {fileID: 3466574081366582429}
   - component: {fileID: 3466574081366582428}
+  - component: {fileID: 1132773834}
   m_Layer: 6
   m_Name: Hugecopter
   m_TagString: Enemy
@@ -870,8 +873,10 @@ MonoBehaviour:
   state: {fileID: 11400000, guid: df6815fb3d9907b40ab0625091eb9181, type: 2}
   isDeadTouch: 0
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
+  shieldPrefab: {fileID: 0}
+  shieldRate: 35
   healthBarRenderer: {fileID: 5237312709064096705, guid: 1d124bdfebf49e44fbb7be3cf2eed98f, type: 3}
-  effectDuration: 1.5
+  effectDuration: 3
   leftLauncher: {fileID: 3466574081695895018}
   rightLauncher: {fileID: 3466574081742200136}
   leftTurret: {fileID: 3466574081977804278}
@@ -895,6 +900,26 @@ MonoBehaviour:
   minMoveDistance: 1
   maxMoveDistance: 2
   timeSwitchLauncher: 1
+--- !u!114 &1132773834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466574081366582418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62536b9186a34cdc95cf66cba01c7e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviours:
+  - {fileID: 3466574081366582429}
+  - {fileID: 3466574081366582428}
+  - {fileID: 3466574081695895018}
+  - {fileID: 3466574081742200136}
+  - {fileID: 3466574081977804278}
+  - {fileID: 3466574081133924464}
+  moveSpeed: 2
 --- !u!1 &3466574081382705936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,6 +1214,8 @@ MonoBehaviour:
   state: {fileID: 11400000, guid: df6815fb3d9907b40ab0625091eb9181, type: 2}
   isDeadTouch: 0
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
+  shieldPrefab: {fileID: 0}
+  shieldRate: 35
 --- !u!50 &2080661128569581832
 Rigidbody2D:
   serializedVersion: 4
@@ -1442,6 +1469,8 @@ MonoBehaviour:
   state: {fileID: 11400000, guid: df6815fb3d9907b40ab0625091eb9181, type: 2}
   isDeadTouch: 0
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
+  shieldPrefab: {fileID: 0}
+  shieldRate: 35
 --- !u!50 &5154181523609090239
 Rigidbody2D:
   serializedVersion: 4
@@ -1661,6 +1690,8 @@ MonoBehaviour:
   state: {fileID: 11400000, guid: df6815fb3d9907b40ab0625091eb9181, type: 2}
   isDeadTouch: 0
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
+  shieldPrefab: {fileID: 0}
+  shieldRate: 35
 --- !u!114 &3466574081977804170
 MonoBehaviour:
   m_ObjectHideFlags: 0
