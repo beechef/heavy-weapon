@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7025c48625e84f679d8f42efceaf90f2, type: 3}
   m_Name: Red Bomb
   m_EditorClassIdentifier: 
-  attack: 15
+  attack: 0
   attackSpeed: 0
   health: 0
   maxHealth: 15

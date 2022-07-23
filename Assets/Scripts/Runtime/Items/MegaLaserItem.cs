@@ -13,6 +13,6 @@ namespace Runtime.Items
             statsSystem.Stats.megaLaserComplete += value;
         }
 
-        protected override string GetCollectionText() => "Mega Laser Complete 25%";
+        protected override string GetCollectionText() => $"Mega Laser Complete {value}%";
     }
 }

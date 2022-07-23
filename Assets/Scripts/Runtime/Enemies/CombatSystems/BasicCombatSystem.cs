@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using Runtime.Bullets;
 using Runtime.Enemies.Animations;
 using Runtime.Items;
 using UnityEngine;
@@ -24,7 +25,10 @@ namespace Runtime.Enemies.CombatSystems
         [SerializeField] protected GameStateSO state;
         [SerializeField] protected bool isDeadTouch = false;
         [SerializeField] protected TextRenderer textRenderer;
+        [SerializeField] protected GameObject shieldPrefab;
+        [SerializeField] protected float shieldRate = 35f;
 
+        protected GameObject Shield;
 
         protected Stats.BasicStats Stats => statsSystem.Stats;
         protected float LastAttack = 0f;
@@ -42,12 +46,20 @@ namespace Runtime.Enemies.CombatSystems
             coll.enabled = true;
             audioSource.loop = false;
             audioSource.playOnAwake = false;
+
+            var cachedTransform = transform;
+
+            if (Random.Range(0f, 100f) <= shieldRate && shieldPrefab != null)
+            {
+                Shield = Instantiate(shieldPrefab, cachedTransform.position, Quaternion.identity, cachedTransform);
+            }
+
             EnemyPosition.AddPos(transform);
         }
 
         public bool isOnGameplayState()
         {
-            return state.State == GameStateSO.GameState.PlayGame||state.State == GameStateSO.GameState.BossFight;
+            return state.State == GameStateSO.GameState.PlayGame || state.State == GameStateSO.GameState.BossFight;
         }
 
 
@@ -120,8 +132,8 @@ namespace Runtime.Enemies.CombatSystems
             if (IsHasScore)
             {
                 inGameScores.Value += Stats.score;
-                textRenderer = Instantiate(textRenderer);
-                textRenderer.Render(transform.position + transform.up, Stats.score.ToString(), 2f, false);
+                var text = Instantiate(textRenderer);
+                text.Render(transform.position + transform.up / 2, Stats.score.ToString(), 2f, false);
             }
         }
 
@@ -140,6 +152,7 @@ namespace Runtime.Enemies.CombatSystems
         protected virtual void OnDisable()
         {
             EnemyPosition.RemovePos(transform);
+            if (Shield != null) Destroy(Shield);
         }
     }
 }
