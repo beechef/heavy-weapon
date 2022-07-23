@@ -21,7 +21,7 @@ public class MissionMapManager : MonoBehaviour
 
    private void Update()
    {
-      if (currentMission.Value > 3)
+      if (currentMission.Value >= 3)
       {
          finishImage.SetActive(true);
          return;
