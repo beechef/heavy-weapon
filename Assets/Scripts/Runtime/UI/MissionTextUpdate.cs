@@ -12,6 +12,6 @@ public class MissionTextUpdate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = "M" + currentMission.Value.ToString();
+        text.text = "M" + (currentMission.Value+1);
     }
 }

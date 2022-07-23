@@ -10,10 +10,10 @@ using UnityEngine.UI;
 public class MissionMapManager : MonoBehaviour
 {
    [SerializeField] private IntVariable currentMission;
-
    [SerializeField] private List<GameObject> missions;
    [SerializeField] private GameObject targetMission;
    private Sequence mySequence;
+   [SerializeField] private GameObject finishImage;
    private void Start()
    {
       targetMission.SetActive(true);
@@ -21,6 +21,11 @@ public class MissionMapManager : MonoBehaviour
 
    private void Update()
    {
+      if (currentMission.Value > 3)
+      {
+         finishImage.SetActive(true);
+         return;
+      }
       CheckCurrentMission();
    }
 
@@ -28,7 +33,6 @@ public class MissionMapManager : MonoBehaviour
    {
       TargetMission(currentMission.Value);
    }
-
    public void TargetMission(int i)
    {
       mySequence = DOTween.Sequence();
@@ -44,7 +48,6 @@ public class MissionMapManager : MonoBehaviour
       if (targetMission.activeSelf)
       { targetMission.SetActive(false);
       }
-     
       missionDes.gameObject.SetActive(true);
    }
 

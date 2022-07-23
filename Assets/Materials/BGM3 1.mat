@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BGM2
+  m_Name: BGM3 1
   m_Shader: {fileID: 10751, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -41,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ec9a2c9fdbd2cfb4b993209b7e7994bf, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7b9c4e852f5a05a478c78a27d8747dc8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 1, y: 1}
     - _MetallicGlossMap:
@@ -59,7 +59,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _BumpScale: 1
-    - _Cutoff: 1
+    - _Cutoff: 0.41
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
