@@ -12,7 +12,7 @@ public class GameStateManager : MonoBehaviour
         State.StartGame();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         State.UpdateState();
     }
