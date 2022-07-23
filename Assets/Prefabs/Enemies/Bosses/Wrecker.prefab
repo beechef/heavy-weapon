@@ -258,8 +258,10 @@ MonoBehaviour:
   state: {fileID: 11400000, guid: df6815fb3d9907b40ab0625091eb9181, type: 2}
   isDeadTouch: 0
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
+  shieldPrefab: {fileID: 0}
+  shieldRate: 35
   healthBarRenderer: {fileID: 5237312709064096705, guid: 1d124bdfebf49e44fbb7be3cf2eed98f, type: 3}
-  effectDuration: 1.5
+  effectDuration: 3
   ballCombatSystem: {fileID: 2742255896469733351}
   wreckerBehaviour: {fileID: 8237188076017235420}
 --- !u!1 &2742255894620584896
@@ -272,6 +274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2742255894620584897}
   - component: {fileID: 2742255894620584890}
+  - component: {fileID: 5462192772296476944}
   m_Layer: 6
   m_Name: Wrecker
   m_TagString: Enemy
@@ -393,6 +396,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5462192772296476944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2742255894620584896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62536b9186a34cdc95cf66cba01c7e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviours:
+  - {fileID: 8237188076017235420}
+  - {fileID: 3706328161945357904}
+  - {fileID: 2742255896469733351}
+  moveSpeed: 2
 --- !u!1 &2742255894811204719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,6 +1813,8 @@ MonoBehaviour:
   state: {fileID: 11400000, guid: df6815fb3d9907b40ab0625091eb9181, type: 2}
   isDeadTouch: 0
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
+  shieldPrefab: {fileID: 0}
+  shieldRate: 35
   explosionRadius: 1
   rotateBehaviour: {fileID: 2742255896469733347}
 --- !u!114 &2742255896469733350
@@ -2160,7 +2182,7 @@ GameObject:
   - component: {fileID: 2742255896732855432}
   - component: {fileID: 2742255896732855430}
   - component: {fileID: 2742255896732855433}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Wall
   m_TagString: Wall
   m_Icon: {fileID: 0}

@@ -9,14 +9,14 @@ namespace Runtime.Enemies.CombatSystems
     public class BossCombatSystem : BasicCombatSystem
     {
         [SerializeField] private HealthBarRenderer healthBarRenderer;
-        [SerializeField] private float effectDuration = 1.5f;
+        [SerializeField] private float effectDuration = 3f;
         private Transform _bossHealthBar;
 
-        protected override void Awake()
+        protected void Start()
         {
-            base.Awake();
             _bossHealthBar = GameObject.FindWithTag(TagName.BossHealthBar).transform;
             healthBarRenderer = Instantiate(healthBarRenderer, _bossHealthBar);
+            healthBarRenderer.Render(Stats.health, Stats.maxHealth);
         }
 
         public override async UniTask Death(float delay)
@@ -35,7 +35,7 @@ namespace Runtime.Enemies.CombatSystems
 
             ScreenEffects.Instance.Blink(Color.white, effectDuration);
             ScreenEffects.Instance.Shake(effectDuration);
-            Destroy(gameObject, effectDuration + 0.2f);
+            Destroy(gameObject, effectDuration + 0.5f);
         }
 
         private Vector3 RandomVector(float minValue, float maxValue)
@@ -45,7 +45,7 @@ namespace Runtime.Enemies.CombatSystems
 
         public override async void TakeDamage(float damage)
         {
-            if (IsDeath) return;
+            if (IsDeath || !enabled) return;
             anim.Hit();
             statsSystem.TakeDamage(damage);
             healthBarRenderer.Render(Stats.health, Stats.maxHealth);
@@ -56,6 +56,10 @@ namespace Runtime.Enemies.CombatSystems
                     inGameScores.Value += Stats.score;
                 Destroy(healthBarRenderer.gameObject, effectDuration + 0.2f);
             }
+        }
+
+        protected override void OnCollisionEnter2D(Collision2D other)
+        {
         }
     }
 }

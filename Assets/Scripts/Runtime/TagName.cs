@@ -9,5 +9,6 @@
         public const string Ground = "Ground";
         public const string EffectRenderQueue = "Effect Render Queue";
         public const string BossHealthBar = "Boss Health Bar";
+        public const string BossPoint = "Boss Point";
     }
 }
