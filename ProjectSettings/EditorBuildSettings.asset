@@ -4,37 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Upgrade.unity
-    guid: 9eaedf124c5b9a148817c863c6347814
-  - enabled: 1
-    path: Assets/Scenes/Demo-PlayerWithState.unity
-    guid: 5d1b8cebba6b08b418008fdeb5a3ab33
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: ef3adca1f0608964d9b518563abb0c0c
-  - enabled: 1
-    path: Assets/Scenes/Nhan.unity
-    guid: b8f81af8e6eef8d4b8acb65ecb39280b
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/Mission1.unity
-    guid: 6acd41622c2f81640852f187f13964c6
-  - enabled: 1
-    path: Assets/Scenes/Mission2.unity
-    guid: 8676e4b8b47f802408b7b567e0e7a26a
-  - enabled: 1
-    path: Assets/Scenes/Mission3.unity
-    guid: 2dbbed0b1d5bde74ba04b6089649c252
-  - enabled: 1
-<<<<<<< Updated upstream
-    path: Assets/Scenes/MenuScenes/LevelChoseMap.unity
-=======
-    path: Assets/Scenes/MenuScenes/MissionMap.unity
->>>>>>> Stashed changes
-    guid: 8a3a642c3102c2944a0f72c346ecde6e
-  m_configObjects:
-    com.unity.addressableassets: {fileID: 11400000, guid: 3d29fb6a8e61090488d1f8f2ce699366, type: 2}
+  m_Scenes: []
+  m_configObjects: {}
