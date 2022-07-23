@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using Runtime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    [SerializeField ]private IntVariable currentMission;
 
+    public void LoadMission()
+    {
+        LoadBySceneName("Mission"+currentMission.Value);
+    }
     public void LoadNextScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;

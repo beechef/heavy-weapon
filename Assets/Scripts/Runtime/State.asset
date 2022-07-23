@@ -16,8 +16,9 @@ MonoBehaviour:
   moveLeftSpeed: 1
   tankMoveSpeed: 0
   canGetInput: 1
-  lives: 3
   State: 1
+  ingameLives: 3
   pointsRemaining: {fileID: 11400000, guid: 01e831fad2963aa46ade7497a6845390, type: 2}
+  currentMission: {fileID: 11400000, guid: d1a1ce55f6c633f43b5c002d947f2e4c, type: 2}
   inGameScores: {fileID: 11400000, guid: 7e9085e90a557004cab9f9f7b2461b35, type: 2}
   totalScores: {fileID: 11400000, guid: 09ede5efa7eb7494c89c088522b09c96, type: 2}

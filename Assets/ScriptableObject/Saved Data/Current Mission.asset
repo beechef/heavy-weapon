@@ -9,12 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34e6359ecce974b43a90de56f35d2920, type: 3}
-  m_Name: State
+  m_Script: {fileID: 11500000, guid: a5a69c8dd46b4b5d935d805306c49676, type: 3}
+  m_Name: Current Mission
   m_EditorClassIdentifier: 
-  isMoveRight: 1
-  moveLeftSpeed: 1
-  tankMoveSpeed: 0
-  canGetInput: 1
-  lives: 3
-  State: 1
+  value: 1

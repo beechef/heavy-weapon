@@ -6,7 +6,7 @@ namespace Runtime
     public class SavedData : ScriptableObject
     {
         public IntVariable totalScores;
-
+        public IntVariable currentMission;
         public IntVariable spreadLevel;
         public IntVariable laserLevel;
         public IntVariable shieldLevel;

@@ -277,7 +277,7 @@ MonoBehaviour:
   pooling: {fileID: -7829245269490917361}
   attackPoint: {fileID: 1107316379773103048}
   inGameScores: {fileID: 11400000, guid: 7e9085e90a557004cab9f9f7b2461b35, type: 2}
-  state: {fileID: 11400000, guid: df6815fb3d9907b40ab0625091eb9181, type: 2}
+  state: {fileID: 11400000, guid: cc54f984569fbaa4397d16ba59a143f4, type: 2}
   isDeadTouch: 0
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   shieldPrefab: {fileID: 3152116375479419723, guid: be723b110c32ac942aeb8d58d57c07e1, type: 3}

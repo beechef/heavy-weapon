@@ -14,6 +14,7 @@ public class BossSpawner : MonoBehaviour
    private float Gameplaytime;
    [SerializeField] private GameStateSO state;
    [SerializeField]private Slider mapMeter;
+   [SerializeField] private Sprite minimapSprite; 
    [SerializeField] private UnityEvent dangerEvent;
    private bool isInvokeEvent;
 
@@ -21,6 +22,7 @@ public class BossSpawner : MonoBehaviour
    {
        isInvokeEvent = false;
        mapMeter.maxValue = DelayTime;
+       mapMeter.transform.GetChild(0).GetComponent<Image>().sprite = minimapSprite;
    }
 
    private void Start()

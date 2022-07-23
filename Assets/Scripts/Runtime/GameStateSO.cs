@@ -11,7 +11,9 @@ public class GameStateSO : ScriptableObject
     public GameState State;
     public int ingameLives;
 
+
     [SerializeField] private IntVariable pointsRemaining;
+    [SerializeField] private IntVariable currentMission;
     [SerializeField] private IntVariable inGameScores;
     [SerializeField] private IntVariable totalScores;
 
@@ -161,5 +163,6 @@ public class GameStateSO : ScriptableObject
         tankMoveSpeed = 0f;
         pointsRemaining.Value++;
         totalScores.Value += inGameScores.Value;
+        currentMission.Value += 1;
     }
 }

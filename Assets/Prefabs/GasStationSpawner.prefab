@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7295061305454338547
+--- !u!1 &7745727328651168394
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2920710794530333565}
-  - component: {fileID: 4075651600358499154}
+  - component: {fileID: 7745727328651168628}
+  - component: {fileID: 7745727328651168395}
   m_Layer: 0
-  m_Name: SceneLoader
+  m_Name: GasStationSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2920710794530333565
+--- !u!4 &7745727328651168628
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7295061305454338547}
+  m_GameObject: {fileID: 7745727328651168394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5445967, y: 2.2076287, z: 3.6817963}
+  m_LocalPosition: {x: 7.9, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4075651600358499154
+--- !u!114 &7745727328651168395
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7295061305454338547}
+  m_GameObject: {fileID: 7745727328651168394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 080bd2eca25d031469bd7ccd9682334f, type: 3}
+  m_Script: {fileID: 11500000, guid: 64871b2435046734a956118f6b5916bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMission: {fileID: 11400000, guid: d1a1ce55f6c633f43b5c002d947f2e4c, type: 2}
+  state: {fileID: 11400000, guid: cc54f984569fbaa4397d16ba59a143f4, type: 2}
+  gasStation: {fileID: 184226518332257558, guid: a5053fe6ea9493a489e7b97536b84ccc, type: 3}
+  groundCombie: {fileID: 0}
