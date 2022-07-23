@@ -231,7 +231,7 @@ MonoBehaviour:
   deathClip: {fileID: 0}
   coll: {fileID: 6446016621820413577}
   pooling: {fileID: 6446016621820413573}
-  savedData: {fileID: 11400000, guid: 5f27e41853437334e8a01063b36ea66d, type: 2}
+  inGameScores: {fileID: 11400000, guid: 7e9085e90a557004cab9f9f7b2461b35, type: 2}
   fadeTime: 1
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
 --- !u!114 &6446016621820413579

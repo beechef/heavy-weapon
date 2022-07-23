@@ -20,7 +20,7 @@ namespace Runtime.Enemies.CombatSystems
         [SerializeField] protected Collider2D coll;
         [SerializeField] protected Pooling pooling;
         [SerializeField] protected Transform attackPoint;
-        [SerializeField] protected SavedData savedData;
+        [SerializeField] protected IntVariable inGameScores;
         [SerializeField] protected GameStateSO state;
         [SerializeField] protected bool isDeadTouch = false;
         [SerializeField] protected TextRenderer textRenderer;
@@ -29,7 +29,7 @@ namespace Runtime.Enemies.CombatSystems
         protected Stats.BasicStats Stats => statsSystem.Stats;
         protected float LastAttack = 0f;
         protected bool IsDeath;
-        protected bool IssavedDataNotNull;
+        protected bool IsHasScore;
 
         protected virtual void OnEnable()
         {
@@ -55,7 +55,7 @@ namespace Runtime.Enemies.CombatSystems
         {
             GODictionary.AddVulnerableGO(gameObject, this);
 
-            IssavedDataNotNull = savedData != null;
+            IsHasScore = inGameScores != null;
 
             animationEvents.OnDeath(() => { pooling.Return(gameObject, .1f).Forget(); });
         }
@@ -117,9 +117,9 @@ namespace Runtime.Enemies.CombatSystems
             if (!statsSystem.TakeDamage(damage)) return;
             Death(.5f);
 
-            if (IssavedDataNotNull)
+            if (IsHasScore)
             {
-                savedData.Score += Stats.score;
+                inGameScores.Value += Stats.score;
                 textRenderer = Instantiate(textRenderer);
                 textRenderer.Render(transform.position + transform.up, Stats.score.ToString(), 2f, false);
             }

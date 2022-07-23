@@ -107,12 +107,12 @@ TextureImporter:
       name: lasers_0
       rect:
         serializedVersion: 2
-        x: 821
-        y: 12
+        x: 822
+        y: 86
         width: 36
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -120,6 +120,48 @@ TextureImporter:
       bones: []
       spriteID: c0bc3403c06e43749b9ea2d132f1ea44
       internalID: -579977354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lasers_1
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 49
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5bbe4860389fdf46b804402ccdb3f48
+      internalID: 1587359838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lasers_2
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 13
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc217345a4229341968c587138ff8c2
+      internalID: -1596320398
       vertices: []
       indices: 
       edges: []
@@ -135,7 +177,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      lasers_2: -1596320398
       lasers_0: -579977354
+      lasers_1: 1587359838
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -8,6 +8,8 @@ namespace Runtime.Player
     {
         [SerializeField] private string missilePrefab;
         [SerializeField] private Transform attackPoint;
+        [SerializeField] private SpriteRenderer spriteRenderer;
+        [SerializeField] private List<Sprite> levelSprites;
 
         [SerializeField] private IntVariable level;
         [SerializeField] private float attackSpeed;
@@ -36,15 +38,15 @@ namespace Runtime.Player
             attackSpeed += levelAttackSpeedSheet[index];
             index = Mathf.Clamp(level.Value, 0, levelAttackSheet.Count);
             attack += levelAttackSheet[index];
+            gameObject.SetActive(level.Value != 0);
+            spriteRenderer.sprite = levelSprites[Mathf.Clamp(index - 1, 0, levelSprites.Count - 1)];
         }
 
         private async void Update()
         {
-            gameObject.SetActive(level.Value != 0);
-            
             if (isBlock) return;
             if (!IsCanAttack) return;
-            
+
             GameObject go = await pooling.GetAsync(missilePrefab, attackPoint.position, attackPoint.rotation);
             GODictionary.BasicBulletStatsSystemGOs[go].Stats.attack += attack;
             _lastAttack = Time.time;

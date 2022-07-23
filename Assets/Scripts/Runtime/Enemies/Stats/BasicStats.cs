@@ -12,6 +12,6 @@ namespace Runtime.Enemies.Stats
         public float attackDelay;
         public float attackSpeed;
         public float moveSpeed;
-        public float score;
+        public int score;
     }
 }

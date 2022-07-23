@@ -156,6 +156,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missilePrefab: Player Missile
   attackPoint: {fileID: 1626153800}
+  spriteRenderer: {fileID: 8219971862162808569}
+  levelSprites:
+  - {fileID: 1043827624, guid: 77ba1cf56ce7dbf408e6e9284643ff20, type: 3}
+  - {fileID: 375620580, guid: 77ba1cf56ce7dbf408e6e9284643ff20, type: 3}
+  - {fileID: 1833464136, guid: 77ba1cf56ce7dbf408e6e9284643ff20, type: 3}
   level: {fileID: 11400000, guid: 987d68ddff20b534ab32d5ed24adad56, type: 2}
   attackSpeed: 0
   attack: 0
@@ -521,6 +526,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missilePrefab: Player Lightning Bullet
   attackPoint: {fileID: 1626153800}
+  spriteRenderer: {fileID: 2544863925139740591}
+  levelSprites:
+  - {fileID: -579977354, guid: d68e42b13960ee546a263e1c93a4758a, type: 3}
+  - {fileID: 1587359838, guid: d68e42b13960ee546a263e1c93a4758a, type: 3}
+  - {fileID: -1596320398, guid: d68e42b13960ee546a263e1c93a4758a, type: 3}
   level: {fileID: 11400000, guid: c0e50155401a72d4ab03cbb5f3cbbe58, type: 2}
   attackSpeed: 0
   attack: 0

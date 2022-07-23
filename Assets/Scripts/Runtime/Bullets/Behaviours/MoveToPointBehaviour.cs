@@ -34,7 +34,7 @@ namespace Runtime.Bullets.Behaviours
         protected virtual void RotateToDir(Vector2 dir)
         {
             float rotationZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, 0f, rotationZ + 90f);
+            transform.rotation = Quaternion.Euler(0f, 0f, rotationZ - 90f);
         }
 
         public void SetPoint(Vector2 point, float curveHeight)

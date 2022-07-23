@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e89c5520ae8c4808955bf0a81fc41075, type: 3}
   m_Name: Saved Data
   m_EditorClassIdentifier: 
-  score: 3750
+  totalScores: {fileID: 11400000, guid: 09ede5efa7eb7494c89c088522b09c96, type: 2}
   spreadLevel: {fileID: 11400000, guid: 7b45831cfe4269149b3638a141acc814, type: 2}
   laserLevel: {fileID: 11400000, guid: 4449f49389dff7746905bd822cc67e07, type: 2}
   shieldLevel: {fileID: 11400000, guid: 5050f51163769d74ebb443b57a906deb, type: 2}

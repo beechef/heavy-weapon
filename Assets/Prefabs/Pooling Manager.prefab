@@ -152,6 +152,13 @@ MonoBehaviour:
       m_SubObjectType: 
       m_EditorAssetChanged: 0
     prepoolAmount: 20
+  - key: Red Bomb Point
+    Object:
+      m_AssetGUID: fdd32f9c4db3f27448ec4879714ecb0a
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    prepoolAmount: 20
 --- !u!1 &1490607676045922889
 GameObject:
   m_ObjectHideFlags: 0

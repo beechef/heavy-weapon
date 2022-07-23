@@ -16,10 +16,10 @@ namespace Runtime.Bullets
         [SerializeField] protected AudioClip deathClip;
         [SerializeField] protected Collider2D coll;
         [SerializeField] protected Pooling pooling;
-        [SerializeField] protected SavedData savedData;
+        [SerializeField] protected IntVariable inGameScores;
         [SerializeField] protected float fadeTime = .2f;
         [SerializeField] protected TextRenderer textRenderer;
-        private bool _issavedDataNotNull;
+        private bool _isHasScore;
         public BasicStats Stats => statsSystem.Stats;
 
         protected virtual void OnEnable()
@@ -30,7 +30,7 @@ namespace Runtime.Bullets
         protected virtual void Awake()
         {
             GODictionary.AddVulnerableGO(gameObject, this);
-            _issavedDataNotNull = savedData != null;
+            _isHasScore = inGameScores != null;
         }
 
         protected virtual void OnInit()
@@ -80,9 +80,9 @@ namespace Runtime.Bullets
             if (statsSystem.TakeDamage(damage))
             {
                 Death();
-                if (_issavedDataNotNull)
+                if (_isHasScore)
                 {
-                    savedData.Score += Stats.score;
+                    inGameScores.Value += Stats.score;
                     textRenderer = Instantiate(textRenderer);
                     textRenderer.Render(transform.position + transform.up, Stats.score.ToString(), 2f, false);
                 }
