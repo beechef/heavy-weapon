@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce7e8cd7-a3b1-48cf-9d43-c9c8823b1bf4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/FloatVariable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/UI/ChangeCursorHover.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/UI/ChangeCursorHover.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/UI/SoundController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/UI/SoundController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Heavy Weapon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Heavy Weapon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/cursor_dragging.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/cursor_dragging.gif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/cursor_hand.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/cursor_hand.gif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/cursor_pointer.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/cursor_pointer.gif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Music/MasterMixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Music/MasterMixer.mixer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Upgrade.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Upgrade.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/FloatVarible.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/FloatVarible.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/FloatVariable.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/UI/CursorManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/UI/CursorManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/UI/MainMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/UI/MainMenuManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="ce7e8cd7-a3b1-48cf-9d43-c9c8823b1bf4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,7 +149,7 @@
       <workItem from="1658468488276" duration="6161000" />
       <workItem from="1658491448618" duration="13369000" />
       <workItem from="1658548341175" duration="3284000" />
-      <workItem from="1658560994336" duration="7642000" />
+      <workItem from="1658560994336" duration="7967000" />
     </task>
     <servers />
   </component>
