@@ -8,8 +8,8 @@ public class GameStateSO : ScriptableObject
     public float moveLeftSpeed;
     public float tankMoveSpeed;
     public bool canGetInput;
-    public int lives;
     public GameState State;
+    public int ingameLives;
 
     [SerializeField] private IntVariable pointsRemaining;
     [SerializeField] private IntVariable inGameScores;
@@ -19,7 +19,8 @@ public class GameStateSO : ScriptableObject
     {
         StartGame,
         PlayGame,
-        EndGame,
+        PlayerDead,
+        BossKilled,
         GameOver,
         BossFight,
         Revive,
@@ -36,9 +37,9 @@ public class GameStateSO : ScriptableObject
         State = GameState.Revive;
     }
 
-    public void EndGame()
+    public void BossKilled()
     {
-        State = GameState.EndGame;
+        State = GameState.BossKilled;
     }
 
     public void PlayGame()
@@ -61,6 +62,11 @@ public class GameStateSO : ScriptableObject
         State = GameState.FinishMission;
     }
 
+    public void PlayerDead()
+    {
+        State = GameState.PlayerDead;
+    }
+
 
     public void UpdateState()
     {
@@ -75,7 +81,7 @@ public class GameStateSO : ScriptableObject
             case GameState.BossFight:
                 OnBossFight();
                 break;
-            case GameState.EndGame:
+            case GameState.BossKilled:
                 OnBossKilled();
                 break;
             case GameState.GameOver:
@@ -87,15 +93,23 @@ public class GameStateSO : ScriptableObject
             case GameState.FinishMission:
                 OnFinishLevel();
                 break;
+            case GameState.PlayerDead:
+                OnPlayerDead();
+                break;
             default:
                 OnGameOver();
                 break;
         }
     }
 
+    void OnPlayerDead()
+    {
+        canGetInput = false;
+        isMoveRight = false;
+    }
     void OnGameStart()
     {
-        lives = 3;
+    
         canGetInput = false;
         isMoveRight = true;
         moveLeftSpeed = 1f;
@@ -131,16 +145,6 @@ public class GameStateSO : ScriptableObject
         isMoveRight = false;
         moveLeftSpeed = 0;
         tankMoveSpeed = 0;
-    }
-
-    public void OnPlayerDead()
-    {
-        if (lives <= 0)
-        {
-            GameOver();
-        }
-
-        lives -= 1;
     }
 
     private void OnRevive()

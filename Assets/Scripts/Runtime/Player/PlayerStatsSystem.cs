@@ -1,17 +1,18 @@
 ﻿using System;
+using Runtime.Enemy;
 using Runtime.Items;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Runtime.Player
 {
     public class PlayerStatsSystem : MonoBehaviour
     {
         [SerializeField] private PlayerStats stats;
-        [SerializeField] private TankExplosion _explosion;
         [SerializeField] private ProgressRenderer progressRenderer;
+        [SerializeField] private HealthBarRenderer healthBarRenderer;
         public PlayerStats Stats => stats;
         private bool _isFirst = false;
-
         public Action OnInit;
 
         protected virtual void Awake()
@@ -27,10 +28,6 @@ namespace Runtime.Player
         private void Update()
         {
             UpdateMegaLaserProgress();
-            if (IsDead())
-            {
-                _explosion.ExplosionByPress();
-            }
         }
 
         protected virtual void Init()
@@ -48,6 +45,7 @@ namespace Runtime.Player
         public void RestoreFullHealth()
         {
             stats.health = stats.maxHealth;
+            healthBarRenderer.Render(stats.health, stats.maxHealth);
         }
 
         public bool IsDead() => stats.health <= 0f;
@@ -55,6 +53,8 @@ namespace Runtime.Player
         public virtual bool TakeDamage(float damage)
         {
             stats.health = Mathf.Clamp(stats.health - damage, 0f, stats.maxHealth);
+            healthBarRenderer.Render(stats.health, stats.maxHealth);
+
             return IsDead();
         }
 

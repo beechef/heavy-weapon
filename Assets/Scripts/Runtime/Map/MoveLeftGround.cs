@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.U2D;
 
-public class MoveLeft : MonoBehaviour
+public class MoveLeftGround : MonoBehaviour
 {
     public float moveSpeed;
     private SpriteRenderer sprite;

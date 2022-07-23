@@ -141,6 +141,7 @@ MonoBehaviour:
   textRendererRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   audioSource: {fileID: 6168797221984659602}
   collectionClip: {fileID: 8300000, guid: 2596ba86724547c418d7859f5a4a0f2f, type: 3}
+  spriteRenderer: {fileID: 5149236615738163846}
   icon: {fileID: 880374116, guid: 6d9e4c6ad038c794380f62e0aaaccc37, type: 3}
   value: 5
   duration: 10

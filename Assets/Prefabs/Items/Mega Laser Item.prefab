@@ -154,7 +154,8 @@ MonoBehaviour:
   textRendererRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   audioSource: {fileID: -681103223530329635}
   collectionClip: {fileID: 8300000, guid: c6b7481e64b8fc44f9060f77a5a993d2, type: 3}
-  value: 25
+  spriteRenderer: {fileID: 3085208769899335446}
+  value: 50
 --- !u!82 &-681103223530329635
 AudioSource:
   m_ObjectHideFlags: 0

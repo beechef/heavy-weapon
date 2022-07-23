@@ -83,8 +83,8 @@ namespace Runtime.Bullets
                 if (_isHasScore)
                 {
                     inGameScores.Value += Stats.score;
-                    textRenderer = Instantiate(textRenderer);
-                    textRenderer.Render(transform.position + transform.up, Stats.score.ToString(), 2f, false);
+                    var text = Instantiate(textRenderer);
+                    text.Render(transform.position + transform.up / 2, Stats.score.ToString(), 2f, false);
                 }
             }
         }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f31c84738449e5bf588c57d26ced53, type: 3}
   m_Name: Player Stats
   m_EditorClassIdentifier: 
-  attack: 10
+  attack: 5
   attackSpeed: 5.5
   moveSpeed: 1
   amountAttackPoint: 1
@@ -20,5 +20,5 @@ MonoBehaviour:
   maxHealth: 50
   lives: 3
   nukeQuantity: 0
-  isActivateMegaLaser: 1
-  megaLaserComplete: 100
+  isActivateMegaLaser: 0
+  megaLaserComplete: 0

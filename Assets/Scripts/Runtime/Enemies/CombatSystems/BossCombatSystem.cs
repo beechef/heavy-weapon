@@ -8,7 +8,7 @@ namespace Runtime.Enemies.CombatSystems
 {
     public class BossCombatSystem : BasicCombatSystem
     {
-        [SerializeField] private BossHealthBar healthBar;
+        [SerializeField] private HealthBarRenderer healthBarRenderer;
         [SerializeField] private float effectDuration = 1.5f;
         private Transform _bossHealthBar;
 
@@ -16,7 +16,7 @@ namespace Runtime.Enemies.CombatSystems
         {
             base.Awake();
             _bossHealthBar = GameObject.FindWithTag(TagName.BossHealthBar).transform;
-            healthBar = Instantiate(healthBar, _bossHealthBar);
+            healthBarRenderer = Instantiate(healthBarRenderer, _bossHealthBar);
         }
 
         public override async UniTask Death(float delay)
@@ -48,13 +48,13 @@ namespace Runtime.Enemies.CombatSystems
             if (IsDeath) return;
             anim.Hit();
             statsSystem.TakeDamage(damage);
-            healthBar.Render(Stats.health, Stats.maxHealth);
+            healthBarRenderer.Render(Stats.health, Stats.maxHealth);
             if (statsSystem.IsDead())
             {
                 await Death(.5f);
                 if (IsHasScore)
                     inGameScores.Value += Stats.score;
-                Destroy(healthBar.gameObject, effectDuration + 0.2f);
+                Destroy(healthBarRenderer.gameObject, effectDuration + 0.2f);
             }
         }
     }

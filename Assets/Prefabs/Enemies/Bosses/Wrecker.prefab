@@ -255,10 +255,10 @@ MonoBehaviour:
   pooling: {fileID: 840553018548302784}
   attackPoint: {fileID: 2742255894620584897}
   inGameScores: {fileID: 11400000, guid: 7e9085e90a557004cab9f9f7b2461b35, type: 2}
-  state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
+  state: {fileID: 11400000, guid: df6815fb3d9907b40ab0625091eb9181, type: 2}
   isDeadTouch: 0
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
-  healthBar: {fileID: 5237312709064096705, guid: 1d124bdfebf49e44fbb7be3cf2eed98f, type: 3}
+  healthBarRenderer: {fileID: 5237312709064096705, guid: 1d124bdfebf49e44fbb7be3cf2eed98f, type: 3}
   effectDuration: 1.5
   ballCombatSystem: {fileID: 2742255896469733351}
   wreckerBehaviour: {fileID: 8237188076017235420}
@@ -1790,7 +1790,7 @@ MonoBehaviour:
   pooling: {fileID: 2742255896469733355}
   attackPoint: {fileID: 2742255894822565132}
   inGameScores: {fileID: 11400000, guid: 7e9085e90a557004cab9f9f7b2461b35, type: 2}
-  state: {fileID: 11400000, guid: f878a8f2813ec054fa85824feea426da, type: 2}
+  state: {fileID: 11400000, guid: df6815fb3d9907b40ab0625091eb9181, type: 2}
   isDeadTouch: 0
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   explosionRadius: 1

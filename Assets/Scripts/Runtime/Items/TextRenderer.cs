@@ -28,7 +28,7 @@ namespace Runtime.Items
                     ? Random.ColorHSV(0f, .25f, 1f, 1f,
                         1f, 1f, i * 1.0f / loopTimes, i * 1.0f / loopTimes)
                     : new Color(1, 1, 1, i * 1.0f / loopTimes);
-                
+
                 textMeshPro.color = color;
 
                 await UniTask.Delay(TimeSpan.FromSeconds(timeStep));

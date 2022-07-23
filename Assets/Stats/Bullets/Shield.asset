@@ -15,6 +15,6 @@ MonoBehaviour:
   attack: 0
   attackSpeed: 0
   health: 0
-  maxHealth: 50
+  maxHealth: 25
   moveSpeed: 0
   score: 250

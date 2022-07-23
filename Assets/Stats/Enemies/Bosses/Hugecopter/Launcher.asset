@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f481551e40cf486482e8e1ba4aa06fce, type: 3}
   m_Name: Launcher
   m_EditorClassIdentifier: 
-  attack: 0
+  attack: 10
   health: 0
   maxHealth: 200
   attackTimes: 1

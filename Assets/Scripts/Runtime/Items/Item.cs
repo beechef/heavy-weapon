@@ -8,6 +8,7 @@ namespace Runtime.Items
         [SerializeField] private TextRenderer textRendererRenderer;
         [SerializeField] private AudioSource audioSource;
         [SerializeField] private AudioClip collectionClip;
+        [SerializeField] private SpriteRenderer spriteRenderer;
         public abstract void Collect(GameObject go);
 
         protected abstract string GetCollectionText();
@@ -20,7 +21,8 @@ namespace Runtime.Items
                 Collect(go);
                 audioSource.clip = collectionClip;
                 audioSource.Play();
-                Destroy(gameObject, .1f);
+                spriteRenderer.enabled = false;
+                Destroy(gameObject, 1.5f);
                 textRendererRenderer = Instantiate(textRendererRenderer);
                 textRendererRenderer.Render(transform.position + Vector3.up * 2f, GetCollectionText(), 1.5f);
             }

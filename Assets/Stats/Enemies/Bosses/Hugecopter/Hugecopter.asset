@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f481551e40cf486482e8e1ba4aa06fce, type: 3}
   m_Name: Hugecopter
   m_EditorClassIdentifier: 
-  attack: 1
+  attack: 5
   health: 500
   maxHealth: 500
   attackTimes: 1
