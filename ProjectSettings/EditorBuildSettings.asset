@@ -23,4 +23,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Upgrade.unity
     guid: 9eaedf124c5b9a148817c863c6347814
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 3d29fb6a8e61090488d1f8f2ce699366, type: 2}

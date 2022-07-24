@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -502,6 +502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundsCombie: {fileID: 499551151}
   ground: {fileID: 6340610615630147167, guid: e4ee07ed5f29c6342ace8e3db726a88f, type: 3}
+  _sprite: {fileID: 0}
 --- !u!212 &499551154
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -707,6 +708,7 @@ MonoBehaviour:
   DelayTime: 60
   state: {fileID: 11400000, guid: df6815fb3d9907b40ab0625091eb9181, type: 2}
   mapMeter: {fileID: 21452459}
+  minimapSprite: {fileID: 0}
   dangerEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1825,6 +1827,7 @@ GameObject:
   - component: {fileID: 1965728658}
   - component: {fileID: 1965728657}
   - component: {fileID: 1965728656}
+  - component: {fileID: 1965728659}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1890,6 +1893,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1965728659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965728655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
 --- !u!1 &2052595317
 GameObject:
   m_ObjectHideFlags: 0

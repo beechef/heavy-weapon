@@ -12,15 +12,18 @@ public class MissionMapManager : MonoBehaviour
    [SerializeField] private IntVariable currentMission;
    [SerializeField] private List<GameObject> missions;
    [SerializeField] private GameObject targetMission;
-   private Sequence mySequence;
+ 
    [SerializeField] private GameObject finishImage;
+ 
    private void Start()
    {
+   
       targetMission.SetActive(true);
    }
 
    private void Update()
    {
+      
       if (currentMission.Value >= 3)
       {
          finishImage.SetActive(true);
@@ -35,20 +38,15 @@ public class MissionMapManager : MonoBehaviour
    }
    public void TargetMission(int i)
    {
-      mySequence = DOTween.Sequence();
-      mySequence.Append(targetMission.transform.DOMove(missions[i].transform.position,3f));
-      mySequence.Insert(0,targetMission.transform.DOScale(0.3f,2f));
-      StartCoroutine(WaitToEnableImage(2,i));
-      
-   }
-   IEnumerator WaitToEnableImage(float time, int i)
-   {
       var missionDes = missions[i].transform.GetChild(0);
-      yield return new WaitForSeconds(time);
+      targetMission.transform.position =missions[i].transform.position;
+      targetMission.transform.localScale =new Vector3(0.3f,0.3f,0.3f);
+      /*if (!(_delayTime > 2)) return;*/
       if (targetMission.activeSelf)
-      { targetMission.SetActive(false);
+      { 
+         targetMission.SetActive(false);
       }
       missionDes.gameObject.SetActive(true);
    }
-
 }
+
