@@ -14,16 +14,20 @@ public class MissionMapManager : MonoBehaviour
    [SerializeField] private GameObject targetMission;
  
    [SerializeField] private GameObject finishImage;
- 
+   private float delayTime;
    private void Start()
    {
-   
       targetMission.SetActive(true);
+   }
+
+   private void OnEnable()
+   {
+      delayTime = 2;
    }
 
    private void Update()
    {
-      
+      delayTime -= Time.deltaTime;
       if (currentMission.Value >= 3)
       {
          finishImage.SetActive(true);
@@ -39,14 +43,18 @@ public class MissionMapManager : MonoBehaviour
    public void TargetMission(int i)
    {
       var missionDes = missions[i].transform.GetChild(0);
-      targetMission.transform.position =missions[i].transform.position;
-      targetMission.transform.localScale =new Vector3(0.3f,0.3f,0.3f);
-      /*if (!(_delayTime > 2)) return;*/
-      if (targetMission.activeSelf)
-      { 
-         targetMission.SetActive(false);
+      targetMission.transform.DOMove(missions[i].transform.position,1.5f);
+      targetMission.transform.DOScale(0.3f, 1f);
+      if (delayTime <= 0)
+      {
+         if (targetMission.activeSelf) 
+         { 
+            targetMission.SetActive(false);
+         }
+         missionDes.gameObject.SetActive(true);
+         delayTime = Mathf.Infinity;
       }
-      missionDes.gameObject.SetActive(true);
+    
    }
 }
 
