@@ -2,50 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce7e8cd7-a3b1-48cf-9d43-c9c8823b1bf4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/UI/Exit.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/UI/Exit.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Heavy Weapon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Heavy Weapon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/Old_Rubber_Stamp SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/Old_Rubber_Stamp SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/cursor_hand.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/cursor_hand.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/cursor_hand.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/cursor_hand.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/cursor_pointer.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/cursor_pointer.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/cursor_pointer.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/cursor_pointer.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Background Music.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Background Music.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Background Music.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Background Music.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Bomb Frag.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Bomb Frag.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Boulder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Boulder.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Dumb Bomb.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Dumb Bomb.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Shield.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Enemies/Shield.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Big Bomber.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Big Bomber.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Bomber.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Bomber.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Bosses/Battleship.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Bosses/Battleship.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Bosses/Hugecopter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Bosses/Hugecopter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Bosses/Wrecker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Bosses/Wrecker.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Cruise.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Cruise.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Jet Fighter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Jet Fighter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Prop Fighter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Prop Fighter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Small Jet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Small Jet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ground.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ground.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GroundSpawner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GroundSpawner.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuScenes/MissionMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuScenes/MissionMap.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mission1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mission1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mission2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mission2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mission3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mission3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nhan.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nhan.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Upgrade.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Upgrade.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Saved Data/Current Mission.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObject/Saved Data/Current Mission.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Saved Data/In Game Scores.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObject/Saved Data/In Game Scores.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Saved Data/Options/Master.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObject/Saved Data/Options/Master.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Saved Data/Options/SoundFX.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObject/Saved Data/Options/SoundFX.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Saved Data/Total Scores.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObject/Saved Data/Total Scores.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BasicCombatSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Enemies/CombatSystems/BasicCombatSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/UI/ChangeCursorHover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/UI/ChangeCursorHover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stats/Enemies/Bosses/Wrecker/Ball.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stats/Enemies/Bosses/Wrecker/Ball.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stats/Enemies/Bosses/Wrecker/Wrecker.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stats/Enemies/Bosses/Wrecker/Wrecker.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Saved Data/Points Remaining.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObject/Saved Data/Points Remaining.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +30,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.unitask@2.3.1/Runtime/UniTaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.grashaar.unity-objectpooling@63e7a98191/Unity.ObjectPooling.Addressables/UnityEngine.Addressables.Pooling/AddressableGameObjectPooler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/InitialPooling.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.grashaar.unity-objectpooling@63e7a98191/Unity.ObjectPooling.Addressables/UnityEngine.Addressables.Pooling/AddressableGameObjectPoolerManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/ReverseAnimationContext.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -205,6 +168,7 @@
       <workItem from="1658581650712" duration="3309000" />
       <workItem from="1658593703408" duration="3546000" />
       <workItem from="1658633280198" duration="5947000" />
+      <workItem from="1658654503588" duration="1342000" />
     </task>
     <servers />
   </component>
