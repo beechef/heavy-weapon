@@ -17,6 +17,7 @@ public class MissionMapManager : MonoBehaviour
    private float delayTime;
    private void Start()
    {
+      Time.timeScale = 1;
       targetMission.SetActive(true);
    }
 
@@ -27,6 +28,7 @@ public class MissionMapManager : MonoBehaviour
 
    private void Update()
    {
+      Debug.Log(Time.timeScale);
       delayTime -= Time.deltaTime;
       if (currentMission.Value >= 3)
       {
@@ -54,7 +56,11 @@ public class MissionMapManager : MonoBehaviour
          missionDes.gameObject.SetActive(true);
          delayTime = Mathf.Infinity;
       }
-    
+   }
+
+   private void OnDisable()
+   {
+      DOTween.KillAll();
    }
 }
 
