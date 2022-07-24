@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6960162002417757958}
   - component: {fileID: 6960162002417757959}
   - component: {fileID: 6960162002417757956}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundSpawner
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

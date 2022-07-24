@@ -202,6 +202,7 @@ MonoBehaviour:
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   shieldPrefab: {fileID: 0}
   shieldRate: 35
+  isIgnoreGround: 1
 --- !u!114 &3466574081133924477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -875,6 +876,7 @@ MonoBehaviour:
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   shieldPrefab: {fileID: 0}
   shieldRate: 35
+  isIgnoreGround: 1
   healthBarRenderer: {fileID: 5237312709064096705, guid: 1d124bdfebf49e44fbb7be3cf2eed98f, type: 3}
   effectDuration: 3
   leftLauncher: {fileID: 3466574081695895018}
@@ -1216,6 +1218,7 @@ MonoBehaviour:
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   shieldPrefab: {fileID: 0}
   shieldRate: 35
+  isIgnoreGround: 1
 --- !u!50 &2080661128569581832
 Rigidbody2D:
   serializedVersion: 4
@@ -1471,6 +1474,7 @@ MonoBehaviour:
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   shieldPrefab: {fileID: 0}
   shieldRate: 35
+  isIgnoreGround: 1
 --- !u!50 &5154181523609090239
 Rigidbody2D:
   serializedVersion: 4
@@ -1692,6 +1696,7 @@ MonoBehaviour:
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   shieldPrefab: {fileID: 0}
   shieldRate: 35
+  isIgnoreGround: 1
 --- !u!114 &3466574081977804170
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -447,6 +447,7 @@ MonoBehaviour:
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   shieldPrefab: {fileID: 0}
   shieldRate: 35
+  isIgnoreGround: 1
 --- !u!50 &1026410269625890159
 Rigidbody2D:
   serializedVersion: 4
@@ -702,6 +703,7 @@ MonoBehaviour:
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   shieldPrefab: {fileID: 0}
   shieldRate: 35
+  isIgnoreGround: 1
 --- !u!50 &8965383028675063861
 Rigidbody2D:
   serializedVersion: 4
@@ -966,6 +968,7 @@ MonoBehaviour:
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   shieldPrefab: {fileID: 0}
   shieldRate: 35
+  isIgnoreGround: 1
   attackPoint1: {fileID: 9206401760623692356}
 --- !u!114 &9206401760474207960
 MonoBehaviour:
@@ -1812,6 +1815,7 @@ GameObject:
   - component: {fileID: 9206401761395491681}
   - component: {fileID: 9206401761395491683}
   - component: {fileID: 9206401761395491692}
+  - component: {fileID: 1489652317}
   m_Layer: 6
   m_Name: Battleship
   m_TagString: Enemy
@@ -1828,7 +1832,7 @@ Transform:
   m_GameObject: {fileID: 9206401761395491691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.5867878, y: 9.74, z: -0.051199768}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9206401761482263856}
@@ -2051,6 +2055,7 @@ MonoBehaviour:
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   shieldPrefab: {fileID: 0}
   shieldRate: 35
+  isIgnoreGround: 1
   healthBarRenderer: {fileID: 5237312709064096705, guid: 1d124bdfebf49e44fbb7be3cf2eed98f, type: 3}
   effectDuration: 1.5
   guns:
@@ -2075,6 +2080,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statsSystem: {fileID: 9206401761395491681}
   combatSystem: {fileID: 9206401761395491683}
+--- !u!114 &1489652317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9206401761395491691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62536b9186a34cdc95cf66cba01c7e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviours:
+  - {fileID: 9206401761395491692}
+  - {fileID: 9206401761395491683}
+  - {fileID: 9206401761940485018}
+  - {fileID: 9206401761430645190}
+  - {fileID: 9206401761942822740}
+  - {fileID: 9206401760474207938}
+  - {fileID: 8407783261067491544}
+  - {fileID: 3345571754815802880}
+  moveSpeed: 2
 --- !u!1 &9206401761397400006
 GameObject:
   m_ObjectHideFlags: 0
@@ -2284,6 +2311,7 @@ MonoBehaviour:
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   shieldPrefab: {fileID: 0}
   shieldRate: 35
+  isIgnoreGround: 1
   attackPoint1: {fileID: 9206401759950296860}
 --- !u!114 &9206401761430645188
 MonoBehaviour:
@@ -2723,6 +2751,7 @@ MonoBehaviour:
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   shieldPrefab: {fileID: 0}
   shieldRate: 35
+  isIgnoreGround: 1
   attackPoint1: {fileID: 9206401761397400025}
 --- !u!114 &9206401761940485019
 MonoBehaviour:
@@ -2978,6 +3007,7 @@ MonoBehaviour:
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   shieldPrefab: {fileID: 0}
   shieldRate: 35
+  isIgnoreGround: 1
   attackPoint1: {fileID: 9206401761463773036}
 --- !u!114 &9206401761942822738
 MonoBehaviour:

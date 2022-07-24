@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3825142745575254391}
   - component: {fileID: 2834432274023761590}
   - component: {fileID: 4549677319955742799}
-  - component: {fileID: 2659513182346550619}
+  - component: {fileID: 7398947462704976362}
   m_Layer: 10
   m_Name: Ground
   m_TagString: Ground
@@ -90,7 +90,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: da175ef64c32ecd46a62885cdef7aa44, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -129,16 +129,29 @@ MonoBehaviour:
   fireStreakPrefab: {fileID: 9189834987313122854, guid: 987926c50e5ab30419b140813bfe741b, type: 3}
   particlePrefab: Collision Particle
   pooling: {fileID: 2834432274023761590}
---- !u!65 &2659513182346550619
-BoxCollider:
+--- !u!61 &7398947462704976362
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6340610615630147167}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.2673143}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 12.8, y: 1.2}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12.8, y: 0.5477812, z: 0.2}
-  m_Center: {x: 0, y: -0.3261094, z: 0}
+  m_Size: {x: 12.8, y: 0.6653714}
+  m_EdgeRadius: 0

@@ -115,7 +115,7 @@ MonoBehaviour:
   isDeadTouch: 0
   textRenderer: {fileID: 482073388898892735, guid: fb0fa2c396280af43b897981e66cf500, type: 3}
   shieldPrefab: {fileID: 3152116375479419723, guid: be723b110c32ac942aeb8d58d57c07e1, type: 3}
-  shieldRate: 35
+  shieldRate: 15
 --- !u!114 &1584930884722510715
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -28,6 +28,7 @@ namespace Runtime.Enemies.CombatSystems
         [SerializeField] protected GameObject shieldPrefab;
         [SerializeField] protected float shieldRate = 35f;
 
+        [SerializeField] protected bool isIgnoreGround = false;
         protected GameObject Shield;
 
         protected Stats.BasicStats Stats => statsSystem.Stats;
@@ -144,9 +145,10 @@ namespace Runtime.Enemies.CombatSystems
                 vulnerable.TakeDamage(Stats.attack);
             }
 
+            if (isIgnoreGround) return;
             if (other.gameObject.CompareTag(TagName.Ground) ||
                 (other.gameObject.CompareTag(TagName.Player) && isDeadTouch))
-                pooling.Return(gameObject, .2f).Forget();
+                pooling.Return(gameObject, .5f).Forget();
         }
 
         protected virtual void OnDisable()
